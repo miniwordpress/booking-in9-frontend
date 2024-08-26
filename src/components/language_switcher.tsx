@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 
 const LocaleSwitcher: React.FC = () => {
   const router = useRouter();
-  const { locales, locale: activeLocale, pathname, query } = router;
+  const { locales, locale: activeLocale, query } = router;
 
   const otherLocales = (locales || []).filter(
     (locale) => locale !== activeLocale
