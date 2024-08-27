@@ -6,7 +6,7 @@ import { useEffect, useState } from "react"
 export default function HomePage() {
   const router = useRouter()
   const { locale, locales } = router
-  const { t, i18n } = useTranslation('common')
+  const { t } = useTranslation('common')
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
