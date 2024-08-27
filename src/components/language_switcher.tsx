@@ -1,19 +1,18 @@
-import React from 'react';
-import { useRouter } from 'next/router';
+import React from 'react'
+import { useRouter } from 'next/router'
 
 const LocaleSwitcher: React.FC = () => {
-  const router = useRouter();
-  const { locales, locale: activeLocale } = router;
-
+  const router = useRouter()
+  const { locales } = router
+  const activeLocale = typeof window !== 'undefined' && window.localStorage.getItem('locale')
   const otherLocales = (locales || []).filter(
     (locale) => locale !== activeLocale
-  );
+  )
 
   const changeLanguage = (locale: string) => {
-    router.push({
-      pathname: router.pathname,
-    }, undefined, { locale });
-  };
+    window.localStorage.setItem("locale", locale)
+    router.push(router.pathname)
+  }
 
   return (
     <div>
@@ -38,7 +37,7 @@ const LocaleSwitcher: React.FC = () => {
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default LocaleSwitcher;
+export default LocaleSwitcher
