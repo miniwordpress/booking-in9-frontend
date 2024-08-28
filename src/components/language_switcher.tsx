@@ -17,7 +17,6 @@ const LocaleSwitcher: React.FC = () => {
 
   return (
     <div>
-      <p>Locale switcher:</p>
       <div>
         {otherLocales.map((locale) => (
           <Button
@@ -25,6 +24,7 @@ const LocaleSwitcher: React.FC = () => {
             onClick={() => changeLanguage(locale)}
             style={{
               fontWeight: locale === activeLocale ? 'bold' : 'normal',
+              color: locale === activeLocale ? '#000' : '#333',
               margin: '0 5px',
               padding: '5px 10px',
               cursor: 'pointer',
