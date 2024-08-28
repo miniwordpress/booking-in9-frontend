@@ -1,5 +1,6 @@
 import React from 'react'
 import { useRouter } from 'next/router'
+import { Button } from "@material-tailwind/react"
 
 const LocaleSwitcher: React.FC = () => {
   const router = useRouter()
@@ -19,7 +20,7 @@ const LocaleSwitcher: React.FC = () => {
       <p>Locale switcher:</p>
       <div>
         {otherLocales.map((locale) => (
-          <button
+          <Button
             key={locale}
             onClick={() => changeLanguage(locale)}
             style={{
@@ -33,7 +34,7 @@ const LocaleSwitcher: React.FC = () => {
             }}
           >
             {locale.toUpperCase()}
-          </button>
+          </Button>
         ))}
       </div>
     </div>
