@@ -5,7 +5,7 @@ import { Button } from "@material-tailwind/react"
 const LocaleSwitcher: React.FC = () => {
   const router = useRouter()
   const { locales } = router
-  const activeLocale = typeof window !== 'undefined' && window.localStorage.getItem('locale')
+  const activeLocale = typeof window !== 'undefined' && window.localStorage.getItem('locale') || 'th'
   const otherLocales = (locales || []).filter(
     (locale) => locale !== activeLocale
   )
