@@ -24,13 +24,13 @@ const LocaleSwitcher: React.FC = () => {
             onClick={() => changeLanguage(locale)}
             style={{
               fontWeight: locale === activeLocale ? 'bold' : 'normal',
-              color: locale === activeLocale ? '#000' : '#333',
+              // color: locale === activeLocale ? '#000' : '#333',
               margin: '0 5px',
               padding: '5px 10px',
               cursor: 'pointer',
-              border: '1px solid #ddd',
+              color: '#fff',
               borderRadius: '4px',
-              backgroundColor: locale === activeLocale ? '#eee' : 'transparent',
+              backgroundColor: locale === activeLocale ? '#fff' : 'transparent',
             }}
           >
             {locale.toUpperCase()}

@@ -1,7 +1,8 @@
 import { useRouter } from "next/router"
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from "react-i18next"
 import { useEffect, useState } from "react"
-import LocaleSwitcher from "../../components/language_switcher"
+// import LocaleSwitcher from "../../components/language_switcher"
+import Header from "../../components/header"
 
 import {
   Card,
@@ -12,8 +13,9 @@ import {
   Input,
   Checkbox,
   Button,
+  Breadcrumbs,
 } from "@material-tailwind/react";
- 
+
 export default function SignInPage() {
   const router = useRouter();
   const { t } = useTranslation();
@@ -25,24 +27,35 @@ export default function SignInPage() {
   }, [locale]);
 
   return (
-    <div className="grid h-screen place-items-center p-6"  style={{ color: "red", background: "blue"}}>
-      <Card className="w-96">
-        <CardHeader
-          variant="gradient"
-          color="gray"
-          className="mb-4 grid h-28 place-items-center"
-        >
-          <Typography variant="h3" color="white">
-            Sign In
-          </Typography>
-        </CardHeader>
-        <CardBody className="flex flex-col gap-4">
-          <Input label="Email" size="lg" crossOrigin="" />
-          <Input label="Password" size="lg" crossOrigin="" />
-          <div className="-ml-2.5">
-            <Checkbox label="Remember Me" crossOrigin="" />
-          </div>
-        </CardBody>
+
+    <div className="grid h-screen grid-rows-[auto_1fr] bg-primary-background">
+      <Header />
+      {/* <Breadcrumbs className="mt-4 ml-4">
+        <a href="#" className="opacity-90">
+          {t('home')}
+        </a>
+        <a href="#">
+          {t('signIn')}
+        </a>
+      </Breadcrumbs> */}
+      <div className="flex items-center justify-center">
+        <Card className="w-96">
+          <CardHeader
+            variant="gradient"
+            color="gray"
+            className="mb-4 grid h-28 place-items-center"
+          >
+            <Typography variant="h3" color="white">
+              Sign In
+            </Typography>
+          </CardHeader>
+          <CardBody className="flex flex-col gap-4">
+            <Input label="Email" size="lg" crossOrigin="" />
+            <Input label="Password" size="lg" crossOrigin="" />
+            <div className="-ml-2.5">
+              <Checkbox label="Remember Me" crossOrigin="" />
+            </div>
+          </CardBody>
           <CardFooter className="pt-0">
             <Button variant="gradient" fullWidth>
               Sign In
@@ -59,8 +72,9 @@ export default function SignInPage() {
                 Sign up
               </Typography>
             </Typography>
-        </CardFooter>
-      </Card>
+          </CardFooter>
+        </Card>
+      </div>
     </div>
   );
 }

@@ -1,0 +1,7 @@
+:root {
+    --primary-color: #061028;
+}
+
+.slate[data-theme="dark"] {
+    --bg-color: #061028;
+}
