@@ -1,4 +1,5 @@
 import "@/styles/globals.css"
+// import "@/styles/theme_color.css"
 import type { AppProps } from "next/app"
 import { appWithI18Next, useSyncLanguage } from "ni18n"
 import { ni18nConfig } from "../ni18n.config"

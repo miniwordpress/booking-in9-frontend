@@ -1,5 +1,8 @@
 {
     "hello": "hello",
     "home": "Home",
-    "signIn": "SignIn"
+    "signIn": "SignIn",
+    "forgot_password": "Forgot password",
+    "email" : "Email",
+    "password" : "Password"
 }

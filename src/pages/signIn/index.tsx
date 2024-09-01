@@ -29,52 +29,63 @@ export default function SignInPage() {
   return (
 
     <div className="grid h-screen grid-rows-[auto_1fr] bg-primary-background">
+      <div>
       <Header />
+      </div>
+
       {/* <Breadcrumbs className="mt-4 ml-4">
         <a href="#" className="opacity-90">
-          {t('home')}
+        {t('home')}
         </a>
         <a href="#">
-          {t('signIn')}
+        {t('signIn')}
         </a>
-      </Breadcrumbs> */}
-      <div className="flex items-center justify-center">
-        <Card className="w-96">
-          <CardHeader
-            variant="gradient"
-            color="gray"
-            className="mb-4 grid h-28 place-items-center"
-          >
-            <Typography variant="h3" color="white">
-              Sign In
+        </Breadcrumbs> */}
+      
+    <Card className="flex items-center justify-center" color="transparent" shadow={false}>
+      <Typography variant="h3" color="white">
+       {t('signIn')}
+      </Typography>
+      <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96 ">
+        <div className="mb-1 flex flex-col gap-6 rounded-md border-2 border-purple-200">
+          <Typography variant="h6" color="white" className="-mb-3">
+            {t('email')}
+          </Typography>
+          <Input
+            size="lg"
+            placeholder="email@mail.com"
+            className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
+            labelProps={{
+              className: "before:content-none after:content-none",
+            }}
+          />
+          <Typography variant="h6" color="white" className="-mb-3">
+          {t('password')}
+          </Typography>
+          <Input
+            type="password"
+            size="lg"
+            placeholder="********"
+            className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
+            labelProps={{
+              className: "before:content-none after:content-none",
+            }}
+          />
+          <Typography
+            variant="small"
+            color="white"
+            className="flex items-center font-normal mt-3"
+            >
+            <a href="#" className="font-medium hover:text-gray-300 ml-5">
+              {t('forgot_password')}
+            </a>
             </Typography>
-          </CardHeader>
-          <CardBody className="flex flex-col gap-4">
-            <Input label="Email" size="lg" crossOrigin="" />
-            <Input label="Password" size="lg" crossOrigin="" />
-            <div className="-ml-2.5">
-              <Checkbox label="Remember Me" crossOrigin="" />
-            </div>
-          </CardBody>
-          <CardFooter className="pt-0">
-            <Button variant="gradient" fullWidth>
-              Sign In
-            </Button>
-            <Typography variant="small" className="mt-6 flex justify-center">
-              Don&apos;t have an account?
-              <Typography
-                as="a"
-                href="#signup"
-                variant="small"
-                color="blue-gray"
-                className="ml-1 font-bold"
-              >
-                Sign up
-              </Typography>
-            </Typography>
-          </CardFooter>
-        </Card>
+          <Button className="mt-2 bg-[#ea4492]" fullWidth>
+            {t('signIn')}
+          </Button>
+          </div>
+        </form>
+      </Card>
       </div>
-    </div>
   );
 }

@@ -16,7 +16,6 @@ const LocaleSwitcher: React.FC = () => {
   }
 
   return (
-    <div>
       <div>
         {otherLocales.map((locale) => (
           <Button
@@ -37,7 +36,6 @@ const LocaleSwitcher: React.FC = () => {
           </Button>
         ))}
       </div>
-    </div>
   )
 }
 

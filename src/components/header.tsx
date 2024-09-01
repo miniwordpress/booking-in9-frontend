@@ -28,12 +28,6 @@ const HeaderBase: React.FC = () => {
     );
   }, []);
  
-  //  const navList = (
-  //   <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-
-  //   </ul>
-  // );
- 
   return (
     <div className="max-h-[768px] w-[calc(100%)] bg-primary-background">
       <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4  bg-primary-background" style={{ border: "none" }}>
@@ -47,16 +41,7 @@ const HeaderBase: React.FC = () => {
             Logo
           </Typography>
           <div className="flex items-center gap-4">
-            {/* <div className="mr-4 hidden lg:block">{navList}</div> */}
-            <div className="flex items-center gap-x-1">
-            <Button
-                color="white"
-                variant="text"
-                size="sm"
-                className="hidden lg:inline-block"
-              >
                 <LocaleSwitcher/>
-              </Button>
               <Button
                 color="white"
                 variant="text"
@@ -65,7 +50,6 @@ const HeaderBase: React.FC = () => {
               >
                 <span>ช่วยเหลือ</span>
               </Button>
-            </div>
             <IconButton
               variant="text"
               className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
@@ -106,7 +90,6 @@ const HeaderBase: React.FC = () => {
           </div>
         </div>
         <MobileNav open={openNav}>
-          {/* {navList} */}
           <div className="flex items-center gap-x-1">
             <LocaleSwitcher/>
             <Button fullWidth variant="gradient" size="sm" className="">
