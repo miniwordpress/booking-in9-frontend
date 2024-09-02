@@ -25,7 +25,7 @@ const config: Config = withMT({
       colors: {
         "primary-background":"#061028",
         "secondary-background": "#FFFFFF",
-        "box-signin" : "linear-gradient(90deg, rgba(234,68,146,1) 0%, rgba(1,218,222,1) 100%);"
+        "footer-background": "#041132",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

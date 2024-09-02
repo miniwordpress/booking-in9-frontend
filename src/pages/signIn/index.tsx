@@ -3,6 +3,8 @@ import { useTranslation } from "react-i18next"
 import { useEffect, useState } from "react"
 // import LocaleSwitcher from "../../components/language_switcher"
 import Header from "../../components/header"
+import Footer from "../../components/footer"
+import Breadcrumbs from "../../components/breadcrumbs"
 
 import {
   Card,
@@ -13,7 +15,6 @@ import {
   Input,
   Checkbox,
   Button,
-  Breadcrumbs,
 } from "@material-tailwind/react";
 
 export default function SignInPage() {
@@ -31,46 +32,22 @@ export default function SignInPage() {
     <div className="grid h-screen grid-rows-[auto_1fr] bg-primary-background">
       <div>
       <Header />
-      </div>
-
-      {/* <Breadcrumbs className="mt-4 ml-4">
-        <a href="#" className="opacity-90">
-        {t('home')}
-        </a>
-        <a href="#">
-        {t('signIn')}
-        </a>
-        </Breadcrumbs> */}
-      
+      <Breadcrumbs/>
+      </div>   
     <Card className="flex items-center justify-center" color="transparent" shadow={false}>
       <Typography variant="h3" color="white">
        {t('signIn')}
       </Typography>
       <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96 ">
-        <div className="mb-1 flex flex-col gap-6 rounded-md border-2 border-purple-200">
+        <div className="mb-1 flex flex-col gap-6 rounded-lg border-4  border-purple-300 p-6 bg-box-shadow-signin">
           <Typography variant="h6" color="white" className="-mb-3">
             {t('email')}
           </Typography>
-          <Input
-            size="lg"
-            placeholder="email@mail.com"
-            className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
-            labelProps={{
-              className: "before:content-none after:content-none",
-            }}
-          />
+          <Input label="Email" size="lg" />
           <Typography variant="h6" color="white" className="-mb-3">
           {t('password')}
           </Typography>
-          <Input
-            type="password"
-            size="lg"
-            placeholder="********"
-            className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
-            labelProps={{
-              className: "before:content-none after:content-none",
-            }}
-          />
+          <Input label="Password" size="lg" />
           <Typography
             variant="small"
             color="white"
@@ -80,12 +57,14 @@ export default function SignInPage() {
               {t('forgot_password')}
             </a>
             </Typography>
-          <Button className="mt-2 bg-[#ea4492]" fullWidth>
+          <Button className="mt-2 bg-gradient-to-r from-cyan-500 via-purple-300 to-pink-300" fullWidth>
             {t('signIn')}
           </Button>
           </div>
         </form>
       </Card>
+      <Footer/>
       </div>
+
   );
 }
