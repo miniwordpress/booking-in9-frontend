@@ -2,7 +2,9 @@
     "hello": "hello",
     "home": "Home",
     "signIn": "SignIn",
-    "forgot_password": "Forgot password",
     "email" : "Email",
-    "password" : "Password"
+    "password" : "Password",
+    "forgot_password": "Forgot password",
+    "forgot_password_detail" : "Enter the email address of the account for which you want to change the password or set a password.",
+    "Payment" : "Payment channels"
 }

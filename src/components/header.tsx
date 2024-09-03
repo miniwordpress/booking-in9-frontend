@@ -1,5 +1,6 @@
 import React from "react"
 import { useRouter } from "next/router"
+import Image from "next/image";
 import LocaleSwitcher from "../components/language_switcher"
 import { useTranslation } from 'react-i18next'
 import { useEffect, useState } from "react"
@@ -41,15 +42,19 @@ const HeaderBase: React.FC = () => {
             Logo
           </Typography>
           <div className="flex items-center gap-4">
-                <LocaleSwitcher/>
-              <Button
-                color="white"
-                variant="text"
-                size="sm"
-                className="hidden lg:inline-block"
-              >
-                <span>ช่วยเหลือ</span>
-              </Button>
+            <LocaleSwitcher/>
+              <Typography>
+                <a href="">
+                <Image
+                  src="/assets/images/help.png"
+                  alt="facebook Logo"
+                  color="white"
+                  width={30}
+                  height={30}
+                  priority
+                  />
+                  </a>
+              </Typography>
             <IconButton
               variant="text"
               className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
@@ -89,14 +94,14 @@ const HeaderBase: React.FC = () => {
             </IconButton>
           </div>
         </div>
-        <MobileNav open={openNav}>
+        {/* <MobileNav open={openNav}>
           <div className="flex items-center gap-x-1">
             <LocaleSwitcher/>
             <Button fullWidth variant="gradient" size="sm" className="">
               <span>ช่วยเหลือ</span>
             </Button>
           </div>
-        </MobileNav>
+        </MobileNav> */}
       </Navbar>
     </div>
   );

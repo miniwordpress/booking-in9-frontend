@@ -35,8 +35,11 @@ export default function SignInPage() {
       <Breadcrumbs/>
       </div>   
     <Card className="flex items-center justify-center" color="transparent" shadow={false}>
-      <Typography variant="h3" color="white">
-       {t('signIn')}
+      <Typography variant="h4" color="white">
+       {t('forgot_password')}
+      </Typography>
+      <Typography className="mt-2" variant="h6" color="white">
+       {t('forgot_password_detail')}
       </Typography>
       <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96 ">
         <div className="mb-1 flex flex-col gap-6 rounded-lg border-4  border-purple-300 p-6 bg-box-shadow-signin">
@@ -46,31 +49,11 @@ export default function SignInPage() {
           <Input
               type="email" 
               size="lg" 
-              placeholder="email@mail.com"
-              className=" !border-t-blue-gray-200 focus:!border-t-gray-900 bg-secondary-background"
+              placeholder="name@mail.com"
+              className=" !border-t-blue-gray-500 focus:!border-t-gray-900 bg-secondary-background"
               labelProps={{
                 className: "before:content-none after:content-none",
               }}/>
-          <Typography variant="h6" color="white" className="-mb-3">
-          {t('password')}
-          </Typography>
-          <Input
-              type="password" 
-              size="lg" 
-              placeholder="password"
-              className=" !border-t-blue-gray-200 focus:!border-t-gray-900 bg-secondary-background"
-              labelProps={{
-                className: "before:content-none after:content-none",
-              }}/>
-          <Typography
-            variant="small"
-            color="white"
-            className="flex items-center font-normal mt-3"
-            >
-            <a href="#" className="font-medium hover:text-gray-300 ml-5">
-              {t('forgot_password')}
-            </a>
-            </Typography>
           <Button className="mt-2 bg-gradient-to-r from-cyan-500 via-purple-300 to-pink-300" fullWidth>
             {t('signIn')}
           </Button>

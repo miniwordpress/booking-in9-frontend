@@ -24,8 +24,8 @@ const BreadcrumbsSigin: React.FC = () => {
   }, []);
  
   return (
-      <Breadcrumbs className="mt-5 ml-4">
-        <a href="#" className="opacity-90">
+      <Breadcrumbs className="mt-12 ml-10">
+        <a href="#" className="opacity-90 ml-2">
           {t('home')}
         </a>
         <a href="#">
