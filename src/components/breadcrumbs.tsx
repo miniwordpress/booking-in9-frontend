@@ -28,7 +28,7 @@ const BreadcrumbsSigin: React.FC = () => {
         <a href="#" className="opacity-90 ml-2">
           {t('home')}
         </a>
-        <a href="#">
+        <a href="#" className="text-white">
           {t('signIn')}
         </a>
         </Breadcrumbs>

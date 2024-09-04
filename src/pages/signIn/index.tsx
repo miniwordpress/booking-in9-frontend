@@ -47,7 +47,7 @@ export default function SignInPage() {
               type="email" 
               size="lg" 
               placeholder="email@mail.com"
-              className=" !border-t-blue-gray-200 focus:!border-t-gray-900 bg-secondary-background"
+              className=" !border-t-blue-gray-500 focus:!border-t-gray-900 bg-white"
               labelProps={{
                 className: "before:content-none after:content-none",
               }}/>
@@ -58,7 +58,7 @@ export default function SignInPage() {
               type="password" 
               size="lg" 
               placeholder="password"
-              className=" !border-t-blue-gray-200 focus:!border-t-gray-900 bg-secondary-background"
+              className=" !border-t-blue-gray-500 focus:!border-t-gray-900 bg-white"
               labelProps={{
                 className: "before:content-none after:content-none",
               }}/>

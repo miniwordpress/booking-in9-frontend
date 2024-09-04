@@ -50,7 +50,7 @@ export default function SignInPage() {
               type="email" 
               size="lg" 
               placeholder="name@mail.com"
-              className=" !border-t-blue-gray-500 focus:!border-t-gray-900 bg-secondary-background"
+              className=" !border-t-blue-gray-500 focus:!border-t-gray-900 bg-white"
               labelProps={{
                 className: "before:content-none after:content-none",
               }}/>
