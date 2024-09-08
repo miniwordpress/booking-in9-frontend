@@ -2,14 +2,6 @@ import { useRouter } from "next/router"
 import LocaleSwitcher from "../../components/language_switcher"
 import { useTranslation } from 'react-i18next'
 import { useEffect, useState } from "react"
-import {
-  Navbar,
-  MobileNav,
-  Typography,
-  Button,
-  IconButton,
-  Card,
-} from "@material-tailwind/react";
 
 export default function HomePage() {
   const router = useRouter()

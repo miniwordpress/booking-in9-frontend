@@ -1,4 +1,4 @@
-import { useRouter } from "next/router"
+import { useRouter } from 'next/navigation'
 import { useTranslation } from "react-i18next"
 import { useEffect, useState } from "react"
 import { useSignInMutation } from '@/lib/features/Auth'
@@ -20,26 +20,27 @@ import {
 export default function SignInPage() {
   const router = useRouter()
   const { t } = useTranslation()
-  const { locale } = router
   const [signIn] = useSignInMutation()
-  const [loading, setLoading] = useState(true)
+  // const [loading, setLoading] = useState(true)
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
+  const [disableButton, setDisableButton] = useState(false)
 
-  useEffect(() => {
-    setLoading(false)
-  }, [locale])
 
-  const loginSubmit = () => {
-    signIn(
-      {
-        email: username,
-        password: password
-      }
-    )
+  const loginSubmit = async () => {
+    try {
+      await signIn(
+        {
+          email: username,
+          password: password
+        }
+      ).unwrap()
+      setDisableButton(true)
+      router.push("/home")
+    } catch (error: any) {
+      setDisableButton(false)
+    }
   }
-
-  console.log(username + " " + password)
 
   return (
     <div className="grid h-screen grid-rows-[auto_1fr] bg-primary-background">
@@ -80,7 +81,8 @@ export default function SignInPage() {
               className=" !border-t-blue-gray-500 focus:!border-t-gray-900 bg-white"
               labelProps={{
                 className: "before:content-none after:content-none",
-              }} />
+              }}
+            />
             <Typography
               variant="small"
               color="white"
@@ -90,7 +92,7 @@ export default function SignInPage() {
                 {t('forgot_password')}
               </a>
             </Typography>
-            <Button onClick={loginSubmit} className="mt-2 bg-gradient-to-r from-cyan-500 via-purple-300 to-pink-300" fullWidth>
+            <Button disabled={disableButton} onClick={loginSubmit} className="mt-2 bg-gradient-to-r from-cyan-500 via-purple-300 to-pink-300" fullWidth>
               {t('signIn')}
             </Button>
           </div>
@@ -98,6 +100,5 @@ export default function SignInPage() {
       </Card>
       <Footer />
     </div>
-
   )
 }
