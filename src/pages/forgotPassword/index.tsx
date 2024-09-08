@@ -1,19 +1,13 @@
 import { useRouter } from "next/router"
 import { useTranslation } from "react-i18next"
 import { useEffect, useState } from "react"
-// import LocaleSwitcher from "../../components/language_switcher"
 import Header from "../../components/header"
 import Footer from "../../components/footer"
 import Breadcrumbs from "../../components/breadcrumbs"
-
 import {
   Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
   Typography,
   Input,
-  Checkbox,
   Button,
 } from "@material-tailwind/react";
 
@@ -55,7 +49,7 @@ export default function SignInPage() {
                 className: "before:content-none after:content-none",
               }}/>
           <Button className="mt-2 bg-gradient-to-r from-cyan-500 via-purple-300 to-pink-300" fullWidth>
-            {t('signIn')}
+            {t('confirm')}
           </Button>
           </div>
         </form>

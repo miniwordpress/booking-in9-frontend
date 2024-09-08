@@ -6,5 +6,6 @@
     "password" : "Password",
     "forgot_password": "Forgot password",
     "forgot_password_detail" : "Enter the email address of the account for which you want to change the password or set a password.",
-    "Payment" : "Payment channels"
+    "Payment" : "Payment channels",
+    "confirm" : "Confirm"
 }
