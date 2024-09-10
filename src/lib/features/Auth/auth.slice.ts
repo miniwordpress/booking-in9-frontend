@@ -10,8 +10,7 @@ export const authSlice = createSlice({
   initialState,
   reducers: {
     setAuthState: (state, { payload }: PayloadAction<any>) => {
-      console.log("=============")
-      setAccessToken(payload.token)
+      setAccessToken(payload)
     },
   },
   extraReducers: (builder) => {
@@ -19,7 +18,6 @@ export const authSlice = createSlice({
       .addMatcher(
         authAPI.endpoints.signIn.matchFulfilled,
         (state, { payload }: PayloadAction<any>) => {
-          console.log("=============")
           setAccessToken(payload.token)
         }
       )
