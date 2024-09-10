@@ -1,5 +1,4 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit"
-import { AuthState } from "@/utils/interfaces/auth"
 import { authAPI } from "./auth.query"
 import { setAccessToken } from '@/utils/cookies'
 
@@ -10,16 +9,18 @@ export const authSlice = createSlice({
   name: reducerName,
   initialState,
   reducers: {
-    setAuthState: (state, { payload }: PayloadAction<AuthState>) => {
-      setAccessToken(payload.access_token)
+    setAuthState: (state, { payload }: PayloadAction<any>) => {
+      console.log("=============")
+      setAccessToken(payload.token)
     },
   },
   extraReducers: (builder) => {
     builder
       .addMatcher(
         authAPI.endpoints.signIn.matchFulfilled,
-        (state, { payload }: PayloadAction<AuthState>) => {
-          setAccessToken(payload.access_token)
+        (state, { payload }: PayloadAction<any>) => {
+          console.log("=============")
+          setAccessToken(payload.token)
         }
       )
   },

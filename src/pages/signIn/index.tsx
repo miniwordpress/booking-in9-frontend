@@ -1,19 +1,17 @@
 import { useRouter } from 'next/navigation'
 import { useTranslation } from "react-i18next"
 import { useEffect, useState } from "react"
-import { useSignInMutation } from '@/lib/features/Auth'
+import { authAPI, useSignInMutation } from '@/lib/features/Auth'
 import Header from "../../components/header"
 import Footer from "../../components/footer"
 import Breadcrumbs from "../../components/breadcrumbs"
+import { setAuthState } from "@/lib/features/Auth"
+import { useAppDispatch } from "@/lib/hooks"
 
 import {
   Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
   Typography,
   Input,
-  Checkbox,
   Button,
 } from "@material-tailwind/react"
 
@@ -21,10 +19,10 @@ export default function SignInPage() {
   const router = useRouter()
   const { t } = useTranslation()
   const [signIn] = useSignInMutation()
-  // const [loading, setLoading] = useState(true)
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
   const [disableButton, setDisableButton] = useState(false)
+  const dispatch = useAppDispatch()
 
 
   const loginSubmit = async () => {
@@ -36,6 +34,7 @@ export default function SignInPage() {
         }
       ).unwrap()
       setDisableButton(true)
+      dispatch(setAuthState({ token: "asfsdgsagsa" }))
       router.push("/home")
     } catch (error: any) {
       setDisableButton(false)
@@ -92,7 +91,7 @@ export default function SignInPage() {
                 {t('forgot_password')}
               </a>
             </Typography>
-            <Button disabled={disableButton} onClick={loginSubmit} className="mt-2 bg-gradient-to-r from-cyan-500 via-purple-300 to-pink-300" fullWidth>
+            <Button disabled={false} onClick={loginSubmit} className="mt-2 bg-gradient-to-r from-cyan-500 via-purple-300 to-pink-300" fullWidth>
               {t('signIn')}
             </Button>
           </div>

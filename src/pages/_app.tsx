@@ -7,7 +7,6 @@ import { ThemeProvider } from "@material-tailwind/react"
 import { wrapper } from '@/lib/store'
 import { Provider } from "react-redux"
 
-
 const MyApp = ({ Component, ...rest }: AppProps) => {
   const { store, props } = wrapper.useWrappedStore(rest)
   const { pageProps } = props

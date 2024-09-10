@@ -1,11 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server'
-const publicRoutes = ['/signIn']
+const publicRoutes = ['/signIn', '/']
 import { getAccessToken } from '@/utils/cookies'
 
 export default async function middleware(req: NextRequest) {
   const path = req.nextUrl.pathname
-  console.log("============")
-  console.log(path)
   const isPublicRoute = publicRoutes.includes(path)
   if (isPublicRoute) {
     return NextResponse.next()
@@ -13,7 +11,7 @@ export default async function middleware(req: NextRequest) {
   const access_token = getAccessToken()
   if (!access_token) {
     return NextResponse.redirect(new URL('/signIn', req.nextUrl))
-  } else if (publicRoutes){
+  } else if (publicRoutes) {
     return NextResponse.redirect(new URL('/home', req.nextUrl))
   }
   return NextResponse.next()

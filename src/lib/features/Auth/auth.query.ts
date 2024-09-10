@@ -2,9 +2,8 @@ import { createApi } from '@reduxjs/toolkit/query/react'
 import type { Action, PayloadAction } from '@reduxjs/toolkit'
 import { HYDRATE } from 'next-redux-wrapper'
 import customFetchBase from '../customFetchBase'
-type RootState = any
 
-function isHydrateAction(action: Action): action is PayloadAction<RootState> {
+function isHydrateAction(action: Action): action is PayloadAction<any> {
   return action.type === HYDRATE
 }
 const baseBody = {
@@ -34,7 +33,6 @@ export const authAPI = createApi({
         }),
         invalidatesTags: ['Auth'],
       }),
-
     }
   },
 
