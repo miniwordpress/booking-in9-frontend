@@ -1,26 +1,30 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit"
-import { authAPI } from "./auth.query"
+import { signIn } from "./auth.query"
 import { setAccessToken } from '@/utils/cookies'
+import { IReduxAuth } from "./auth"
 
 const reducerName = "auth"
-export const initialState: {} = {}
+export const initialState: IReduxAuth.IInitialState = {
+  token: 0
+}
 
 export const authSlice = createSlice({
   name: reducerName,
   initialState,
   reducers: {
     setAuthState: (state, { payload }: PayloadAction<any>) => {
-      setAccessToken(payload)
+      state.token = ++state.token
+      // setAccessToken(payload)
     },
   },
   extraReducers: (builder) => {
-    builder
-      .addMatcher(
-        authAPI.endpoints.signIn.matchFulfilled,
-        (state, { payload }: PayloadAction<any>) => {
-          setAccessToken(payload.token)
-        }
-      )
+    builder.addMatcher(
+      signIn.matchFulfilled,
+      (state, { payload }: PayloadAction<any>) => {
+        state.token = payload.token
+        setAccessToken(payload.token)
+      }
+    )
   },
 })
 

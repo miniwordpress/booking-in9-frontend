@@ -6,6 +6,6 @@ const combineReducer = {
   ...authSliceReducer
 }
 
-export * from './auth.query'
-export * from './auth.slice'
+export * from "./auth.query"
+export * from "./auth.slice"
 export default combineReducer

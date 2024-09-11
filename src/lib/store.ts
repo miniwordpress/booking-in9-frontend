@@ -12,9 +12,9 @@ export const makeStore = () =>
       return getDefaultMiddleware({
         serializableCheck: false
       })
-        .concat(authAPI.middleware)
         .concat(packagesAPI.middleware)
         .concat(nationalityAPI.middleware)
+        .concat(authAPI.middleware)
     }
   })
 

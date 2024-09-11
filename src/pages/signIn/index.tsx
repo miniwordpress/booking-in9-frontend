@@ -5,8 +5,7 @@ import { authAPI, useSignInMutation } from '@/lib/features/Auth'
 import Header from "../../components/header"
 import Footer from "../../components/footer"
 import Breadcrumbs from "../../components/breadcrumbs"
-import { setAuthState } from "@/lib/features/Auth"
-import { useAppDispatch } from "@/lib/hooks"
+import { useAppSelector } from "@/lib/hooks"
 
 import {
   Card,
@@ -16,14 +15,13 @@ import {
 } from "@material-tailwind/react"
 
 export default function SignInPage() {
+  const { token } = useAppSelector((state) => state.auth)
   const router = useRouter()
   const { t } = useTranslation()
   const [signIn] = useSignInMutation()
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
   const [disableButton, setDisableButton] = useState(false)
-  const dispatch = useAppDispatch()
-
 
   const loginSubmit = async () => {
     try {
@@ -34,7 +32,6 @@ export default function SignInPage() {
         }
       ).unwrap()
       setDisableButton(true)
-      dispatch(setAuthState({ token: "asfsdgsagsa" }))
       router.push("/home")
     } catch (error: any) {
       setDisableButton(false)
@@ -53,6 +50,9 @@ export default function SignInPage() {
         </Typography>
         <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96 ">
           <div className="mb-1 flex flex-col gap-6 rounded-lg border-4  border-purple-300 p-6 bg-box-shadow-signin">
+            <Typography variant="h6" color="white" className="-mb-3">
+              {token}
+            </Typography>
             <Typography variant="h6" color="white" className="-mb-3">
               {t('email')}
             </Typography>

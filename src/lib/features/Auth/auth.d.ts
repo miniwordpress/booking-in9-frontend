@@ -1,8 +1,7 @@
-
 declare namespace IReduxAuth {
 
   export interface IInitialState {
-    token: string
+    token: number
   }
 }
 

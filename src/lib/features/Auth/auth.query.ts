@@ -35,11 +35,9 @@ export const authAPI = createApi({
       }),
     }
   },
-
 })
 
 export const authQueryReducer = { [reducerPath]: authAPI.reducer }
-// Client side 
-export const {
-  useSignInMutation,
-} = authAPI
+export const { useSignInMutation } = authAPI
+
+export const { signIn } = authAPI.endpoints
