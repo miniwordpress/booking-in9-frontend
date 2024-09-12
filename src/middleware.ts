@@ -8,15 +8,14 @@ export default async function middleware(req: NextRequest) {
   const isSignInRoutes = signInRoutes.includes(path)
   const isPageNotToken = isPublicRoute || isSignInRoutes
   const access_token = req.cookies.get('access_token')?.value
-  if (isPublicRoute) {
+  
+  if (!access_token){
+    if (isPageNotToken) return NextResponse.next()
+      return NextResponse.redirect(new URL("/signIn", req.nextUrl))
+  }else{
+    if (isSignInRoutes) return NextResponse.redirect(new URL("/home", req.nextUrl))
     return NextResponse.next()
   }
-  if (!access_token && !isPageNotToken) {
-    return NextResponse.redirect(new URL("/signIn", req.nextUrl))
-  } else if (isSignInRoutes) {
-    return NextResponse.redirect(new URL("/home", req.nextUrl))
-  }
-  return NextResponse.next()
 }
 
 // Routes Middleware should not run on
