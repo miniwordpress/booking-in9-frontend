@@ -16,6 +16,7 @@ const LocaleSwitcher: React.FC = () => {
   }
 
   return (
+    <div>
       <div>
         {otherLocales.map((locale) => (
           <Button
@@ -23,19 +24,19 @@ const LocaleSwitcher: React.FC = () => {
             onClick={() => changeLanguage(locale)}
             style={{
               fontWeight: locale === activeLocale ? 'bold' : 'normal',
-              // color: locale === activeLocale ? '#000' : '#333',
               margin: '0 5px',
               padding: '5px 10px',
               cursor: 'pointer',
-              color: '#fff',
+              border: '1px solid #ddd',
               borderRadius: '4px',
-              backgroundColor: locale === activeLocale ? '#fff' : 'transparent',
+              backgroundColor: locale === activeLocale ? '#eee' : 'transparent',
             }}
           >
             {locale.toUpperCase()}
           </Button>
         ))}
       </div>
+    </div>
   )
 }
 
