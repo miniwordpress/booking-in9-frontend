@@ -1,10 +1,11 @@
 import { useRouter } from 'next/navigation'
 import { useTranslation } from "react-i18next"
-import { useEffect, useState } from "react"
-import { authAPI, useSignInMutation } from '@/lib/features/Auth'
+import { useState } from "react"
+import { useSignInMutation } from '@/lib/features/Auth'
 import Header from "../../components/header"
 import Footer from "../../components/footer"
 import Breadcrumbs from "../../components/breadcrumbs"
+import { Alert } from "@material-tailwind/react"
 
 import {
   Card,
@@ -20,8 +21,10 @@ export default function SignInPage() {
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
   const [disableButton, setDisableButton] = useState(false)
+  const [open, setOpen] = useState(false)
 
   const loginSubmit = async () => {
+    setOpen(false)
     try {
       await signIn(
         {
@@ -32,6 +35,7 @@ export default function SignInPage() {
       setDisableButton(true)
       router.push("/home")
     } catch (error: any) {
+      setOpen(true)
       setDisableButton(false)
     }
   }
@@ -48,6 +52,9 @@ export default function SignInPage() {
         </Typography>
         <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96 ">
           <div className="mb-1 flex flex-col gap-6 rounded-lg border-4  border-purple-300 p-6 bg-box-shadow-signin">
+            <Alert open={open} color="red" onClose={() => setOpen(false)}>
+              {t('login.error')}
+            </Alert>
             <Typography variant="h6" color="white" className="-mb-3">
               {t('email')}
             </Typography>
@@ -58,6 +65,7 @@ export default function SignInPage() {
               onChange={(e) => {
                 setUsername(e.target.value)
               }}
+              value={username}
               className=" !border-t-blue-gray-500 focus:!border-t-gray-900 bg-white"
               labelProps={{
                 className: "before:content-none after:content-none",
@@ -69,9 +77,11 @@ export default function SignInPage() {
               type="password"
               size="lg"
               placeholder="password"
+              value={password}
               onChange={(e) => {
                 setPassword(e.target.value)
               }}
+              icon={<i className="fas fa-heart" />}
               className=" !border-t-blue-gray-500 focus:!border-t-gray-900 bg-white"
               labelProps={{
                 className: "before:content-none after:content-none",
