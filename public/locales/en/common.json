@@ -10,5 +10,7 @@
   "confirm": "Confirm",
   "login": {
     "error": "Email or password invalid"
-  }
+  } ,
+    "search_accommodation" : "Find your accommodation here",
+    "search" : "Search"
 }
