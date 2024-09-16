@@ -1,11 +1,14 @@
 {
-    "hello": "hello",
-    "home": "Home",
-    "signIn": "SignIn",
-    "email" : "Email",
-    "password" : "Password",
-    "forgot_password": "Forgot password",
-    "forgot_password_detail" : "Enter the email address of the account for which you want to change the password or set a password.",
-    "Payment" : "Payment channels",
-    "confirm" : "Confirm"
+  "hello": "hello",
+  "home": "Home",
+  "signIn": "SignIn",
+  "email": "Email",
+  "password": "Password",
+  "forgot_password": "Forgot password",
+  "forgot_password_detail": "Enter the email address of the account for which you want to change the password or set a password.",
+  "Payment": "Payment channels",
+  "confirm": "Confirm",
+  "login": {
+    "error": "Email or password invalid"
+  }
 }
