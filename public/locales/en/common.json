@@ -7,5 +7,7 @@
     "forgot_password": "Forgot password",
     "forgot_password_detail" : "Enter the email address of the account for which you want to change the password or set a password.",
     "Payment" : "Payment channels",
-    "confirm" : "Confirm"
+    "confirm" : "Confirm",
+    "search_accommodation" : "Find your accommodation here",
+    "search" : "Search"
 }
