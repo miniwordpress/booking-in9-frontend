@@ -6,7 +6,6 @@ import Header from "../../components/header"
 import Footer from "../../components/footer"
 import Breadcrumbs from "../../components/breadcrumbs"
 import { Alert } from "@material-tailwind/react"
-
 import {
   Card,
   Typography,
@@ -20,23 +19,30 @@ export default function SignInPage() {
   const [signIn] = useSignInMutation()
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
+  const [showErrorUsername, setShowErrorUsername] = useState(false)
+  const [showErrorPassword, setShowErrorPassword] = useState(false)
   const [disableButton, setDisableButton] = useState(false)
   const [open, setOpen] = useState(false)
 
   const loginSubmit = async () => {
-    setOpen(false)
-    try {
-      await signIn(
-        {
-          email: username,
-          password: password
-        }
-      ).unwrap()
-      setDisableButton(true)
-      router.push("/home")
-    } catch (error: any) {
-      setOpen(true)
-      setDisableButton(false)
+    if (username.length > 0 && password.length > 0) {
+      setOpen(false)
+      try {
+        await signIn(
+          {
+            email: username,
+            password: password
+          }
+        ).unwrap()
+        setDisableButton(true)
+        router.push("/home")
+      } catch (error: any) {
+        setOpen(true)
+        setDisableButton(false)
+      }
+    } else {
+      setShowErrorUsername(true)
+      setShowErrorPassword(true)
     }
   }
 
@@ -59,33 +65,35 @@ export default function SignInPage() {
               {t('email')}
             </Typography>
             <Input
+              error={showErrorUsername}
               type="email"
               size="lg"
+              color="white"
               placeholder="email@mail.com"
               onChange={(e) => {
                 setUsername(e.target.value)
               }}
+              label="Email"
+              onFocus={(e) => { setShowErrorUsername(false) }}
               value={username}
-              className=" !border-t-blue-gray-500 focus:!border-t-gray-900 bg-white"
-              labelProps={{
-                className: "before:content-none after:content-none",
-              }} />
+              // className=" !border-t-blue-gray-500 focus:!border-t-gray-900 bg-white"
+            />
             <Typography variant="h6" color="white" className="-mb-3">
               {t('password')}
             </Typography>
             <Input
+              error={showErrorPassword}
               type="password"
               size="lg"
-              placeholder="password"
+              label="Password"
+              color="white"
               value={password}
               onChange={(e) => {
                 setPassword(e.target.value)
               }}
-              icon={<i className="fas fa-heart" />}
-              className=" !border-t-blue-gray-500 focus:!border-t-gray-900 bg-white"
-              labelProps={{
-                className: "before:content-none after:content-none",
-              }}
+              onFocus={(e) => { setShowErrorPassword(false) }}
+              // icon={<i className="fas fa-heart" />}
+              // className=" !border-t-blue-gray-500 focus:!border-t-gray-900 bg-white"
             />
             <Typography
               variant="small"
