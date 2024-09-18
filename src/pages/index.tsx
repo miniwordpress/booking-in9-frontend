@@ -45,7 +45,7 @@ export default function SignInPage() {
           </div>
         </div>
         <div className="basis-1/2 flex items-center justify-center ">
-          <Card className="flex " color="transparent" shadow={false}>
+          <Card className="flex backdrop-blur-sm bg-white/30 p-6" color="transparent" shadow={false}>
             <Typography
               variant="h3"
               color="white"
@@ -133,8 +133,8 @@ export default function SignInPage() {
                 <Avatar
                   size="xxl"
                   alt="avatar"
-                  src="https://docs.material-tailwind.com/img/face-2.jpg"
-                  className="border border-green-500 shadow-xl hover:ring ring-pink-200 shadow-pink-900/20 "
+                  src="/assets/images/home.png"
+                  className="hover:ring ring-pink-200 shadow-pink-900/20 "
                 />
                 <Typography className="text-center mt-4" variant="h6">
                   {t("บ้านเดียว")}
@@ -144,8 +144,8 @@ export default function SignInPage() {
                 <Avatar
                   size="xxl"
                   alt="avatar"
-                  src="https://docs.material-tailwind.com/img/face-2.jpg"
-                  className="border border-green-500 shadow-xl hover:ring ring-pink-200 shadow-pink-900/20 "
+                  src="/assets/images/hotel.png"
+                  className="hover:ring ring-pink-200 shadow-pink-900/20 "
                 />
                 <Typography className="text-center mt-4" variant="h6">
                   {t("โรงแรม")}
@@ -155,8 +155,8 @@ export default function SignInPage() {
                 <Avatar
                   size="xxl"
                   alt="avatar"
-                  src="https://docs.material-tailwind.com/img/face-2.jpg"
-                  className="border border-green-500 shadow-xl hover:ring ring-pink-200 shadow-pink-900/20 "
+                  src="/assets/images/Apartment.png"
+                  className=" hover:ring ring-pink-200 shadow-pink-900/20 "
                 />
                 <Typography className="text-center mt-4" variant="h6">
                   {t("อพาร์ทเมนท์")}
@@ -166,8 +166,8 @@ export default function SignInPage() {
                 <Avatar
                   size="xxl"
                   alt="avatar"
-                  src="https://docs.material-tailwind.com/img/face-2.jpg"
-                  className="border border-green-500 shadow-xl hover:ring ring-pink-200 shadow-pink-900/20 "
+                  src="/assets/images/townhome.png"
+                  className=" hover:ring ring-pink-200 shadow-pink-900/20 "
                 />
                 <Typography className="text-center mt-4" variant="h6">
                   {t("บ้านทาวน์โฮม")}
@@ -177,8 +177,8 @@ export default function SignInPage() {
                 <Avatar
                   size="xxl"
                   alt="avatar"
-                  src="https://docs.material-tailwind.com/img/face-2.jpg"
-                  className="border border-green-500 shadow-xl hover:ring ring-pink-200 shadow-pink-900/20 "
+                  src="/assets/images/condo.png"
+                  className=" hover:ring ring-pink-200 shadow-pink-900/20 "
                 />
                 <Typography className="text-center mt-4" variant="h6">
                   {t("คอนโด")}
@@ -191,21 +191,200 @@ export default function SignInPage() {
       <>
         <div className="flex items-center justify-center mt-8 mb-8">
           <div className="p-8 w-full  grid grid-cols-5 gap-4 ">
-          <Card className="w-92 shadow-xl hover:shadow-orange-900/50">
-      <CardHeader floated={false} className="h-80">
-        <img src="https://docs.material-tailwind.com/img/team-3.jpg" alt="profile-picture" />
-      </CardHeader>
-      <CardBody className="text-center">
-        <Typography variant="h4" color="blue-gray" className="mb-2">
-          Natalie Paisley
-        </Typography>
-        <Typography color="blue-gray" className="font-medium" textGradient>
-          CEO / Co-Founder
-        </Typography>
-      </CardBody>
+            <Card className="w-92 shadow-xl hover:shadow-orange-900/50">
+              <CardHeader floated={false} className="h-60">
+                <img
+                  src="https://images.pexels.com/photos/322154/pexels-photo-322154.jpeg?auto=compress&cs=tinysrgb&w=600"
+                  alt="profile-picture"
+                />
+              </CardHeader>
+              <CardBody className="">
+                <div className="grid grid-cols-3 gap-4 items-center justify-centers">
+                  <Card
+                    color="blue"
+                    className="items-center justify-centers"
+                  >
+                    Thailand
+                  </Card>
+                  <div className="">
+                    <img src="/assets/images/thailand.png"/>
+                  </div>
+                </div>
+                <Typography variant="h5" color="blue-gray" className="mb-2 mt-2">
+                  STAY Hotel Bangkok
+                </Typography>
+                <Typography
+                  color="blue-gray"
+                  className="font-medium"
+                  textGradient
+                >
+                  5 ซอย รัชดาภิเษก 17 แขวงรัชดาภิเษก ดินแดง กรุงเทพมหานคร 10400
+                </Typography>
+                <Typography
+                  color="blue-gray"
+                  className="font-medium mt-2"
+                  textGradient
+                >
+                  1,200-2,200 THB
+                </Typography>
+              </CardBody>
             </Card>
-            
-           
+
+            <Card className="w-92 shadow-xl hover:shadow-orange-900/50">
+              <CardHeader floated={false} className="h-60">
+                <img
+                  src="https://images.pexels.com/photos/322154/pexels-photo-322154.jpeg?auto=compress&cs=tinysrgb&w=600"
+                  alt="profile-picture"
+                />
+              </CardHeader>
+              <CardBody className="">
+                <div className="grid grid-cols-3 gap-4 items-center justify-centers">
+                  <Card
+                    color="blue"
+                    className="items-center justify-centers"
+                  >
+                    Thailand
+                  </Card>
+                  <div className="">
+                    <img src="/assets/images/thailand.png"/>
+                  </div>
+                </div>
+                <Typography variant="h5" color="blue-gray" className="mb-2 mt-2">
+                  STAY Hotel Bangkok
+                </Typography>
+                <Typography
+                  color="blue-gray"
+                  className="font-medium"
+                  textGradient
+                >
+                  5 ซอย รัชดาภิเษก 17 แขวงรัชดาภิเษก ดินแดง กรุงเทพมหานคร 10400
+                </Typography>
+                <Typography
+                  color="blue-gray"
+                  className="font-medium mt-2"
+                  textGradient
+                >
+                  1,200-2,200 THB
+                </Typography>
+              </CardBody>
+            </Card>
+
+            <Card className="w-92 shadow-xl hover:shadow-orange-900/50">
+              <CardHeader floated={false} className="h-60">
+                <img
+                  src="https://images.pexels.com/photos/322154/pexels-photo-322154.jpeg?auto=compress&cs=tinysrgb&w=600"
+                  alt="profile-picture"
+                />
+              </CardHeader>
+              <CardBody className="">
+                <div className="grid grid-cols-3 gap-4 items-center justify-centers">
+                  <Card
+                    color="blue"
+                    className="items-center justify-centers"
+                  >
+                    Thailand
+                  </Card>
+                  <div className="">
+                    <img src="/assets/images/thailand.png"/>
+                  </div>
+                </div>
+                <Typography variant="h5" color="blue-gray" className="mb-2 mt-2">
+                  STAY Hotel Bangkok
+                </Typography>
+                <Typography
+                  color="blue-gray"
+                  className="font-medium"
+                  textGradient
+                >
+                  5 ซอย รัชดาภิเษก 17 แขวงรัชดาภิเษก ดินแดง กรุงเทพมหานคร 10400
+                </Typography>
+                <Typography
+                  color="blue-gray"
+                  className="font-medium mt-2"
+                  textGradient
+                >
+                  1,200-2,200 THB
+                </Typography>
+              </CardBody>
+            </Card>
+
+            <Card className="w-92 shadow-xl hover:shadow-orange-900/50">
+              <CardHeader floated={false} className="h-60">
+                <img
+                  src="https://images.pexels.com/photos/322154/pexels-photo-322154.jpeg?auto=compress&cs=tinysrgb&w=600"
+                  alt="profile-picture"
+                />
+              </CardHeader>
+              <CardBody className="">
+                <div className="grid grid-cols-3 gap-4 items-center justify-centers">
+                  <Card
+                    color="blue"
+                    className="items-center justify-centers"
+                  >
+                    Thailand
+                  </Card>
+                  <div className="">
+                    <img src="/assets/images/thailand.png"/>
+                  </div>
+                </div>
+                <Typography variant="h5" color="blue-gray" className="mb-2 mt-2">
+                  STAY Hotel Bangkok
+                </Typography>
+                <Typography
+                  color="blue-gray"
+                  className="font-medium"
+                  textGradient
+                >
+                  5 ซอย รัชดาภิเษก 17 แขวงรัชดาภิเษก ดินแดง กรุงเทพมหานคร 10400
+                </Typography>
+                <Typography
+                  color="blue-gray"
+                  className="font-medium mt-2"
+                  textGradient
+                >
+                  1,200-2,200 THB
+                </Typography>
+              </CardBody>
+            </Card>
+
+            <Card className="w-92 shadow-xl hover:shadow-orange-900/50">
+              <CardHeader floated={false} className="h-60">
+                <img
+                  src="https://images.pexels.com/photos/322154/pexels-photo-322154.jpeg?auto=compress&cs=tinysrgb&w=600"
+                  alt="profile-picture"
+                />
+              </CardHeader>
+              <CardBody className="">
+                <div className="grid grid-cols-3 gap-4 items-center justify-centers">
+                  <Card
+                    color="blue"
+                    className="items-center justify-centers"
+                  >
+                    Thailand
+                  </Card>
+                  <div className="">
+                    <img src="/assets/images/thailand.png"/>
+                  </div>
+                </div>
+                <Typography variant="h5" color="blue-gray" className="mb-2 mt-2">
+                  STAY Hotel Bangkok
+                </Typography>
+                <Typography
+                  color="blue-gray"
+                  className="font-medium"
+                  textGradient
+                >
+                  5 ซอย รัชดาภิเษก 17 แขวงรัชดาภิเษก ดินแดง กรุงเทพมหานคร 10400
+                </Typography>
+                <Typography
+                  color="blue-gray"
+                  className="font-medium mt-2"
+                  textGradient
+                >
+                  1,200-2,200 THB
+                </Typography>
+              </CardBody>
+            </Card>
           </div>
         </div>
       </>
