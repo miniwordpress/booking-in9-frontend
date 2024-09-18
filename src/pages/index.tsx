@@ -45,7 +45,11 @@ export default function SignInPage() {
           </div>
         </div>
         <div className="basis-1/2 flex items-center justify-center ">
-          <Card className="flex backdrop-blur-sm bg-white/30 p-6" color="transparent" shadow={false}>
+          <Card
+            className="flex backdrop-blur-sm bg-white/30 p-6"
+            color="transparent"
+            shadow={false}
+          >
             <Typography
               variant="h3"
               color="white"
@@ -200,17 +204,18 @@ export default function SignInPage() {
               </CardHeader>
               <CardBody className="">
                 <div className="grid grid-cols-3 gap-4 items-center justify-centers">
-                  <Card
-                    color="blue"
-                    className="items-center justify-centers"
-                  >
+                  <Card color="blue" className="items-center justify-centers">
                     Thailand
                   </Card>
                   <div className="">
-                    <img src="/assets/images/thailand.png"/>
+                    <img src="/assets/images/thailand.png" />
                   </div>
                 </div>
-                <Typography variant="h5" color="blue-gray" className="mb-2 mt-2">
+                <Typography
+                  variant="h5"
+                  color="blue-gray"
+                  className="mb-2 mt-2"
+                >
                   STAY Hotel Bangkok
                 </Typography>
                 <Typography
@@ -239,17 +244,18 @@ export default function SignInPage() {
               </CardHeader>
               <CardBody className="">
                 <div className="grid grid-cols-3 gap-4 items-center justify-centers">
-                  <Card
-                    color="blue"
-                    className="items-center justify-centers"
-                  >
+                  <Card color="blue" className="items-center justify-centers">
                     Thailand
                   </Card>
                   <div className="">
-                    <img src="/assets/images/thailand.png"/>
+                    <img src="/assets/images/thailand.png" />
                   </div>
                 </div>
-                <Typography variant="h5" color="blue-gray" className="mb-2 mt-2">
+                <Typography
+                  variant="h5"
+                  color="blue-gray"
+                  className="mb-2 mt-2"
+                >
                   STAY Hotel Bangkok
                 </Typography>
                 <Typography
@@ -278,17 +284,18 @@ export default function SignInPage() {
               </CardHeader>
               <CardBody className="">
                 <div className="grid grid-cols-3 gap-4 items-center justify-centers">
-                  <Card
-                    color="blue"
-                    className="items-center justify-centers"
-                  >
+                  <Card color="blue" className="items-center justify-centers">
                     Thailand
                   </Card>
                   <div className="">
-                    <img src="/assets/images/thailand.png"/>
+                    <img src="/assets/images/thailand.png" />
                   </div>
                 </div>
-                <Typography variant="h5" color="blue-gray" className="mb-2 mt-2">
+                <Typography
+                  variant="h5"
+                  color="blue-gray"
+                  className="mb-2 mt-2"
+                >
                   STAY Hotel Bangkok
                 </Typography>
                 <Typography
@@ -317,17 +324,18 @@ export default function SignInPage() {
               </CardHeader>
               <CardBody className="">
                 <div className="grid grid-cols-3 gap-4 items-center justify-centers">
-                  <Card
-                    color="blue"
-                    className="items-center justify-centers"
-                  >
+                  <Card color="blue" className="items-center justify-centers">
                     Thailand
                   </Card>
                   <div className="">
-                    <img src="/assets/images/thailand.png"/>
+                    <img src="/assets/images/thailand.png" />
                   </div>
                 </div>
-                <Typography variant="h5" color="blue-gray" className="mb-2 mt-2">
+                <Typography
+                  variant="h5"
+                  color="blue-gray"
+                  className="mb-2 mt-2"
+                >
                   STAY Hotel Bangkok
                 </Typography>
                 <Typography
@@ -356,17 +364,18 @@ export default function SignInPage() {
               </CardHeader>
               <CardBody className="">
                 <div className="grid grid-cols-3 gap-4 items-center justify-centers">
-                  <Card
-                    color="blue"
-                    className="items-center justify-centers"
-                  >
+                  <Card color="blue" className="items-center justify-centers">
                     Thailand
                   </Card>
                   <div className="">
-                    <img src="/assets/images/thailand.png"/>
+                    <img src="/assets/images/thailand.png" />
                   </div>
                 </div>
-                <Typography variant="h5" color="blue-gray" className="mb-2 mt-2">
+                <Typography
+                  variant="h5"
+                  color="blue-gray"
+                  className="mb-2 mt-2"
+                >
                   STAY Hotel Bangkok
                 </Typography>
                 <Typography
@@ -385,6 +394,308 @@ export default function SignInPage() {
                 </Typography>
               </CardBody>
             </Card>
+
+            <Card className="w-92 shadow-xl hover:shadow-orange-900/50">
+              <CardHeader floated={false} className="h-60">
+                <img
+                  src="https://images.pexels.com/photos/322154/pexels-photo-322154.jpeg?auto=compress&cs=tinysrgb&w=600"
+                  alt="profile-picture"
+                />
+              </CardHeader>
+              <CardBody className="">
+                <div className="grid grid-cols-3 gap-4 items-center justify-centers">
+                  <Card color="blue" className="items-center justify-centers">
+                    Thailand
+                  </Card>
+                  <div className="">
+                    <img src="/assets/images/thailand.png" />
+                  </div>
+                </div>
+                <Typography
+                  variant="h5"
+                  color="blue-gray"
+                  className="mb-2 mt-2"
+                >
+                  STAY Hotel Bangkok
+                </Typography>
+                <Typography
+                  color="blue-gray"
+                  className="font-medium"
+                  textGradient
+                >
+                  5 ซอย รัชดาภิเษก 17 แขวงรัชดาภิเษก ดินแดง กรุงเทพมหานคร 10400
+                </Typography>
+                <Typography
+                  color="blue-gray"
+                  className="font-medium mt-2"
+                  textGradient
+                >
+                  1,200-2,200 THB
+                </Typography>
+              </CardBody>
+            </Card>
+
+            <Card className="w-92 shadow-xl hover:shadow-orange-900/50">
+              <CardHeader floated={false} className="h-60">
+                <img
+                  src="https://images.pexels.com/photos/322154/pexels-photo-322154.jpeg?auto=compress&cs=tinysrgb&w=600"
+                  alt="profile-picture"
+                />
+              </CardHeader>
+              <CardBody className="">
+                <div className="grid grid-cols-3 gap-4 items-center justify-centers">
+                  <Card color="blue" className="items-center justify-centers">
+                    Thailand
+                  </Card>
+                  <div className="">
+                    <img src="/assets/images/thailand.png" />
+                  </div>
+                </div>
+                <Typography
+                  variant="h5"
+                  color="blue-gray"
+                  className="mb-2 mt-2"
+                >
+                  STAY Hotel Bangkok
+                </Typography>
+                <Typography
+                  color="blue-gray"
+                  className="font-medium"
+                  textGradient
+                >
+                  5 ซอย รัชดาภิเษก 17 แขวงรัชดาภิเษก ดินแดง กรุงเทพมหานคร 10400
+                </Typography>
+                <Typography
+                  color="blue-gray"
+                  className="font-medium mt-2"
+                  textGradient
+                >
+                  1,200-2,200 THB
+                </Typography>
+              </CardBody>
+            </Card>
+
+            <Card className="w-92 shadow-xl hover:shadow-orange-900/50">
+              <CardHeader floated={false} className="h-60">
+                <img
+                  src="https://images.pexels.com/photos/322154/pexels-photo-322154.jpeg?auto=compress&cs=tinysrgb&w=600"
+                  alt="profile-picture"
+                />
+              </CardHeader>
+              <CardBody className="">
+                <div className="grid grid-cols-3 gap-4 items-center justify-centers">
+                  <Card color="blue" className="items-center justify-centers">
+                    Thailand
+                  </Card>
+                  <div className="">
+                    <img src="/assets/images/thailand.png" />
+                  </div>
+                </div>
+                <Typography
+                  variant="h5"
+                  color="blue-gray"
+                  className="mb-2 mt-2"
+                >
+                  STAY Hotel Bangkok
+                </Typography>
+                <Typography
+                  color="blue-gray"
+                  className="font-medium"
+                  textGradient
+                >
+                  5 ซอย รัชดาภิเษก 17 แขวงรัชดาภิเษก ดินแดง กรุงเทพมหานคร 10400
+                </Typography>
+                <Typography
+                  color="blue-gray"
+                  className="font-medium mt-2"
+                  textGradient
+                >
+                  1,200-2,200 THB
+                </Typography>
+              </CardBody>
+            </Card>
+
+            <Card className="w-92 shadow-xl hover:shadow-orange-900/50">
+              <CardHeader floated={false} className="h-60">
+                <img
+                  src="https://images.pexels.com/photos/322154/pexels-photo-322154.jpeg?auto=compress&cs=tinysrgb&w=600"
+                  alt="profile-picture"
+                />
+              </CardHeader>
+              <CardBody className="">
+                <div className="grid grid-cols-3 gap-4 items-center justify-centers">
+                  <Card color="blue" className="items-center justify-centers">
+                    Thailand
+                  </Card>
+                  <div className="">
+                    <img src="/assets/images/thailand.png" />
+                  </div>
+                </div>
+                <Typography
+                  variant="h5"
+                  color="blue-gray"
+                  className="mb-2 mt-2"
+                >
+                  STAY Hotel Bangkok
+                </Typography>
+                <Typography
+                  color="blue-gray"
+                  className="font-medium"
+                  textGradient
+                >
+                  5 ซอย รัชดาภิเษก 17 แขวงรัชดาภิเษก ดินแดง กรุงเทพมหานคร 10400
+                </Typography>
+                <Typography
+                  color="blue-gray"
+                  className="font-medium mt-2"
+                  textGradient
+                >
+                  1,200-2,200 THB
+                </Typography>
+              </CardBody>
+            </Card>
+
+            <Card className="w-92 shadow-xl hover:shadow-orange-900/50">
+              <CardHeader floated={false} className="h-60">
+                <img
+                  src="https://images.pexels.com/photos/322154/pexels-photo-322154.jpeg?auto=compress&cs=tinysrgb&w=600"
+                  alt="profile-picture"
+                />
+              </CardHeader>
+              <CardBody className="">
+                <div className="grid grid-cols-3 gap-4 items-center justify-center">
+                  <Card color="blue" className="items-center justify-centers">
+                    Thailand
+                  </Card>
+                  <div className="">
+                    <img src="/assets/images/thailand.png" />
+                  </div>
+                </div>
+                <Typography
+                  variant="h5"
+                  color="blue-gray"
+                  className="mb-2 mt-2"
+                >
+                  STAY Hotel Bangkok
+                </Typography>
+                <Typography
+                  color="blue-gray"
+                  className="font-medium"
+                  textGradient
+                >
+                  5 ซอย รัชดาภิเษก 17 แขวงรัชดาภิเษก ดินแดง กรุงเทพมหานคร 10400
+                </Typography>
+                <Typography
+                  color="blue-gray"
+                  className="font-medium mt-2"
+                  textGradient
+                >
+                  1,200-2,200 THB
+                </Typography>
+              </CardBody>
+            </Card>
+          </div>
+        </div>
+        <div className="flex items-center justify-center bg-footer-background w-full mt-5">
+          <div className="">
+            <Typography variant="h3" color="orange" className="mt-8 mb-8">
+              สิ่งที่คุณจะได้รับจาก In9.co
+            </Typography>
+          </div>
+        </div>
+        <div className="bg-[url('/assets/images/lgbt.png')] w-full bg-cover">
+          <div className="grid grid-cols-3 gap-4 items-center justify-center h-96 w-full">
+            <div className="flex items-center justify-center">
+              <img src="/assets/images/experience.png" />
+            </div>
+            <div className="flex items-center justify-center">
+              <img src="/assets/images/comfortable.png" />
+            </div>
+            <div className="flex items-center justify-center">
+              <img src="/assets/images/business.png" />
+            </div>
+          </div>
+        </div>
+        <div className="flex items-center justify-center bg-footer-background w-full">
+          <div className="grid grid-cols-3 gap-4 items-center justify-center h-96 w-full">
+            <div className="flex items-center justify-center">
+              <div className="relative flex flex-col my-6 bg-white shadow-sm border border-slate-200 rounded-lg w-96 ">
+                <div className="p-4 ">
+                  <Typography
+                    variant="h4"
+                    color="orange"
+                    className="text-center"
+                  >
+                    ประสบการณ์
+                  </Typography>
+                  <Typography
+                    color="blue-gray"
+                    className="text-center font-medium mt-2"
+                    textGradient
+                  >
+                    เปิดประสบการณ์แปลกใหม่ ในการจองที่พัก พบกับชุมชนที่เป็นมิตร
+                    ทำให้การพักผ่อนของคุณ เต็มไปด้วยความทรงจำที่น่าประทับใจ
+                  </Typography>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex items-center justify-center">
+              <div className="relative flex flex-col my-6 bg-white shadow-sm border border-slate-200 rounded-lg w-96 ">
+                <div className="p-4 ">
+                  <Typography
+                    variant="h4"
+                    color="orange"
+                    className="text-center"
+                  >
+                    รวดเร็วสะวดกสบาย
+                  </Typography>
+                  <Typography
+                    color="blue-gray"
+                    className="text-center font-medium mt-2"
+                    textGradient
+                  >
+                    จองที่พักสะดวกสบายในไม่กี่คลิก พบที่พักถูกใจ
+                    รวดเร็วและง่ายดาย ตอบโจทย์ทุกการเดินทางของคุณ
+                  </Typography>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex items-center justify-center">
+              <div className="relative flex flex-col my-6 bg-white shadow-sm border border-slate-200 rounded-lg w-96 ">
+                <div className="p-4 ">
+                  <Typography
+                    variant="h4"
+                    color="orange"
+                    className="text-center"
+                  >
+                    เครือข่ายพันธมิตรทางธุรกิจ
+                  </Typography>
+                  <Typography
+                    color="blue-gray"
+                    className="text-center font-medium mt-2"
+                    textGradient
+                  >
+                    ฝ่ายบริการลูกค้าของเรา พร้อมช่วยเหลือ และให้คำแนะนำคุณ ตลอด
+                    24 ชั่วโมง
+                  </Typography>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex items-center justify-center w-full">
+          <div className="grid grid-cols-2 gap-4 items-center justify-center h-96 w-full">
+            <div className="flex items-center justify-center p-16 border-black border-r">
+              <img src="/assets/images/registerUser.png" />
+            </div>
+            <div className="grid grid-cols-3 gap-4 items-center justify-center h-96 p-16 w-full">
+              <img src="/assets/images/groupFriend_01.png" />
+              <img src="/assets/images/groupFriend_02.png" />
+              <img src="/assets/images/groupFriend_03.png" />
+            </div>
           </div>
         </div>
       </>
