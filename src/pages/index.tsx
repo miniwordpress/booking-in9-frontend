@@ -141,7 +141,7 @@ export default function SignInPage() {
                   className="hover:ring ring-pink-200 shadow-pink-900/20 "
                 />
                 <Typography className="text-center mt-4" variant="h6">
-                  {t("บ้านเดียว")}
+                  {t("house")}
                 </Typography>
               </div>
               <div className="">
@@ -152,7 +152,7 @@ export default function SignInPage() {
                   className="hover:ring ring-pink-200 shadow-pink-900/20 "
                 />
                 <Typography className="text-center mt-4" variant="h6">
-                  {t("โรงแรม")}
+                  {t("hotel")}
                 </Typography>
               </div>
               <div className="">
@@ -163,7 +163,7 @@ export default function SignInPage() {
                   className=" hover:ring ring-pink-200 shadow-pink-900/20 "
                 />
                 <Typography className="text-center mt-4" variant="h6">
-                  {t("อพาร์ทเมนท์")}
+                  {t("apartment")}
                 </Typography>
               </div>
               <div className="">
@@ -174,7 +174,7 @@ export default function SignInPage() {
                   className=" hover:ring ring-pink-200 shadow-pink-900/20 "
                 />
                 <Typography className="text-center mt-4" variant="h6">
-                  {t("บ้านทาวน์โฮม")}
+                  {t("townhome")}
                 </Typography>
               </div>
               <div className="">
@@ -185,7 +185,7 @@ export default function SignInPage() {
                   className=" hover:ring ring-pink-200 shadow-pink-900/20 "
                 />
                 <Typography className="text-center mt-4" variant="h6">
-                  {t("คอนโด")}
+                  {t("condominium")}
                 </Typography>
               </div>
             </div>
@@ -599,20 +599,21 @@ export default function SignInPage() {
         <div className="flex items-center justify-center bg-footer-background w-full mt-5">
           <div className="">
             <Typography variant="h3" color="orange" className="mt-8 mb-8">
+              {t("")}
               สิ่งที่คุณจะได้รับจาก In9.co
             </Typography>
           </div>
         </div>
-        <div className="bg-[url('/assets/images/lgbt.png')] w-full bg-cover">
-          <div className="grid grid-cols-3 gap-4 items-center justify-center h-96 w-full">
-            <div className="flex items-center justify-center">
-              <img src="/assets/images/experience.png" />
+        <div className="bg-[url('/assets/images/lgbt.png')] ">
+          <div className="grid grid-cols-3 gap-4 items-center justify-center h-[400px] w-[100px]">
+            <div className="flex items-center justify-center ">
+              {/* <img src="/assets/images/experience.png" /> */}
             </div>
             <div className="flex items-center justify-center">
-              <img src="/assets/images/comfortable.png" />
+              {/* <img src="/assets/images/comfortable.png" /> */}
             </div>
             <div className="flex items-center justify-center">
-              <img src="/assets/images/business.png" />
+              {/* <img src="/assets/images/business.png" /> */}
             </div>
           </div>
         </div>
@@ -626,15 +627,14 @@ export default function SignInPage() {
                     color="orange"
                     className="text-center"
                   >
-                    ประสบการณ์
+                    {t("ประสบการณ์")}
                   </Typography>
                   <Typography
                     color="blue-gray"
                     className="text-center font-medium mt-2"
                     textGradient
                   >
-                    เปิดประสบการณ์แปลกใหม่ ในการจองที่พัก พบกับชุมชนที่เป็นมิตร
-                    ทำให้การพักผ่อนของคุณ เต็มไปด้วยความทรงจำที่น่าประทับใจ
+                    {t("เปิดประสบการณ์แปลกใหม่ ในการจองที่พัก พบกับชุมชนที่เป็นมิตร ทำให้การพักผ่อนของคุณ เต็มไปด้วยความทรงจำที่น่าประทับใจ")}
                   </Typography>
                 </div>
               </div>
@@ -648,15 +648,14 @@ export default function SignInPage() {
                     color="orange"
                     className="text-center"
                   >
-                    รวดเร็วสะวดกสบาย
+                    {t("รวดเร็วสะวดกสบาย")}
                   </Typography>
                   <Typography
                     color="blue-gray"
                     className="text-center font-medium mt-2"
                     textGradient
                   >
-                    จองที่พักสะดวกสบายในไม่กี่คลิก พบที่พักถูกใจ
-                    รวดเร็วและง่ายดาย ตอบโจทย์ทุกการเดินทางของคุณ
+                    {t("จองที่พักสะดวกสบายในไม่กี่คลิก พบที่พักถูกใจ รวดเร็วและง่ายดาย ตอบโจทย์ทุกการเดินทางของคุณ")}
                   </Typography>
                 </div>
               </div>
@@ -670,15 +669,14 @@ export default function SignInPage() {
                     color="orange"
                     className="text-center"
                   >
-                    เครือข่ายพันธมิตรทางธุรกิจ
+                    {t("เครือข่ายพันธมิตรทางธุรกิจ")}
                   </Typography>
                   <Typography
                     color="blue-gray"
                     className="text-center font-medium mt-2"
                     textGradient
                   >
-                    ฝ่ายบริการลูกค้าของเรา พร้อมช่วยเหลือ และให้คำแนะนำคุณ ตลอด
-                    24 ชั่วโมง
+                    {t("ฝ่ายบริการลูกค้าของเรา พร้อมช่วยเหลือ และให้คำแนะนำคุณ ตลอด 24 ชั่วโมง")}
                   </Typography>
                 </div>
               </div>
@@ -691,6 +689,35 @@ export default function SignInPage() {
             <div className="flex items-center justify-center p-16 border-black border-r">
               <img src="/assets/images/registerUser.png" />
             </div>
+            <div className="grid grid-cols-3 gap-4 items-center justify-center h-96 p-16 w-full">
+              <img src="/assets/images/groupFriend_01.png" />
+              <img src="/assets/images/groupFriend_02.png" />
+              <img src="/assets/images/groupFriend_03.png" />
+            </div>
+          </div>
+        </div>
+        <div className="bg-[url('/assets/images/friend_group.png')] w-full h-96 bg-cover"></div>
+        <div className="flex items-center justify-center w-full">
+          <div className="grid grid-cols-2 gap-4 items-center justify-center h-96 w-full">
+            <div className="">
+                  <Typography
+                    variant="h2"
+                    color="black"
+                    className="text-center"
+                  >
+                    {t("How to get visa USA")}
+                  </Typography>
+                  <Typography
+                    color="blue-gray"
+                    className="text-center font-medium mt-2"
+
+                  >
+                    {t("ร่วมแชร์ประสบการณ์ ให้คำแนะนำเบื้องต้นในการเตรียมความพร้อมในการทำ visa แนะนำแนวทางที่ถูกต้อง.. เพื่อที่คุณจะไม่ต้องเสียเวลา..")}
+                  </Typography>
+                  <div className="flex items-center justify-center mt-6">
+                  <a href="https://www.rakoonda.co/" target="_blank"><Button color="blue">{t("สอบถามเพิ่มเติม")}</Button></a>
+                  </div>
+                </div>
             <div className="grid grid-cols-3 gap-4 items-center justify-center h-96 p-16 w-full">
               <img src="/assets/images/groupFriend_01.png" />
               <img src="/assets/images/groupFriend_02.png" />

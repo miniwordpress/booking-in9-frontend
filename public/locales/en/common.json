@@ -18,5 +18,10 @@
     "adult" : "Adults 13 years older",
     "Children" : "Children (2-13 years)",
     "infant" : "Infants (under 2 years)",
-    "pets" : "Pets"
+    "pets" : "Pets",
+    "house" : "HOUSE",
+    "hotel" : "HOTEL",
+    "apartment" : "APARTMENT",
+    "townhome" : "TOWNHOME",
+    "condominium" : "CONDOMINIUM"
 }
