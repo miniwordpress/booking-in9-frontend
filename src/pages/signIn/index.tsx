@@ -57,7 +57,7 @@ export default function SignInPage() {
         color="transparent"
         shadow={false}
       >
-        <Typography variant="h3" color="black">
+        <Typography className="Prompt-Black" variant="h3" color="black">
           {t("signIn")}
         </Typography>
         <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96 ">
@@ -66,7 +66,7 @@ export default function SignInPage() {
             <Alert open={open} color="red" onClose={() => setOpen(false)}>
               {t("login.error")}
             </Alert>
-            <Typography variant="h6" color="black" className="-mb-3">
+            <Typography variant="h6" color="black" className="-mb-3" class="Prompt-Regular">
               {t("email")}
             </Typography>
             <Input
@@ -82,7 +82,7 @@ export default function SignInPage() {
               onFocus={(e) => { setShowErrorUsername(false) }}
               value={username}
             />
-            <Typography variant="h6" color="black" className="-mb-3">
+            <Typography variant="h6" color="black" className="-mb-3" class="Prompt-Regular">
               {t("password")}
             </Typography>
             <Input
@@ -112,7 +112,7 @@ export default function SignInPage() {
               color="black"
               className="flex items-center font-normal mt-3"
             >
-              <a href="#" className="font-medium hover:text-gray-700 ml-5">
+              <a href="#" className="font-medium hover:text-gray-700 ml-5" class="Prompt-Regular">
                 {t("forgot_password")}
               </a>
             </Typography>

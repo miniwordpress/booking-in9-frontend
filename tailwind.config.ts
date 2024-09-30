@@ -10,6 +10,9 @@ const config: Config = withMT({
     "@material-tailwind/react/theme/components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: {
+      'prompt': ['ui-sans-serif', 'system-ui'],
+    },
     container: {
       center: true,
       padding: {
