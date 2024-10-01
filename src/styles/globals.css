@@ -33,26 +33,28 @@ body {
 }
 
 @font-face {
-  font-family: 'fontFamily';
-  src: url('/public/assets/font/Prompt/Prompt-Regular.ttf'),
-       url('/public/assets/font/Prompt/Prompt-Black.ttf'),
-       url('/public/assets/font/Prompt/Prompt-BlackItalic.ttf'),
-       url('/public/assets/font/Prompt/Prompt-Bold.ttf'),
-       url('/public/assets/font/Prompt/Prompt-BoldItalic.ttf'),
-       url('/public/assets/font/Prompt/Prompt-ExtraBold.ttf'),
-       url('/public/assets/font/Prompt/Prompt-ExtraBoldItalic.ttf'),
-       url('/public/assets/font/Prompt/Prompt-ExtraLight.ttf'),
-       url('/public/assets/font/Prompt/Prompt-ExtraLightItalic.ttf'),
-       url('/public/assets/font/Prompt/Prompt-Italic.ttf'),
-       url('/public/assets/font/Prompt/Prompt-Light.ttf'),
-       url('/public/assets/font/Prompt/Prompt-LightItalic.ttf'),
-       url('/public/assets/font/Prompt/Prompt-Medium.ttf'),
-       url('/public/assets/font/Prompt/Prompt-MediumItalic.ttf'),
-       url('/public/assets/font/Prompt/Prompt-SemiBold.ttf'),
-       url('/public/assets/font/Prompt/Prompt-SemiBoldItalic.ttf'),
-       url('/public/assets/font/Prompt/Prompt-Thin.ttf'),
-       url('/public/assets/font/Prompt/Prompt-ThinItalic.ttf'),
-  format('ttf');
+  font-family: 'Prompt';
+  src: url('/public/assets/font/Prompt/Prompt-Regular.ttf') format('truetype'),
+       url('/public/assets/font/Prompt/Prompt-Black.ttf') format('truetype'),
+       url('/public/assets/font/Prompt/Prompt-BlackItalic.ttf') format('truetype'),
+       url('/public/assets/font/Prompt/Prompt-Bold.ttf') format('truetype'),
+       url('/public/assets/font/Prompt/Prompt-BoldItalic.ttf') format('truetype'),
+       url('/public/assets/font/Prompt/Prompt-ExtraBold.ttf') format('truetype'),
+       url('/public/assets/font/Prompt/Prompt-ExtraBoldItalic.ttf') format('truetype'),
+       url('/public/assets/font/Prompt/Prompt-ExtraLight.ttf') format('truetype'),
+       url('/public/assets/font/Prompt/Prompt-ExtraLightItalic.ttf') format('truetype'),
+       url('/public/assets/font/Prompt/Prompt-Italic.ttf') format('truetype'),
+       url('/public/assets/font/Prompt/Prompt-Light.ttf') format('truetype'),
+       url('/public/assets/font/Prompt/Prompt-LightItalic.ttf') format('truetype'),
+       url('/public/assets/font/Prompt/Prompt-Medium.ttf') format('truetype'),
+       url('/public/assets/font/Prompt/Prompt-MediumItalic.ttf') format('truetype'),
+       url('/public/assets/font/Prompt/Prompt-SemiBold.ttf') format('truetype'),
+       url('/public/assets/font/Prompt/Prompt-SemiBoldItalic.ttf') format('truetype'),
+       url('/public/assets/font/Prompt/Prompt-Thin.ttf') format('truetype'),
+       url('/public/assets/font/Prompt/Prompt-ThinItalic.ttf') format('truetype');
   font:400;
   font-style: normal;
+}
+body {
+  font-family: 'Prompt', sans-serif;
 }

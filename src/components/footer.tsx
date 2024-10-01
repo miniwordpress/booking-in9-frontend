@@ -30,7 +30,7 @@ const FooterBase: React.FC = () => {
   return (
     <footer className="relative w-full bg-footer-background">
       <div className="mx-auto w-full px-8">
-        <div className="grid grid-cols-2 justify-between gap-6 md:grid-cols-2">
+        <div className="flex flex-col md:flex-row  justify-between gap-6 ">
           <div className="grid grid-cols-2 justify-between gap-6 mt-5">
             {LINKS.map(({ items }) => (
               <ul>
@@ -49,14 +49,15 @@ const FooterBase: React.FC = () => {
               </ul>
             ))}
           </div>
-          <div className="grid grid-cols-1 w-full text-end py-4 md:flex-row md:justify-between">
-            <Typography color="white"variant="h5" className="mb-6 mt-4 ">
+          <div className="grid grid-cols-1 w-full text-end py-4 md:flex-row sm:justify-center">
+            <Typography color="white"variant="h5" className="mb-6 mt-4 hidden sm:block font-prompt">
               {t('Payment')}
             </Typography>
-            <div className="flex gap-5 text-white sm:justify-end mr-5">
+            <div className="flex gap-5 text-white sm:justify-end md:justify-items-center mr-5">
             <Image
               src="/assets/images/QRcode.png"
               alt="facebook Logo"
+              // style={{width: '50%', height: 'auto'}}
               width={45}
               height={40}
               priority

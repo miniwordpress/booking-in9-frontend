@@ -6,6 +6,7 @@ import { ni18nConfig } from "../ni18n.config"
 import { ThemeProvider } from "@material-tailwind/react"
 import { wrapper } from '@/lib/store'
 import { Provider } from "react-redux"
+import '../styles/tailwind.config'
 
 const MyApp = ({ Component, ...rest }: AppProps) => {
   const { store, props } = wrapper.useWrappedStore(rest)
