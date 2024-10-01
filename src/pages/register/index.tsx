@@ -13,6 +13,7 @@ import {
   Typography,
   Input,
   Button,
+  Radio 
 } from "@material-tailwind/react";
 
 export default function SignInPage() {
@@ -28,7 +29,7 @@ export default function SignInPage() {
   //ยังไม่ได้ทำระบบ 2 ภาษา
 
   return (
-    <div className="grid  grid-rows-[auto_1fr] bg-primary-background">
+    <div className="grid  grid-rows-[auto_1fr] bg-white">
       <div>
         <Header />
         <Breadcrumbs />
@@ -38,7 +39,7 @@ export default function SignInPage() {
         color="transparent"
         shadow={false}
       >
-        <Typography variant="h3" color="white">
+        <Typography variant="h3" color="black">
           {t("ลงทะเบียน/สมัครสมาชิก")}
         </Typography>
         <form className="mt-8 w-96 md:w-auto">
@@ -55,93 +56,48 @@ export default function SignInPage() {
                   <input id="dropzone-file" type="file" className="hidden" />
               </label>
             </div>
+            <div className="flex flex-col gap-2">
+              <Radio name="type" label={t("เลขบัตรประจำตัวประชาชน")} />
+              <Radio name="type" label={t("เลขหนังสือเดินทาง")}  />
+              <Radio name="type" label={t("เลขนิติบุคคล")}  />
+            </div>
           <div>
-              <Typography variant="h6" color="white" className="mb-2 font-medium">
+              <Typography variant="h6" color="black" className="mb-2 font-medium">
                 {t("เลขบัตรประจำตัวประชาชน/เลขหนังสือเดินทาง/เลขนิติบุคคล *")}
               </Typography>
               <Input
                 type="email"
                 size="lg"
                 placeholder="email@mail.com"
-                className=" !border-t-blue-gray-500 focus:!border-t-gray-900 bg-white"
-                labelProps={{
-                  className: "before:content-none after:content-none",
-                }}
               />
             </div>
             <div className="flex items-center gap-4">
               <div>
                 <Typography
                   variant="small"
-                  color="white"
+                  color="black"
                   className="mb-2 font-medium"
                 >
-                  ชื่อ *
+                  {t("name")} *
                 </Typography>
                 <Input
                   maxLength={5}
                   containerProps={{ className: "min-w-[72px]" }}
-                  placeholder="00/00"
-                  className=" !border-t-blue-gray-200 focus:!border-t-gray-900 bg-white"
-                  labelProps={{
-                    className: "before:content-none after:content-none",
-                  }}
+                  placeholder={t("name")}
                 />
               </div>
               <div>
                 <Typography
                   variant="small"
-                  color="white"
+                  color="black"
                   className="mb-2 font-medium"
                 >
-                  นามสกุล *
+                  {t("lastName")} *
                 </Typography>
                 <Input
                   maxLength={4}
                   containerProps={{ className: "min-w-[72px]" }}
-                  placeholder="000"
-                  className=" !border-t-blue-gray-200 focus:!border-t-gray-900 bg-white"
-                  labelProps={{
-                    className: "before:content-none after:content-none",
-                  }}
-                />
-              </div>
-            </div>
-            <div className="flex items-center gap-4">
-              <div>
-                <Typography
-                  variant="small"
-                  color="white"
-                  className="mb-2 font-medium"
-                >
-                  ชื่อ (ภาษาอังกฤษ) *
-                </Typography>
-                <Input
-                  maxLength={5}
-                  containerProps={{ className: "min-w-[72px]" }}
-                  placeholder="00/00"
-                  className=" !border-t-blue-gray-200 focus:!border-t-gray-900 bg-white"
-                  labelProps={{
-                    className: "before:content-none after:content-none",
-                  }}
-                />
-              </div>
-              <div>
-                <Typography
-                  variant="small"
-                  color="white"
-                  className="mb-2 font-medium"
-                >
-                  นามสกุล (ภาษาอังกฤษ) *
-                </Typography>
-                <Input
-                  maxLength={4}
-                  containerProps={{ className: "min-w-[72px]" }}
-                  placeholder="000"
-                  className=" !border-t-blue-gray-200 focus:!border-t-gray-900 bg-white"
-                  labelProps={{
-                    className: "before:content-none after:content-none",
-                  }}
+                  placeholder={t("lastName")}
                 />
               </div>
             </div>
@@ -149,51 +105,39 @@ export default function SignInPage() {
               <div>
                 <Typography
                   variant="small"
-                  color="white"
+                  color="black"
                   className="mb-2 font-medium"
                 >
-                  อีเมล *
+                  {t("email")} *
                 </Typography>
                 <Input
                   maxLength={5}
                   containerProps={{ className: "min-w-[72px]" }}
-                  placeholder="00/00"
-                  className=" !border-t-blue-gray-200 focus:!border-t-gray-900 bg-white"
-                  labelProps={{
-                    className: "before:content-none after:content-none",
-                  }}
+                  placeholder={t("email")}
                 />
               </div>
               <div>
                 <Typography
                   variant="small"
-                  color="white"
+                  color="black"
                   className="mb-2 font-medium"
                 >
-                  เบอร์โทร *
+                  {t("tel")} *
                 </Typography>
                 <Input
                   maxLength={4}
                   containerProps={{ className: "min-w-[72px]" }}
-                  placeholder="000"
-                  className=" !border-t-blue-gray-200 focus:!border-t-gray-900 bg-white"
-                  labelProps={{
-                    className: "before:content-none after:content-none",
-                  }}
+                  placeholder={t("tel")}
                 />
               </div>
             </div>
-            <Typography variant="small" color="white" className=" font-medium">
-            ข้อมูลแนะนำผู้ให้เช่า ธุรกิจที่มี หรือต้องการหนุนเสริมด้านธุรกิจ
+            <Typography variant="small" color="black" className=" font-medium">
+            {t("ธุรกิจที่มี หรือต้องการหนุนเสริมด้านธุรกิจ")}
             </Typography>
             <Textarea
               rows={4}
               containerProps={{ className: "min-w-[72px]" }}
               placeholder=""
-              className=" !border-t-blue-gray-200 focus:!border-t-gray-900 bg-white"
-              labelProps={{
-                className: "before:content-none after:content-none",
-              }}
             />
             <div />
             <Button

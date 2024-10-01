@@ -35,10 +35,10 @@ export default function SignInPage() {
   };
 
   return (
-    <div className="grid h-screen grid-rows-[auto_1fr] bg-white">
+    <div className="font-prompt grid h-screen grid-rows-[auto_1fr] bg-white">
       <div>
         <Header />
-        <div className="hidden sm:block">
+        <div className="hidden sm:block ">
         <Breadcrumbs />
         </div>
       </div>
@@ -47,7 +47,7 @@ export default function SignInPage() {
         color="transparent"
         shadow={false}
       >
-        <Typography className="Prompt-Black" variant="h3" color="black">
+        <Typography className="font-prompt text-[150%] font-bold text-black">
           {t("signIn")}
         </Typography>
         <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96 ">
@@ -56,10 +56,10 @@ export default function SignInPage() {
             <Alert open={open} color="red" onClose={() => setOpen(false)}>
               {t("login.error")}
             </Alert>
-            <Typography variant="h6" color="black" className="-mb-3" class="Prompt-Regular">
+            <Typography className="text-[110%] font-bold">
               {t("email")}
-            </Typography>
-            <Input
+            </Typography >
+            <Input 
               label="Email"
               type="email"
               onChange={(e) => {
@@ -67,7 +67,7 @@ export default function SignInPage() {
               }}
               value={username}
             />
-            <Typography variant="h6" color="black" className="-mb-3" class="Prompt-Regular">
+            <Typography className="text-[110%] font-bold">
               {t("password")}
             </Typography>
             <Input
@@ -93,19 +93,15 @@ export default function SignInPage() {
                 className: "before:content-none after:content-none",
               }}
             /> */}
-            <Typography
-              variant="small"
-              color="black"
-              className="flex items-center font-normal mt-3"
-            >
-              <a href="#" className="font-medium hover:text-gray-700 ml-5" class="Prompt-Regular">
+            <Typography className="text-[90%] font-semibold">
+              <a href="#" className="font-medium hover:text-blue-700 ml-5">
                 {t("forgot_password")}
               </a>
             </Typography>
             <Button
               disabled={disableButton}
               onClick={loginSubmit}
-              className="mt-2 bg-gradient-to-r from-cyan-500 via-purple-300 to-pink-300"
+              className="mt-2 bg-gradient-to-r from-cyan-500 via-purple-300 to-pink-300 text-[100%] font-semibold"
               fullWidth
             >
               {t("signIn")}
