@@ -38,10 +38,12 @@ export default function SignInPage() {
     <div className="grid h-screen grid-rows-[auto_1fr] bg-white">
       <div>
         <Header />
+        <div className="hidden sm:block">
         <Breadcrumbs />
+        </div>
       </div>
       <Card
-        className="flex items-center justify-center"
+        className="flex items-center justify-center p-8"
         color="transparent"
         shadow={false}
       >
