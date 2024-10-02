@@ -53,27 +53,30 @@ const FooterBase: React.FC = () => {
             <Typography color="white"variant="h5" className="mb-6 mt-4 hidden sm:block font-prompt">
               {t('Payment')}
             </Typography>
-            <div className="flex gap-5 text-white sm:justify-end md:justify-items-center mr-5">
+            <div className="flex gap-5 text-white sm:justify-end md:justify-items-center mr-1">
             <Image
               src="/assets/images/QRcode.png"
-              alt="facebook Logo"
+              alt="QRcode"
               // style={{width: '50%', height: 'auto'}}
-              width={45}
+              width={40}
               height={40}
+              className="rounded-lg object-cover"
               priority
               />
               <Image
               src="/assets/images/visa.png"
-              alt="facebook Logo"
+              alt="visa"
               width={40}
               height={40}
+              className="rounded-lg object-cover"
               priority
               />
               <Image
               src="/assets/images/mastercard.png"
-              alt="facebook Logo"
+              alt="mastercard"
               width={40}
               height={40}
+              className="rounded-lg object-cover"
               priority
               />
               </div>

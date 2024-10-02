@@ -51,7 +51,14 @@ export default function SignInPage() {
       <div>
         <Header />
         <div className="hidden sm:block ">
-        <Breadcrumbs />
+        <Breadcrumbs className="mt-12 ml-10">
+        <a href="#" className="opacity-80 ml-2">
+          {t('home')}
+        </a>
+        <a href="#" className="text-black">
+          {t('login.signIn')}
+        </a>
+        </Breadcrumbs>
         </div>
       </div>
       <Card
@@ -59,11 +66,10 @@ export default function SignInPage() {
         color="transparent"
         shadow={false}
       >
-        <Typography className="font-prompt text-[150%] font-bold text-black">
-          {t("signIn")}
+        <Typography className="text-[150%] text-black ">
+          {t("login.signIn")}
         </Typography>
         <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96 ">
-          {/* <div className="mb-1 flex flex-col gap-6 rounded-lg border-4  border-purple-300 p-6 bg-box-shadow-signin"> */}
           <div className="mb-1 flex flex-col gap-6 ">
             <Alert open={open} color="red" onClose={() => setOpen(false)}>
               {t("login.error")}

@@ -52,9 +52,9 @@ body {
        url('/public/assets/font/Prompt/Prompt-SemiBoldItalic.ttf') format('truetype'),
        url('/public/assets/font/Prompt/Prompt-Thin.ttf') format('truetype'),
        url('/public/assets/font/Prompt/Prompt-ThinItalic.ttf') format('truetype');
-  font:400;
-  font-style: normal;
 }
 body {
   font-family: 'Prompt', sans-serif;
+  font:400;
+  font-style: normal;
 }
