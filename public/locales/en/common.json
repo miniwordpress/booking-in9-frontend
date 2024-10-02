@@ -1,14 +1,26 @@
 {
-  "hello": "hello",
+  "login": {
+    "error": "Email or password invalid",
+    "signIn": "SignIn"
+  },
+  "register" : {
+    "register" : "Register",
+    "id" : "ID",
+    "passport" : "Passport",
+    "ssn" : "SSN",
+    "number_passport" : "ID / Passport / SSN",
+    "name" : "Name",
+    "lastName" : "Last Name",
+    "email" : "Email",
+    "tel" : "Tel",
+    "recommend" : "Please introduce yourself and what you would like to support in developing learning for those who use our services."
+  },
+  "hello": "Hello",
   "home": "Home",
-  "signIn": "SignIn",
   "email": "Email",
   "password": "Password",
   "forgot_password": "Forgot password",
   "forgot_password_detail": "Enter the email address of the account for which you want to change the password or set a password.",
   "Payment": "Payment channels",
-  "confirm": "Confirm",
-  "login": {
-    "error": "Email or password invalid"
-  }
+  "confirm": "Confirm"
 }
