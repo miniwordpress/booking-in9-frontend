@@ -23,7 +23,7 @@ export default function SignInPage() {
 
   return (
 
-    <div className="grid h-screen grid-rows-[auto_1fr] bg-primary-background">
+    <div className="font-prompt grid h-screen grid-rows-[auto_1fr] bg-primary-background">
       <div>
       <Header />
       <Breadcrumbs/>
