@@ -684,7 +684,7 @@ export default function SignInPage() {
           <div className="hiddden flex items-center justify-center p-4 xl:p-16 xl:border-black border-r">
             <img src="/assets/images/registerUser.png" />
           </div>
-          <div className="hidden xl:grid xl:grid-cols-3 xl:gap-4 items-center justify-center xl:h-96 xl:p-6 w-full">
+          <div className="hidden xl:grid xl:grid-cols-3 xl:gap-4 items-center justify-center xl:h-96 xl:p-16 w-full">
             <img src="/assets/images/groupFriend_01.png" />
             <img src="/assets/images/groupFriend_02.png" />
             <img src="/assets/images/groupFriend_03.png" />
@@ -692,7 +692,7 @@ export default function SignInPage() {
         </div>
         <div className="bg-[url('/assets/images/friend_group.png')] w-full h-96 bg-cover"></div>
         <div className="flex items-center justify-center w-full">
-          <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 mx-6 xl:mx-16 items-center justify-center h-96 w-full">
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 mx-6 my-10 xl:mx-16 items-center justify-center h-96 w-full">
             <div className="">
                   <Typography
                     variant="h2"
@@ -712,8 +712,8 @@ export default function SignInPage() {
                   <a href="https://www.rakoonda.co/" target="_blank"><Button color="blue">{t("สอบถามเพิ่มเติม")}</Button></a>
                   </div>
                 </div>
-            <div className="hidden xl:flex xl:items-stretch xl:justify-center xl:p-16 xl:w-full">
-              <img src="/assets/images/airPlane.png" className="hidden xl:block"/>
+            <div className="flex item-center xl:items-stretch justify-center xl:w-full">
+              <img src="/assets/images/airPlane.png" className="items-center justify-items-center w-3/4 xl:w-full"/>
             </div>
           </div>
         </div>
