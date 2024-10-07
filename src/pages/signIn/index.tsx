@@ -81,7 +81,7 @@ export default function SignInPage() {
               error={showErrorUsername}
               type="email"
               size="lg"
-              color="white"
+              color="black"
               placeholder="email@mail.com"
               onChange={(e) => {
                 setUsername(e.target.value);
