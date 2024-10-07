@@ -18,69 +18,47 @@ export default function SignInPage() {
   const { t } = useTranslation();
   return (
     <>
-      <div className=" bg-fixed">
+      <div className="bg-fixed">
         <Header />
       </div>
 
-      <div className="flex flex-row  bg-[url('/assets/images/friends.png')] bg-cover bg-center ">
-        <div className="basis-1/2 items-center justify-center rounded-md h-full w-ful">
-          <div className=" ml-8 box-content  p-16">
-            <Carousel className="rounded-xl ">
-              <img
-                src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
-                alt="image 1"
-                className="h-full w-full object-cover"
-              />
-              <img
-                src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
-                alt="image 2"
-                className="h-full w-full object-cover"
-              />
-              <img
-                src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
-                alt="image 3"
-                className="h-full w-full object-cover"
-              />
-            </Carousel>
-          </div>
+      <div className="flex flex-col items-center xl:flex-row xl:items-stretch justify-center bg-[url('/assets/images/friends.png')] bg-cover bg-center">
+        <div className="my-6 mx-6 xl:mx-14 xl:my-12 flex-grow">
+          <Carousel className="rounded-xl w-full max-w-lg">
+            <img
+              src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
+              alt="image 1"
+              className="h-full w-full object-cover"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
+              alt="image 2"
+              className="h-full w-full object-cover"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
+              alt="image 3"
+              className="h-full w-full object-cover"
+            />
+          </Carousel>
         </div>
-        <div className="basis-1/2 flex items-center justify-center ">
-          <Card
-            className="flex backdrop-blur-sm bg-white/30 p-6"
-            color="transparent"
-            shadow={false}
-          >
-            <Typography
-              variant="h3"
-              color="white"
-              className="[text-shadow:_0_1px_0_rgb(0_0_0_/_80%)]"
+        <div className="my-6 mx-6 xl:mx-14 xl:my-12 flex-grow xl:flex-grow-0">
+            <Card
+              className="w-full backdrop-blur-sm bg-white/30 p-6"
+              color="transparent"
+              shadow={false}
             >
-              {t("search_accommodation")}
-            </Typography>
-            <form className="mt-8 mb-2 ">
-              {/* <div className="mb-1 flex flex-col gap-6 rounded-lg border-4  border-purple-300 p-6 bg-box-shadow-signin"> */}
-              <div className="mb-1 flex flex-col gap-8 ">
-                <div className="w-full ">
-                  <Select label={t("Location")} className="bg-white h-14">
-                    <Option>Material Tailwind HTML</Option>
-                    <Option>Material Tailwind React</Option>
-                    <Option>Material Tailwind Vue</Option>
-                    <Option>Material Tailwind Angular</Option>
-                    <Option>Material Tailwind Svelte</Option>
-                  </Select>
-                </div>
-                <div className="w-full">
-                  <Select label={t("Province_State")} className="bg-white h-14">
-                    <Option>Material Tailwind HTML</Option>
-                    <Option>Material Tailwind React</Option>
-                    <Option>Material Tailwind Vue</Option>
-                    <Option>Material Tailwind Angular</Option>
-                    <Option>Material Tailwind Svelte</Option>
-                  </Select>
-                </div>
-                <div className="flex items-center gap-2 ">
-                  <div>
-                    <Select label={t("adult")} className="bg-white h-14">
+              <Typography
+                variant="h3"
+                color="white"
+                className="[text-shadow:_0_1px_0_rgb(0_0_0_/_80%)]"
+              >
+                {t("search_accommodation")}
+              </Typography>
+              <form className="mt-8 mb-2 w-full">
+                <div className="mb-1 flex flex-col gap-8">
+                  <div className="w-full">
+                    <Select label={t("Location")} className="bg-white h-14">
                       <Option>Material Tailwind HTML</Option>
                       <Option>Material Tailwind React</Option>
                       <Option>Material Tailwind Vue</Option>
@@ -88,8 +66,8 @@ export default function SignInPage() {
                       <Option>Material Tailwind Svelte</Option>
                     </Select>
                   </div>
-                  <div>
-                    <Select label={t("Children")} className="bg-white h-14">
+                  <div className="w-full">
+                    <Select label={t("Province_State")} className="bg-white h-14">
                       <Option>Material Tailwind HTML</Option>
                       <Option>Material Tailwind React</Option>
                       <Option>Material Tailwind Vue</Option>
@@ -97,42 +75,61 @@ export default function SignInPage() {
                       <Option>Material Tailwind Svelte</Option>
                     </Select>
                   </div>
+                  <div className="flex flex-col gap-8 md:flex-row md:gap-2 items-center">
+                    <div className="w-full">
+                      <Select label={t("adult")} className="bg-white h-14">
+                        <Option>Material Tailwind HTML</Option>
+                        <Option>Material Tailwind React</Option>
+                        <Option>Material Tailwind Vue</Option>
+                        <Option>Material Tailwind Angular</Option>
+                        <Option>Material Tailwind Svelte</Option>
+                      </Select>
+                    </div>
+                    <div className="w-full">
+                      <Select label={t("Children")} className="bg-white h-14">
+                        <Option>Material Tailwind HTML</Option>
+                        <Option>Material Tailwind React</Option>
+                        <Option>Material Tailwind Vue</Option>
+                        <Option>Material Tailwind Angular</Option>
+                        <Option>Material Tailwind Svelte</Option>
+                      </Select>
+                    </div>
+                  </div>
+                  <div className="flex flex-col gap-8 w-full md:flex-row items-center md:gap-2">
+                    <div className="w-full">
+                      <Select label={t("infant")} className="bg-white h-14">
+                        <Option>Material Tailwind HTML</Option>
+                        <Option>Material Tailwind React</Option>
+                        <Option>Material Tailwind Vue</Option>
+                        <Option>Material Tailwind Angular</Option>
+                        <Option>Material Tailwind Svelte</Option>
+                      </Select>
+                    </div>
+                    <div className="w-full">
+                      <Select label={t("pets")} className="bg-white h-14">
+                        <Option>Material Tailwind HTML</Option>
+                        <Option>Material Tailwind React</Option>
+                        <Option>Material Tailwind Vue</Option>
+                        <Option>Material Tailwind Angular</Option>
+                        <Option>Material Tailwind Svelte</Option>
+                      </Select>
+                    </div>
+                  </div>
+                  <Button
+                    className="mt-2 bg-gradient-to-r from-cyan-500 via-purple-300 to-pink-300"
+                    fullWidth
+                  >
+                    <Typography variant="h5">{t("search")}</Typography>
+                  </Button>
                 </div>
-                <div className="flex items-center gap-2">
-                  <div>
-                    <Select label={t("infant")} className="bg-white h-14">
-                      <Option>Material Tailwind HTML</Option>
-                      <Option>Material Tailwind React</Option>
-                      <Option>Material Tailwind Vue</Option>
-                      <Option>Material Tailwind Angular</Option>
-                      <Option>Material Tailwind Svelte</Option>
-                    </Select>
-                  </div>
-                  <div>
-                    <Select label={t("pets")} className="bg-white h-14">
-                      <Option>Material Tailwind HTML</Option>
-                      <Option>Material Tailwind React</Option>
-                      <Option>Material Tailwind Vue</Option>
-                      <Option>Material Tailwind Angular</Option>
-                      <Option>Material Tailwind Svelte</Option>
-                    </Select>
-                  </div>
-                </div>
-                <Button
-                  className="mt-2 bg-gradient-to-r from-cyan-500 via-purple-300 to-pink-300"
-                  fullWidth
-                >
-                  <Typography variant="h5">{t("search")}</Typography>
-                </Button>
-              </div>
-            </form>
-          </Card>
+              </form>
+            </Card>
         </div>
       </div>
       <>
         <div className="flex items-center justify-center mt-8 mb-8">
           <Card className="rounded-lg bg-zinc-300">
-            <div className="p-6 w-auto  grid grid-cols-5 gap-8 ">
+            <div className="p-6 w-auto grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-8">
               <div className="">
                 <Avatar
                   size="xxl"
@@ -193,8 +190,8 @@ export default function SignInPage() {
         </div>
       </>
       <>
-        <div className="flex items-center justify-center mt-8 mb-8">
-          <div className="p-8 w-full  grid grid-cols-5 gap-4 ">
+        <div className="flex items-center justify-center mt-8 mb-8 xl:mx-6">
+          <div className="p-8 w-full grid grid-cols-1 md:grid-cols-3 xl:grid-cols-5 gap-4 ">
             <Card className="w-92 shadow-xl hover:shadow-orange-900/50">
               <CardHeader floated={false} className="h-60">
                 <img
@@ -604,10 +601,10 @@ export default function SignInPage() {
             </Typography>
           </div>
         </div>
-        <div className="bg-[url('/assets/images/lgbt2.png')]">
-          <div className="grid grid-cols-3 gap-4 items-center justify-center h-96 w-full object-fit ">
-            <div className="flex items-center justify-center">
-              <img src="/assets/images/experience.png" />
+        <div className="bg-[url('/assets/images/lgbt.png')] bg-cover">
+          <div className="grid grid-cols-3 gap-4 items-center justify-center h-[400px] w-[100px]">
+            <div className="flex items-center justify-center ">
+              {/* <img src="/assets/images/experience.png" /> */}
             </div>
             <div className="flex items-center justify-center">
               <img src="/assets/images/comfortable.png" />
@@ -617,9 +614,9 @@ export default function SignInPage() {
             </div>
           </div>
         </div>
-        <div className="flex items-center justify-center bg-footer-background w-full">
-          <div className="grid grid-cols-3 gap-4 items-center justify-center h-96 w-full">
-            <div className="flex items-center justify-center">
+        <div className="flex flex-col xl:flex-row xl:items-stretch justify-center bg-footer-background">
+            <div className="flex flex-col xl:flex-row justify-center h-full">
+            <div className="flex mx-6 xl:mx-4 justify-center">
               <div className="relative flex flex-col my-6 bg-white shadow-sm border border-slate-200 rounded-lg w-96 ">
                 <div className="p-4 ">
                   <Typography
@@ -640,7 +637,7 @@ export default function SignInPage() {
               </div>
             </div>
 
-            <div className="flex items-center justify-center">
+            <div className="flex mx-6 xl:mx-4 justify-center">
               <div className="relative flex flex-col my-6 bg-white shadow-sm border border-slate-200 rounded-lg w-96 ">
                 <div className="p-4 ">
                   <Typography
@@ -661,9 +658,9 @@ export default function SignInPage() {
               </div>
             </div>
 
-            <div className="flex items-center justify-center">
+            <div className="flex mx-6 xl:mx-4 justify-center">
               <div className="relative flex flex-col my-6 bg-white shadow-sm border border-slate-200 rounded-lg w-96 ">
-                <div className="p-4 ">
+                <div className="p-4">
                   <Typography
                     variant="h4"
                     color="orange"
@@ -683,22 +680,19 @@ export default function SignInPage() {
             </div>
           </div>
         </div>
-
-        <div className="flex items-center justify-center w-full">
-          <div className="grid grid-cols-2 gap-4 items-center justify-center h-96 w-full">
-            <div className="flex items-center justify-center p-16 border-black border-r">
-              <img src="/assets/images/registerUser.png" />
-            </div>
-            <div className="grid grid-cols-3 gap-4 items-center justify-center h-96 p-16 w-full">
-              <img src="/assets/images/groupFriend_01.png" />
-              <img src="/assets/images/groupFriend_02.png" />
-              <img src="/assets/images/groupFriend_03.png" />
-            </div>
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 items-center justify-center w-full">
+          <div className="hiddden flex items-center justify-center p-4 xl:p-16 xl:border-black border-r">
+            <img src="/assets/images/registerUser.png" />
+          </div>
+          <div className="hidden xl:grid xl:grid-cols-3 xl:gap-4 items-center justify-center xl:h-96 xl:p-16 w-full">
+            <img src="/assets/images/groupFriend_01.png" />
+            <img src="/assets/images/groupFriend_02.png" />
+            <img src="/assets/images/groupFriend_03.png" />
           </div>
         </div>
         <div className="bg-[url('/assets/images/friend_group.png')] w-full h-96 bg-cover"></div>
         <div className="flex items-center justify-center w-full">
-          <div className="grid grid-cols-2 gap-4 items-center justify-center h-96 w-full">
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 mx-6 my-10 xl:mx-16 items-center justify-center h-96 w-full">
             <div className="">
                   <Typography
                     variant="h2"
@@ -718,10 +712,8 @@ export default function SignInPage() {
                   <a href="https://www.rakoonda.co/" target="_blank"><Button color="blue">{t("สอบถามเพิ่มเติม")}</Button></a>
                   </div>
                 </div>
-            <div className="grid grid-cols-3 gap-4 items-center justify-center h-96 p-16 w-full">
-              <img src="/assets/images/groupFriend_01.png" />
-              <img src="/assets/images/groupFriend_02.png" />
-              <img src="/assets/images/groupFriend_03.png" />
+            <div className="flex item-center xl:items-stretch justify-center xl:w-full">
+              <img src="/assets/images/airPlane.png" className="items-center justify-items-center w-3/4 xl:w-full"/>
             </div>
           </div>
         </div>
