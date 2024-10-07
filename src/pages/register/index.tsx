@@ -30,7 +30,7 @@ export default function SignInPage() {
   //ยังไม่ได้ทำระบบ 2 ภาษา
 
   return (
-    <div className="font-pompt grid  grid-rows-[auto_1fr] bg-white">
+    <div className="font-pompt grid  grid-rows-[auto_1fr] bg-white ">
       <div>
         <Header />
         <div className="hidden sm:block ">
