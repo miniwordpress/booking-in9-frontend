@@ -596,8 +596,8 @@ export default function SignInPage() {
         <div className="flex items-center justify-center bg-footer-background w-full mt-5">
           <div className="">
             <Typography variant="h3" color="orange" className="mt-8 mb-8">
-              {t("")}
-              สิ่งที่คุณจะได้รับจาก In9.co
+              {t("what you will receive from in9.co")}
+              {/* สิ่งที่คุณจะได้รับจาก In9.co */}
             </Typography>
           </div>
         </div>
@@ -607,10 +607,10 @@ export default function SignInPage() {
               {/* <img src="/assets/images/experience.png" /> */}
             </div>
             <div className="flex items-center justify-center">
-              {/* <img src="/assets/images/comfortable.png" /> */}
+              <img src="/assets/images/comfortable.png" />
             </div>
             <div className="flex items-center justify-center">
-              {/* <img src="/assets/images/business.png" /> */}
+              <img src="/assets/images/business.png" />
             </div>
           </div>
         </div>
@@ -624,7 +624,7 @@ export default function SignInPage() {
                     color="orange"
                     className="text-center"
                   >
-                    {t("ประสบการณ์")}
+                    {t("experience")}
                   </Typography>
                   <Typography
                     color="blue-gray"
@@ -645,7 +645,7 @@ export default function SignInPage() {
                     color="orange"
                     className="text-center"
                   >
-                    {t("รวดเร็วสะวดกสบาย")}
+                    {t("fast convenient")}
                   </Typography>
                   <Typography
                     color="blue-gray"
@@ -666,7 +666,7 @@ export default function SignInPage() {
                     color="orange"
                     className="text-center"
                   >
-                    {t("เครือข่ายพันธมิตรทางธุรกิจ")}
+                    {t("business partner")}
                   </Typography>
                   <Typography
                     color="blue-gray"
