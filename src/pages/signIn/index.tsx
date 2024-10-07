@@ -102,7 +102,7 @@ export default function SignInPage() {
               }}
               icon={<i className="fas fa-heart" />}
             />
-            {/* <Input
+            {/* { <Input
               type="password"
               size="lg"
               label="Password"
@@ -114,13 +114,13 @@ export default function SignInPage() {
               onFocus={(e) => { setShowErrorPassword(false) }}
               // icon={<i className="fas fa-heart" />}
               // className=" !border-t-blue-gray-500 focus:!border-t-gray-900 bg-white"
-            />
+            /> */}
             <Typography
               variant="small"
               color="black"
               className="flex items-center font-normal mt-3"
             >
-              <a href="#" className="font-medium hover:text-gray-700 ml-5" class="Prompt-Regular">
+              <a href="#" className="font-prompt hover:text-gray-700 ml-5">
                 {t("forgot_password")}
               </a>
             </Typography>

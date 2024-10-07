@@ -24,7 +24,7 @@ export default function SignInPage() {
 
   return (
 
-    <div className="font-prompt grid h-screen grid-rows-[auto_1fr] bg-primary-background">
+    <div className="font-prompt grid h-screen grid-rows-[auto_1fr] bg-white">
       <div>
       <Header />
       <div className="hidden sm:block ">
