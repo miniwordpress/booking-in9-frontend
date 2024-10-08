@@ -51,7 +51,7 @@ const FooterBase: React.FC = () => {
           </div>
           <div className="grid grid-cols-1 w-full text-end py-4 md:flex-row sm:justify-center">
             <Typography color="white"variant="h5" className="mb-6 mt-4 hidden sm:block font-prompt">
-              {t('Payment')}
+              {t('payment')}
             </Typography>
             <div className="flex gap-5 text-white sm:justify-end md:justify-items-center mr-1">
             <Image
