@@ -2,19 +2,7 @@ import SidebarMenu from "@/components/SidebarMenu";
 import HeaderBaseAdmin from "../../components/header_admin";
 import {
   Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
   Typography,
-  Button,
-  Input,
-  Chip,
-  Tabs,
-  TabsHeader,
-  Tab,
-  Avatar,
-  IconButton,
-  Tooltip,
 } from "@material-tailwind/react";
 
 const TABLE_HEAD = ["ลำดับ", "ชื่อที่พัก", "สถานะ", "จัดการ"];
