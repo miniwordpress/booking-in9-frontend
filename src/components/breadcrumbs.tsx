@@ -25,10 +25,10 @@ const BreadcrumbsSigin: React.FC = () => {
  
   return (
       <Breadcrumbs className="mt-12 ml-10">
-        <a href="#" className="opacity-90 ml-2">
+        <a href="#" className="opacity-80 ml-2">
           {t('home')}
         </a>
-        <a href="#" className="text-white">
+        <a href="#" className="text-black">
           {t('signIn')}
         </a>
         </Breadcrumbs>

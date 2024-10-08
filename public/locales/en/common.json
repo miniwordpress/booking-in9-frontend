@@ -1,22 +1,34 @@
 {
-  "hello": "hello",
-  "home": "Home",
-  "signIn": "SignIn",
-  "email": "Email",
-  "password": "Password",
-  "forgot_password": "Forgot password",
-  "forgot_password_detail": "Enter the email address of the account for which you want to change the password or set a password.",
-  "Payment": "Payment channels",
-  "confirm": "Confirm",
   "login": {
-    "error": "Email or password invalid"
-  } ,
+    "error": "Email or password invalid",
+    "signIn": "SignIn"
+  },
+  "register" : {
+    "register" : "Register",
+    "id" : "ID",
+    "passport" : "Passport",
+    "ssn" : "SSN",
+    "number_passport" : "ID / Passport / SSN",
+    "name" : "Name",
+    "lastName" : "Last Name",
+    "email" : "Email",
+    "tel" : "Tel",
+    "recommend" : "Please introduce yourself and what you would like to support in developing learning for those who use our services."
+  },
+    "hello": "Hello",
+    "home": "Home",
+    "email": "Email",
+    "password": "Password",
+    "forgot_password": "Forgot password",
+    "forgot_password_detail": "Enter the email address of the account for which you want to change the password or set a password.",
+    "payment": "Payment channels",
+    "confirm": "Confirm",
     "search_accommodation" : "Find your accommodation here",
     "search" : "Search",
-    "Location" : "Location",
-    "Province_State" : "Province/State",
+    "location" : "Location",
+    "province_State" : "Province/State",
     "adult" : "Adults 13 years older",
-    "Children" : "Children (2-13 years)",
+    "children" : "Children (2-13 years)",
     "infant" : "Infants (under 2 years)",
     "pets" : "Pets",
     "house" : "HOUSE",
@@ -27,5 +39,6 @@
     "what you will receive from in9.co" : "WHAT YOU WILL RECEIVE FROM In9.co",
     "experience" : "Experience",
     "fast convenient" : "Fast Convenient",
-    "business partner" : "Business Partner"
+    "business partner" : "Business Partner",
+    "click_upload_file" : "Click up to upload Profile"
 }
