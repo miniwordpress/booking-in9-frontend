@@ -41,7 +41,7 @@ export default function SignInPage() {
         <Typography variant="h3" color="white">
           {t("ลงทะเบียน/สมัครสมาชิก")}
         </Typography>
-        <form className="mt-8 w-96 md:w-auto">
+        <form className="mt-8 md:w-auto">
           <div className="mb-1 flex flex-col gap-6 rounded-lg p-6 ">
             <div className="">
               <label  className="flex flex-col items-center justify-center w-full h-24 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-gray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
