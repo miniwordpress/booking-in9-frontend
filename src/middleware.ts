@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 const signInRoutes = ['/signIn']
-const publicRoutes = ['/']
+const publicRoutes = ['/', '/testRedux']
 
 export default async function middleware(req: NextRequest) {
   const path = req.nextUrl.pathname
@@ -11,7 +11,7 @@ export default async function middleware(req: NextRequest) {
   
   if (!access_token){
     if (isPageNotToken) return NextResponse.next()
-      // return NextResponse.redirect(new URL("/signIn", req.nextUrl))
+      return NextResponse.redirect(new URL("/signIn", req.nextUrl))
   }else{
     if (isSignInRoutes) return NextResponse.redirect(new URL("/home", req.nextUrl))
     return NextResponse.next()

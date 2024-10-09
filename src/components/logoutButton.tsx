@@ -10,7 +10,7 @@ const LogoutButton: React.FC = () => {
 
   const signOut = () => {
     destroyAccessToken()
-    router.push("/sigIn")
+    router.push("/signIn")
   }
 
   return (

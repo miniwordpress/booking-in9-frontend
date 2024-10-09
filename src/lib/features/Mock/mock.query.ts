@@ -11,11 +11,11 @@ const baseBody = {
   client_secret: process.env.NEXT_PUBLIC_CLIENT_SECRET
 }
 
-const reducerPath = "authAPI"
-export const authAPI = createApi({
+const reducerPath = "mockAPI"
+export const mockAPI = createApi({
   reducerPath,
   baseQuery: customFetchBase,
-  tagTypes: ['Auth'],
+  tagTypes: ['Mock'],
   extractRehydrationInfo(action, { reducerPath }) {
     if (isHydrateAction(action)) {
       return action.payload[reducerPath]
@@ -23,19 +23,19 @@ export const authAPI = createApi({
   },
   endpoints(builder) {
     return {
-      signIn: builder.mutation({
+      testMail: builder.mutation({
         query: (body) => ({
-          url: '/mock/login',
+          url: '/mock/mail',
           method: 'POST',
           body: { ...body }
         }),
-        invalidatesTags: ['Auth'],
+        invalidatesTags: ['Mock'],
       }),
     }
   },
 })
 
-export const authQueryReducer = { [reducerPath]: authAPI.reducer }
-export const { useSignInMutation } = authAPI
+export const mockQueryReducer = { [reducerPath]: mockAPI.reducer }
+export const { useTestMailMutation } = mockAPI
 
-export const { signIn } = authAPI.endpoints
+export const { testMail } = mockAPI.endpoints
