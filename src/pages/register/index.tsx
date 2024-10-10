@@ -79,7 +79,7 @@ export default function SignInPage() {
                 placeholder={t("register.number_passport")}
               />
             </div>
-            <div className="flex items-center gap-4">
+            <div className="grid grid-row xl:grid-cols-2 justify-stretch gap-4">
               <div>
                 <Typography
                   variant="small"
@@ -90,7 +90,7 @@ export default function SignInPage() {
                 </Typography>
                 <Input
                   maxLength={50}
-                  containerProps={{ className: "min-w-[72px]" }}
+                  containerProps={{ className: "" }}
                   placeholder={t("register.name")}
                 />
               </div>
@@ -104,12 +104,12 @@ export default function SignInPage() {
                 </Typography>
                 <Input
                   maxLength={50}
-                  containerProps={{ className: "min-w-[72px]" }}
+                  containerProps={{ className: "" }}
                   placeholder={t("register.lastName")}
                 />
               </div>
             </div>
-            <div className=" flex items-center gap-4">
+            <div className="grid grid-row xl:grid-cols-2 justify-stretch gap-4">
               <div>
                 <Typography
                   variant="small"
@@ -120,7 +120,7 @@ export default function SignInPage() {
                 </Typography>
                 <Input
                   maxLength={50}
-                  containerProps={{ className: "min-w-[72px]" }}
+                  containerProps={{ className: "" }}
                   placeholder={t("register.email")}
                 />
               </div>
@@ -134,7 +134,7 @@ export default function SignInPage() {
                 </Typography>
                 <Input
                   maxLength={20}
-                  containerProps={{ className: "min-w-[72px]" }}
+                  containerProps={{ className: "" }}
                   placeholder={t("register.tel")}
                 />
               </div>
