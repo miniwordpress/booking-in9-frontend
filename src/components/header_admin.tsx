@@ -29,7 +29,7 @@ const HeaderBaseAdmin: React.FC = () => {
 
   return (
     <div className="max-h-[768px] w-[calc(100%)] bg-white">
-      <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4  bg-primary-background" style={{ border: "none" }}>
+      <Navbar className="sticky top-0 z-10 h-full max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4  bg-primary-background" style={{ border: "none" }}>
         <div className="flex justify-end text-blue-gray-900">
           <div className="flex gap-4">
             {loading ? (<></>) : (<LocaleSwitcher />)}

@@ -24,12 +24,12 @@ const BreadcrumbsSigin: React.FC = () => {
   }, []);
  
   return (
-      <Breadcrumbs className="mt-12 ml-10">
-        <a href="#" className="opacity-80 ml-2">
+      <Breadcrumbs className="">
+        <a href="#" className="opacity-80">
           {t('home')}
         </a>
         <a href="#" className="text-black">
-          {t('signIn')}
+          {t('register.register')}
         </a>
         </Breadcrumbs>
   );

@@ -8,6 +8,7 @@
     "id" : "ID",
     "passport" : "Passport",
     "ssn" : "SSN",
+    "tin" : "TIN",
     "number_passport" : "ID / Passport / SSN",
     "name" : "Name",
     "lastName" : "Last Name",
