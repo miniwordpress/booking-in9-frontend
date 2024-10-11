@@ -28,8 +28,8 @@ export default function SignUpPage() {
   const { locale } = router;
   const [loading, setLoading] = useState(true);
 
-  const [idnumber, setIdnumber] = useState("");
-  const [idType, setIdType] = useState(ID_TYPE);
+  const [idNumber, setIdnumber] = useState("");
+  const [idNumberType, setidNumberType] = useState(ID_TYPE);
 
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastname] = useState("");
@@ -39,7 +39,7 @@ export default function SignUpPage() {
   const [createUser] = useCreateUserMutation()
 
   const submit = () => {
-    createUser({idnumber, idType, firstName, lastName, email, tel, introduce: description})
+    createUser({idNumber, idNumberType, firstName, lastName, email, tel, description})
   }
  
   useEffect(() => {
@@ -84,10 +84,10 @@ export default function SignUpPage() {
               </label>
             </div>
             <div className="flex flex-col gap-2">
-              <Radio name="type" label={t("register.id")} value={ID_TYPE} checked={idType === ID_TYPE} onClick={() => setIdType(ID_TYPE)} />
-              <Radio name="type" label={t("register.passport")} value={PASSPORT_TYPE} checked={idType === PASSPORT_TYPE} onClick={() => setIdType(PASSPORT_TYPE)} />
-              <Radio name="type" label={t("register.ssn")} value={SSN_TYPE} checked={idType === SSN_TYPE} onClick={() => setIdType(SSN_TYPE)} />
-              <Radio name="type" label={t("register.tin")} value={TIN_TYPE} checked={idType === TIN_TYPE} onClick={() => setIdType(TIN_TYPE)} />
+              <Radio name="type" label={t("register.id")} value={ID_TYPE} checked={idNumberType === ID_TYPE} onClick={() => setidNumberType(ID_TYPE)} />
+              <Radio name="type" label={t("register.passport")} value={PASSPORT_TYPE} checked={idNumberType === PASSPORT_TYPE} onClick={() => setidNumberType(PASSPORT_TYPE)} />
+              <Radio name="type" label={t("register.ssn")} value={SSN_TYPE} checked={idNumberType === SSN_TYPE} onClick={() => setidNumberType(SSN_TYPE)} />
+              <Radio name="type" label={t("register.tin")} value={TIN_TYPE} checked={idNumberType === TIN_TYPE} onClick={() => setidNumberType(TIN_TYPE)} />
             </div>
           <div>
               <Typography variant="h6" color="black" className="mb-2 font-medium">
@@ -98,7 +98,7 @@ export default function SignUpPage() {
                 type="number"
                 size="lg"
                 placeholder={t("register.number_passport")}
-                value={idnumber}
+                value={idNumber}
                 onChange={(e) => { setIdnumber(e.target.value); }}
               />
             </div>
