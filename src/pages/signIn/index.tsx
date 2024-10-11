@@ -35,7 +35,7 @@ export default function SignInPage() {
           }
         ).unwrap()
         setDisableButton(true)
-        router.push("/home")
+        router.push("/manageAccommodation")
       } catch (error: any) {
         setOpen(true)
         setDisableButton(false)
@@ -50,15 +50,15 @@ export default function SignInPage() {
     <div className="font-prompt grid h-screen grid-rows-[auto_1fr] bg-white ">
       <div>
         <Header />
-        <div className="hidden sm:block ">
-        <Breadcrumbs className="mt-12 ml-10">
-        <a href="#" className="opacity-80 ml-2">
-          {t('home')}
-        </a>
-        <a href="#" className="text-black">
-          {t('login.signIn')}
-        </a>
-        </Breadcrumbs>
+        <div className="hidden sm:block my-10 mx-10">
+          <Breadcrumbs className="">
+          <a href="/" className="opacity-80 ml-2">
+            {t('home')}
+          </a>
+          <a href="/signIn" className="text-black">
+            {t('login.signIn')}
+          </a>
+          </Breadcrumbs>
         </div>
       </div>
       <Card
@@ -100,7 +100,6 @@ export default function SignInPage() {
               onChange={(e) => {
                 setPassword(e.target.value);
               }}
-              icon={<i className="fas fa-heart" />}
             />
             {/* { <Input
               type="password"
@@ -115,23 +114,24 @@ export default function SignInPage() {
               // icon={<i className="fas fa-heart" />}
               // className=" !border-t-blue-gray-500 focus:!border-t-gray-900 bg-white"
             /> */}
-            <Typography
-              variant="small"
-              color="black"
-              className="flex items-center font-normal mt-3"
-            >
-              <a href="#" className="font-prompt hover:text-gray-700 ml-5">
-                {t("forgot_password")}
-              </a>
-            </Typography>
+            
             <Button
               disabled={disableButton}
               onClick={loginSubmit}
               className="mt-2 bg-gradient-to-r from-cyan-500 via-purple-300 to-pink-300 text-[100%] font-semibold"
               fullWidth
             >
-              {t("signIn")}
+              {t("login.signIn")}
             </Button>
+            <Typography
+              variant="small"
+              color="black"
+              className="flex justify-center font-normal mt-3"
+            >
+              <a href="/forgotPassword" className="font-prompt hover:text-gray-700">
+                {t("forgot_password")}
+              </a>
+            </Typography>
           </div>
         </form>
       </Card>
