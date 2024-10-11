@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 // import LocaleSwitcher from "../../components/language_switcher"
 import Header from "../../components/header";
 import Footer from "../../components/footer";
+import { useCreateUserMutation } from "@/lib/features/Users"
 // import Breadcrumbs from "../../components/breadcrumbs";
-
 
 import {
   Card,
@@ -17,26 +17,45 @@ import {
   Breadcrumbs
 } from "@material-tailwind/react";
 
-export default function SignInPage() {
+export default function SignUpPage() {
+  const ID_TYPE = "ID";
+  const PASSPORT_TYPE = "PASSPORT";
+  const SSN_TYPE = "SSN";
+  const TIN_TYPE = "TIN";
+
   const router = useRouter();
   const { t } = useTranslation();
   const { locale } = router;
   const [loading, setLoading] = useState(true);
 
+  const [idNumber, setIdnumber] = useState("");
+  const [idNumberType, setidNumberType] = useState(ID_TYPE);
+
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastname] = useState("");
+  const [email, setEmail] = useState("");
+  const [tel, setTel] = useState("");
+  const [description, setDescription] = useState("");
+  const [createUser] = useCreateUserMutation()
+
+  const submit = () => {
+    createUser({idNumber, idNumberType, firstName, lastName, email, tel, description})
+  }
+ 
   useEffect(() => {
     setLoading(false);
   }, [locale]);
 
   return (
-    <div className="font-prompt grid grid-rows-[auto_1fr] bg-white">
+    <div className="Font-Prompt grid-rows-[auto_1fr] bg-white">
       <div>
         <Header />
-        <div className="hidden sm:block">
-        <Breadcrumbs className="mt-12 ml-10">
-        <a href="#" className="opacity-80 ml-2">
+        <div className="hidden sm:block my-10 mx-10">
+        <Breadcrumbs className="">
+        <a href="/" className="opacity-80 ml-2">
           {t('home')}
         </a>
-        <a href="#" className="text-black">
+        <a href="/register" className="text-black">
           {t('register.register')}
         </a>
         </Breadcrumbs>
@@ -65,18 +84,22 @@ export default function SignInPage() {
               </label>
             </div>
             <div className="flex flex-col gap-2">
-              <Radio name="type" label={t("register.id")} />
-              <Radio name="type" label={t("register.passport")}  />
-              <Radio name="type" label={t("register.ssn")}  />
+              <Radio name="type" label={t("register.id")} value={ID_TYPE} checked={idNumberType === ID_TYPE} onClick={() => setidNumberType(ID_TYPE)} />
+              <Radio name="type" label={t("register.passport")} value={PASSPORT_TYPE} checked={idNumberType === PASSPORT_TYPE} onClick={() => setidNumberType(PASSPORT_TYPE)} />
+              <Radio name="type" label={t("register.ssn")} value={SSN_TYPE} checked={idNumberType === SSN_TYPE} onClick={() => setidNumberType(SSN_TYPE)} />
+              <Radio name="type" label={t("register.tin")} value={TIN_TYPE} checked={idNumberType === TIN_TYPE} onClick={() => setidNumberType(TIN_TYPE)} />
             </div>
           <div>
               <Typography variant="h6" color="black" className="mb-2 font-medium">
                 {t("register.number_passport")}
               </Typography>
               <Input
+                maxLength={50}
                 type="number"
                 size="lg"
                 placeholder={t("register.number_passport")}
+                value={idNumber}
+                onChange={(e) => { setIdnumber(e.target.value); }}
               />
             </div>
             <div className="grid grid-row xl:grid-cols-2 justify-stretch gap-4">
@@ -92,6 +115,8 @@ export default function SignInPage() {
                   maxLength={50}
                   containerProps={{ className: "" }}
                   placeholder={t("register.name")}
+                  value={firstName}
+                  onChange={(e) => { setFirstName(e.target.value); }}
                 />
               </div>
               <div>
@@ -106,6 +131,8 @@ export default function SignInPage() {
                   maxLength={50}
                   containerProps={{ className: "" }}
                   placeholder={t("register.lastName")}
+                  value={lastName}
+                  onChange={(e) => { setLastname(e.target.value); }}
                 />
               </div>
             </div>
@@ -122,6 +149,8 @@ export default function SignInPage() {
                   maxLength={50}
                   containerProps={{ className: "" }}
                   placeholder={t("register.email")}
+                  value={email}
+                  onChange={(e) => { setEmail(e.target.value); }}
                 />
               </div>
               <div>
@@ -136,6 +165,8 @@ export default function SignInPage() {
                   maxLength={20}
                   containerProps={{ className: "" }}
                   placeholder={t("register.tel")}
+                  value={tel}
+                  onChange={(e) => { setTel(e.target.value); }}
                 />
               </div>
             </div>
@@ -146,11 +177,14 @@ export default function SignInPage() {
               rows={4}
               containerProps={{ className: "min-w-[72px]" }}
               placeholder=""
+              value={description}
+              onChange={(e) => { setDescription(e.target.value); }}
             />
             <div />
             <Button
               className="mt-2 bg-gradient-to-r from-cyan-500 via-purple-300 to-pink-300"
               fullWidth
+              onClick={submit}
             >
               {t('confirm')}
             </Button>

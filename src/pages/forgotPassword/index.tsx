@@ -12,11 +12,12 @@ import {
   Breadcrumbs
 } from "@material-tailwind/react";
 
-export default function SignInPage() {
+export default function ForgotPasswordPage() {
   const router = useRouter();
   const { t } = useTranslation();
   const { locale } = router;
   const [loading, setLoading] = useState(true);
+  const [email, setEmail] = useState("");
 
   useEffect(() => {
     setLoading(false);
@@ -27,12 +28,12 @@ export default function SignInPage() {
     <div className="font-prompt grid h-screen grid-rows-[auto_1fr] bg-white">
       <div>
       <Header />
-      <div className="hidden sm:block ">
-      <Breadcrumbs className="mt-12 ml-10">
-        <a href="#" className="opacity-80 ml-2">
+      <div className="hidden sm:block my-10 mx-10">
+      <Breadcrumbs className="">
+        <a href="/" className="opacity-80 ml-2">
           {t('home')}
         </a>
-        <a href="#" className="text-black">
+        <a href="/forgotPassword" className="text-black">
           {t('forgot_password')}
         </a>
         </Breadcrumbs>
@@ -53,10 +54,34 @@ export default function SignInPage() {
           <Input
               type="email" 
               size="lg" 
-              placeholder="name@mail.com"/>
-          <Button className="mt-2 bg-gradient-to-r from-cyan-500 via-purple-300 to-pink-300" fullWidth>
-            {t('confirm')}
-          </Button>
+              placeholder="name@mail.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              />
+            <Button 
+              className="mt-2 bg-gradient-to-r from-cyan-500 via-purple-300 to-pink-300" 
+              fullWidth 
+              // mock url send mail forgot password left language
+                onClick={async () => {
+                const response = await fetch("http://localhost:4000/users/send-mail-forgot-password", {
+                  method: "POST",
+                  headers: {
+                  "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify({
+                  email: email,
+                  language: 'th'
+                  }),
+                });
+                if (response.ok) {
+                  alert(t('email_sent'));
+                } else {
+                  alert(t('email_send_error'));
+                }
+                }}
+              >
+              {t('confirm')}
+            </Button>
           </div>
         </form>
       </Card>

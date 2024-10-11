@@ -14,7 +14,7 @@ import {
   CardFooter,
 } from "@material-tailwind/react";
 
-export default function SignInPage() {
+export default function MainPage() {
   const { t } = useTranslation();
   return (
     <>

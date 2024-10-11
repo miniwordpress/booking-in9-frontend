@@ -4,6 +4,7 @@ import { createWrapper } from 'next-redux-wrapper'
 import { packagesAPI } from './features/Package'
 import { nationalityAPI } from './features/Nationality'
 import { authAPI } from './features/Auth'
+import { usersAPI } from './features/Users'
 
 export const makeStore = () =>
   configureStore({
@@ -15,6 +16,7 @@ export const makeStore = () =>
         .concat(packagesAPI.middleware)
         .concat(nationalityAPI.middleware)
         .concat(authAPI.middleware)
+        .concat(usersAPI.middleware)
     }
   })
 

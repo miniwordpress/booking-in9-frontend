@@ -1,83 +1,86 @@
+
+import { useState } from "react"
+import { useRouter } from 'next/navigation'
+import { useTranslation } from "react-i18next"
 import SidebarMenu from "@/components/SidebarMenu";
 import HeaderBaseAdmin from "../../components/header_admin";
+
 import {
   Card,
+  Chip,
   Typography,
+  Tooltip,
+  Button,
+  IconButton,
+  Dialog,
+  DialogHeader,
+  DialogBody,
+  DialogFooter,
 } from "@material-tailwind/react";
 
-const TABLE_HEAD = ["ลำดับ", "ชื่อที่พัก", "สถานะ", "จัดการ"];
+export function manageAccommodation() {
+  const router = useRouter()
+  const { t } = useTranslation()
+  const [open, setOpen] = useState(false);
+ 
+  const handleOpen = () => setOpen(!open);
+  const TABLE_HEAD = ["ลำดับ", "ชื่อที่พัก", "Status", "จัดการ"];
  
 const TABLE_ROWS = [
   {
     name: "1",
     job: "Manager",
-    date: "23/04/18",
+    status: "Open",
   },
   {
     name: "2",
     job: "Developer",
-    date: "23/04/18",
+    status: "Pending",
   },
   {
     name: "3",
     job: "Executive",
-    date: "19/09/17",
+    status: "Open",
   },
   {
     name: "4",
     job: "Developer",
-    date: "24/12/08",
+    status: "Open",
   },
   {
     name: "5",
     job: "Manager",
-    date: "04/10/21",
+    status: "Closed",
   },
   {
     name: "6",
     job: "Manager",
-    date: "04/10/21",
+    status: "Open",
   },
   {
     name: "7",
     job: "Manager",
-    date: "04/10/21",
+    status: "Open",
   },
   {
     name: "8",
     job: "Manager",
-    date: "04/10/21",
+    status: "Open",
   },
   {
     name: "9",
     job: "Manager",
-    date: "04/10/21",
+    status: "Open",
   },
   {
     name: "10",
     job: "Manager",
-    date: "04/10/21",
-  },
-  {
-    name: "11",
-    job: "Manager",
-    date: "04/10/21",
-  },
-  {
-    name: "12",
-    job: "Manager",
-    date: "04/10/21",
-  },
-  {
-    name: "13",
-    job: "Manager",
-    date: "04/10/21",
+    status: "Closed",
   },
 ];
-
-export function Card5() {
   return (
-    <div className="flex flex-row h-full w-full">
+    
+    <div className="font-prompt font-black flex flex-row h-full w-full">
       <div className="basis-1/5 h-full">
         <SidebarMenu/>
       </div>
@@ -96,7 +99,7 @@ export function Card5() {
                 <Typography
                   variant="small"
                   color="blue-gray"
-                  className="font-normal leading-none opacity-70"
+                  className="font-bold leading-none opacity-70"
                 >
                   {head}
                 </Typography>
@@ -105,8 +108,8 @@ export function Card5() {
           </tr>
         </thead>
         <tbody>
-          {TABLE_ROWS.map(({ name, job, date }, index) => {
-            const isLast = index === TABLE_ROWS.length - 1;
+          {TABLE_ROWS.map(({ name, job, status }, index) => {
+            const isLast = index === TABLE_ROWS.length ;
             const classes = isLast ? "p-4" : "p-4 border-b border-blue-gray-50";
  
             return (
@@ -130,25 +133,38 @@ export function Card5() {
                   </Typography>
                 </td>
                 <td className={classes}>
-                  <Typography
-                    variant="small"
-                    color="blue-gray"
-                    className="font-normal"
-                  >
-                    {date}
-                  </Typography>
+                <div className="w-max">
+                <Chip
+                          size="sm"
+                          variant="ghost"
+                          value={status}
+                          color={
+                            status === "Open"
+                              ? "green"
+                              : status === "Pending"
+                              ? "amber"
+                              : "red"
+                          }
+                        />
+                        </div>
                 </td>
                 <td className={classes}>
-                  <Typography
-                    as="a"
-                    href="#"
-                    variant="small"
-                    color="blue-gray"
-                    className="font-medium"
-                  >
-                    Edit
-                  </Typography>
-                </td>
+                      <Tooltip content="Edit User">
+                        <IconButton variant="text">
+                        <svg className="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+  <path stroke="currentColor" stroke-linecap="square" stroke-linejoin="round" stroke-width="2" d="M7 19H5a1 1 0 0 1-1-1v-1a3 3 0 0 1 3-3h1m4-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm7.441 1.559a1.907 1.907 0 0 1 0 2.698l-6.069 6.069L10 19l.674-3.372 6.07-6.07a1.907 1.907 0 0 1 2.697 0Z"/>
+</svg>
+
+                        </IconButton>
+                      </Tooltip>
+                      <Tooltip content="Delete User">
+                        <IconButton onClick={handleOpen} variant="text">
+                        <svg className="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z"/>
+                        </svg>
+                        </IconButton>
+                      </Tooltip>
+                  </td>
               </tr>
             );
           })}
@@ -157,10 +173,29 @@ export function Card5() {
     </Card>
         </div>
       </div>
-      </div>
 
+      <Dialog open={open} handler={handleOpen} size="xs">
+        <DialogHeader>Delete Hostel</DialogHeader>
+        <DialogBody>
+        {t('Are you sure you want to delete this accommodation?')}
+        </DialogBody>
+        <DialogFooter>
+          <Button
+            variant="text"
+            color="red"
+            onClick={handleOpen}
+            className="mr-1"
+          >
+            <span>Cancel</span>
+          </Button>
+          <Button variant="gradient" color="green" onClick={handleOpen}>
+            <span>Confirm</span>
+          </Button>
+        </DialogFooter>
+      </Dialog>
+      </div>
       
   );
 }
 
-export default Card5;
+export default manageAccommodation;
