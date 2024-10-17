@@ -46,7 +46,11 @@ export default function MainPage() {
       imgelink:
         "https://baanpoolvillas.com/wp-content/uploads/2024/03/LINE_ALBUM_2024.3.24_240324_51.jpg",
     },
-
+    {
+      imgelink:
+        "https://baanpoolvillas.com/wp-content/uploads/2024/03/LINE_ALBUM_2024.3.24_240324_40.jpg",
+    },
+    
   ];
  
   const [active, setActive] = useState(
@@ -85,7 +89,7 @@ export default function MainPage() {
           alt=""
         />
       </div>
-      <div className="grid grid-cols-5 gap-4">
+      <div className="grid grid-cols-9 gap-4">
         {data.map(({ imgelink }, index) => (
           <div key={index}>
             <img
@@ -105,28 +109,21 @@ export default function MainPage() {
           <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 mx-6 my-10 xl:mx-16   h-96 w-full">
             <div className="">
                   <Typography
+                    variant="h4"
+                    color="black"
+                    className="mb-2 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500"
+                  >
+                    {t("บ้านเดี่ยว")}
+                  </Typography>
+                  
+                  <Typography
                     variant="h3"
                     color="black"
                     className=""
                   >
                     {t("อ.หัวหิน จ.ประจวบคีรีขันธ์")}
                   </Typography>
-                  <Typography
-                    variant="h4"
-                    color="blue-gray"
-                    className="mt-1"
-
-                  >
-                    {t("0912345678")}
-                  </Typography>
-                  <Typography
-                    variant="h4"
-                    color="blue-gray"
-                    className="mt-1"
-
-                  >
-                    {t("in9.co@mail.com")}
-                  </Typography>
+                 
                   <Typography
                     variant="h4"
                     color="blue-gray"
@@ -144,10 +141,10 @@ export default function MainPage() {
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ยอมรับหมวยแอพพริคอทแบรนด์ เมคอัพซิม อุรังคธาตุก๋ากั่นกรีน บึ้ม ซูโม่คลับ ﻿กรรมาชน ท็อปบูตคอร์รัปชั่นวอลนัทอีสเตอร์ตัวตน หมวยคาแรคเตอร์สไลด์ กุมภาพันธ์นอร์ทผลักดัน ไพลินซูฮกคาราโอเกะแคชเชียร์แอปเปิล เนอะเฟอร์รี่มอนสเตอร์ โครนา โฟล์คแคร์บึ้มช็อปปิ้ง แตงกวามาร์ตสเตริโอ จิ๊กซอว์พาสปอร์ตเวสต์แบนเนอร์ ฮิปโป เปเปอร์เที่ยงวันเยอร์บีราแดนเซอร์อุปนายิกาสเกตช์ บรรพชน เด้อกรุ๊ปแรงใจดีพาร์ทเมนต์ไฮเทค ครูเสดดิสเครดิตว้อยซากุระมหภาค ปาร์ตี้แอดมิสชันไวอากร้าเฮอร์ริเคนดิกชันนารี
                   </Typography>
                 </div>
-            <div className="flex item-center xl:items-stretch justify-center xl:w-full p-8">
+            <div className="flex item-center xl:items-stretch justify-center xl:w-full p-4">
             {/* <div className="my-6 mx-6 xl:mx-14 xl:my-12 flex-grow xl:flex-grow-0"> */}
             <Card
-              className="w-full backdrop-blur-sm bg-white/90 p-6"
+              className="w-full backdrop-blur-sm bg-white/90 p-4"
               color="transparent"
               shadow={false}
             >
@@ -284,7 +281,7 @@ export default function MainPage() {
           <div className="grid justify-items-center items-center">
           <Card className="w-96 h-full">
       <CardHeader floated={false} className="h-80">
-        <img src="https://docs.material-tailwind.com/img/team-3.jpg" alt="profile-picture" />
+        <img src="https://docs.material-tailwind.com/img/face-2.jpg" alt="profile-picture" />
       </CardHeader>
       <CardBody className="text-center">
         <Typography variant="h4" color="blue-gray" className="mb-2">

@@ -58,7 +58,7 @@ export default function MainPage() {
               <form className="mt-8 mb-2 w-full">
                 <div className="mb-1 flex flex-col gap-8">
                   <div className="w-full">
-                    <Select label={t("Location")} className="bg-white h-14">
+                    <Select label={t("location")} className="bg-white h-14">
                       <Option>Material Tailwind HTML</Option>
                       <Option>Material Tailwind React</Option>
                       <Option>Material Tailwind Vue</Option>
@@ -67,7 +67,7 @@ export default function MainPage() {
                     </Select>
                   </div>
                   <div className="w-full">
-                    <Select label={t("Province_State")} className="bg-white h-14">
+                    <Select label={t("province_state")} className="bg-white h-14">
                       <Option>Material Tailwind HTML</Option>
                       <Option>Material Tailwind React</Option>
                       <Option>Material Tailwind Vue</Option>
@@ -86,7 +86,7 @@ export default function MainPage() {
                       </Select>
                     </div>
                     <div className="w-full">
-                      <Select label={t("Children")} className="bg-white h-14">
+                      <Select label={t("children")} className="bg-white h-14">
                         <Option>Material Tailwind HTML</Option>
                         <Option>Material Tailwind React</Option>
                         <Option>Material Tailwind Vue</Option>
@@ -192,45 +192,47 @@ export default function MainPage() {
       <>
         <div className="flex items-center justify-center mt-8 mb-8 xl:mx-6">
           <div className="p-8 w-full grid grid-cols-1 md:grid-cols-3 xl:grid-cols-5 gap-4 ">
-            <Card className="w-92 shadow-xl hover:shadow-orange-900/50">
+            <a href="http://localhost:3000/rentelDetail" target="_blank" rel="noopener noreferrer">
+              <Card className="w-92 shadow-xl hover:shadow-orange-900/50">
               <CardHeader floated={false} className="h-60">
                 <img
-                  src="https://images.pexels.com/photos/322154/pexels-photo-322154.jpeg?auto=compress&cs=tinysrgb&w=600"
-                  alt="profile-picture"
+                src="https://images.pexels.com/photos/322154/pexels-photo-322154.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="profile-picture"
                 />
               </CardHeader>
               <CardBody className="">
                 <div className="grid grid-cols-3 gap-4 items-center justify-centers">
-                  <Card color="blue" className="items-center justify-centers">
-                    Thailand
-                  </Card>
-                  <div className="">
-                    <img src="/assets/images/thailand.png" />
-                  </div>
+                <Card color="blue" className="items-center justify-centers">
+                  Thailand
+                </Card>
+                <div className="">
+                  <img src="/assets/images/thailand.png" />
+                </div>
                 </div>
                 <Typography
-                  variant="h5"
-                  color="blue-gray"
-                  className="mb-2 mt-2"
+                variant="h5"
+                color="blue-gray"
+                className="mb-2 mt-2"
                 >
-                  STAY Hotel Bangkok
+                STAY Hotel Bangkok
                 </Typography>
                 <Typography
-                  color="blue-gray"
-                  className="font-medium"
-                  textGradient
+                color="blue-gray"
+                className="font-medium"
+                textGradient
                 >
-                  5 ซอย รัชดาภิเษก 17 แขวงรัชดาภิเษก ดินแดง กรุงเทพมหานคร 10400
+                5 ซอย รัชดาภิเษก 17 แขวงรัชดาภิเษก ดินแดง กรุงเทพมหานคร 10400
                 </Typography>
                 <Typography
-                  color="blue-gray"
-                  className="font-medium mt-2"
-                  textGradient
+                color="blue-gray"
+                className="font-medium mt-2"
+                textGradient
                 >
-                  1,200-2,200 THB
+                1,200-2,200 THB
                 </Typography>
               </CardBody>
-            </Card>
+              </Card>
+            </a>
 
             <Card className="w-92 shadow-xl hover:shadow-orange-900/50">
               <CardHeader floated={false} className="h-60">
@@ -709,7 +711,7 @@ export default function MainPage() {
                     {t("ร่วมแชร์ประสบการณ์ ให้คำแนะนำเบื้องต้นในการเตรียมความพร้อมในการทำ visa แนะนำแนวทางที่ถูกต้อง.. เพื่อที่คุณจะไม่ต้องเสียเวลา..")}
                   </Typography>
                   <div className="flex items-center justify-center mt-6">
-                  <a href="https://www.rakoonda.co/" target="_blank"><Button color="blue">{t("สอบถามเพิ่มเติม")}</Button></a>
+                  <a href="https://www.rakoonda.co/" target="_blank"><Button color="blue">{t("main_page.more_information")}</Button></a>
                   </div>
                 </div>
             <div className="flex item-center xl:items-stretch justify-center xl:w-full">
