@@ -5,8 +5,6 @@ import Image from "next/image"
 import { useEffect, useState } from "react"
 import LogoutButton from "@components/logoutButton"
 
-
-
 const SidebarMenu: React.FC = () => {
   const router = useRouter()
   const { locale } = router
