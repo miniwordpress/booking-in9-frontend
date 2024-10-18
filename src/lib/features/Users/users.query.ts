@@ -21,7 +21,7 @@ export const usersAPI = createApi({
     return {
       createUser: builder.mutation({
         query: (body) => ({
-          url: '/users/createUser',
+          url: '/users/create-user',
           method: 'POST',
           body: { ...body }
         }),
