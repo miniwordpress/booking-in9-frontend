@@ -1,9 +1,8 @@
 import { useRouter } from "next/router";
 import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
-import { Card} from "@material-tailwind/react";
 
-export default function notFoundPage() {
+export default function forbiddenPage() {
   const router = useRouter();
   const { t } = useTranslation();
   const { locale } = router;
@@ -23,14 +22,14 @@ export default function notFoundPage() {
       Forbidden
       </div>
       <div className="mt-6 text-white">
-      Oops, You don't have permission to access this page.
+        {t("forbidden.permission_dont_have")}
       </div>
       <button className="mt-5">
         <span className="relative inline-block text-sm font-medium text-[#FF6A3D] group active:text-orange-500 focus:outline-none focus:ring">
           <span className="absolute inset-0 transition-transform translate-x-0.5 translate-y-0.5 bg-[#FF6A3D] group-hover:translate-y-0 group-hover:translate-x-0"></span>
 
           <span className="relative block px-8 py-3 bg-[#1A2238] border border-current">
-            <a href="/">Go Home</a>
+            <a href="/">{t("forbidden.back_to_home")}</a>
           </span>
         </span>
       </button>

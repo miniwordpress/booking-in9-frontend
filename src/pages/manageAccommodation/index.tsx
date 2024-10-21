@@ -24,7 +24,7 @@ export function manageAccommodation() {
   const [open, setOpen] = useState(false);
 
   const handleOpen = () => setOpen(!open);
-  const TABLE_HEAD = ["ลำดับ", "ชื่อที่พัก", "Status", "จัดการ"];
+  const TABLE_HEAD = ["#", "Name Accommodation", "Status", "Setting"];
 
   const TABLE_ROWS = [
     {
@@ -92,12 +92,11 @@ export function manageAccommodation() {
               color="blue-gray"
               className="font-bold leading-none opacity-70"
             >
-              จัดการที่พัก
+              {t("manage_accommodation.accommodation_anagement")}
             </Typography>
             <a href="/manageAccommodation/dialogCreate" className="font-prompt hover:text-gray-700">
-            <Button color="red">+ เพิ่มที่พัก</Button>
+            <Button color="red">{t("manage_accommodation.add_accommodation")}</Button>
               </a>
-            {/* <DialogCreate /> */}
           </div>
           <Card className="w-full ">
             <table className="w-full min-w-max table-auto text-left">
@@ -163,7 +162,7 @@ export function manageAccommodation() {
                         </div>
                       </td>
                       <td className={classes}>
-                        <Tooltip content="Edit User">
+                        <Tooltip content={t("manage_accommodation.edit_accommodation")}>
                           <IconButton variant="text">
                             <svg
                               className="w-6 h-6 text-gray-800 dark:text-white"
@@ -184,7 +183,7 @@ export function manageAccommodation() {
                             </svg>
                           </IconButton>
                         </Tooltip>
-                        <Tooltip content="Delete User">
+                        <Tooltip content={t("manage_accommodation.delete_accommodation")}>
                           <IconButton onClick={handleOpen} variant="text">
                             <svg
                               className="w-6 h-6 text-gray-800 dark:text-white"
@@ -216,9 +215,9 @@ export function manageAccommodation() {
       </div>
 
       <Dialog open={open} handler={handleOpen} size="xs">
-        <DialogHeader>Delete Hostel</DialogHeader>
+        <DialogHeader>{t("manage_accommodation.delete_accommodation")}</DialogHeader>
         <DialogBody>
-          {t("Are you sure you want to delete this accommodation?")}
+          {t("manage_accommodation.you_sure_delete_accommodation")}
         </DialogBody>
         <DialogFooter>
           <Button
@@ -227,10 +226,10 @@ export function manageAccommodation() {
             onClick={handleOpen}
             className="mr-1"
           >
-            <span>Cancel</span>
+            <span>{t("button.cancel")}</span>
           </Button>
           <Button variant="gradient" color="green" onClick={handleOpen}>
-            <span>Confirm</span>
+            <span>{t("button.confirm")}</span>
           </Button>
         </DialogFooter>
       </Dialog>
