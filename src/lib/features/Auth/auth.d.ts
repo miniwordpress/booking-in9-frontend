@@ -1,7 +1,13 @@
 declare namespace IReduxAuth {
 
   export interface IInitialState {
-    token: number
+    baseResponse: BaseResponse
+  }
+  export interface BaseResponse {
+    code: string,
+    data: string?,
+    message: string?,
+    cause: string?
   }
 }
 
