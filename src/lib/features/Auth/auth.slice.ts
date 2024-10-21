@@ -5,31 +5,26 @@ import { IReduxAuth } from "./auth"
 
 const reducerName = "auth"
 export const initialState: IReduxAuth.IInitialState = {
-  token: 0
+  baseResponse: {
+    code: "",
+    data: null,
+    message: null,
+    cause: null,
+  }
 }
 
 export const authSlice = createSlice({
   name: reducerName,
   initialState,
-  reducers: {
-    setAuthState: (state, { payload }: PayloadAction<any>) => {
-      state.token = ++state.token
-      // setAccessToken(payload)
-    },
-  },
+  reducers: {},
   extraReducers: (builder) => {
     builder.addMatcher(
       signIn.matchFulfilled,
-      (state, { payload }: PayloadAction<any>) => {
-        state.token = payload.token
-        setAccessToken(payload.token)
+      (state, { payload }: {payload: IReduxAuth.BaseResponse}) => {
+        state.baseResponse = {...payload}
       }
     )
   },
 })
 
 export const authSliceReducer = { [reducerName]: authSlice.reducer }
-
-export const {
-  setAuthState,
-} = authSlice.actions

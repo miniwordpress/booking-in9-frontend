@@ -1,7 +1,13 @@
 {
   "login": {
     "error": "อีเมลหรือรหัสไม่ถูกต้อง",
-    "signIn": "เข้าสู่ระบบ"
+    "signIn": "เข้าสู่ระบบ",
+    "please_enter_your_email": "โปรดกรอกอีเมลของคุณ",
+    "please_enter_correct_email_address": "โปรดกรอกอีเมลให้ถูกต้อง",
+    "please_enter_your_password": "โปรดกรอกรหัสผ่านของคุณ",
+    "email_or_password_is_incorrect": "อีเมลหรือรหัสผ่านไม่ถูกต้อง"
+    
+    
   },
   "button" : {
     "confirm" : "ยืนยัน",
@@ -18,30 +24,7 @@
     "lastName" : "นามสกุล",
     "email" : "อีเมล",
     "tel" : "เบอร์โทร",
-    "recommend" : "โปรดแนะนำตัวเอง และสิ่งที่คุณต้องการหนุนเสริมเพื่อการพัฒนาการเรียนรู้ให้แก่ผู้ที่มาใช้บริการ",
-    "min_id_number": "เลขประจำตัวไม่ต่ำกว่า 10 หลัก",
-    "required_id_number": "โปรดระบุเลขประจำตัว",
-    "required_first_name": "โปรดระบุชื่อจริง",
-    "required_last_name": "โปรดระบุนามสกุล",
-    "invalid_email": "อีเมลไม่ถูกต้อง",
-    "required_email": "โปรดระบุอีเมล",
-    "min_tel": "เบอร์โทรศัพท์ต้องไม่ต่ำกว่า 10 หลัก",
-    "required_tel": "โปรดระบุเบอร์โทรศัพท์",
-    "modal_title_success_message":"สำเร็จ",
-    "modal_body_success_message":"ลงทะเบียนสำเร็จโปรดตรวจสอบอีเมลของคุณ",
-    "modal_button_success_title":"ไปหน้าเข้าสู่ระบบ",
-    "modal_title_failed_message":"ไม่สำเร็จ",
-    "modal_body_failed_normal_message":"ลงทะเบียนไม่สำเร็จ โปรดลองอีกครั้ง",
-    "modal_button_failed_title":"ปิด"
-  },
-  "forgot_password_group" : {
-    "renew_password_title": "ตั้งรหัสผ่านใหม่",
-    "old_password_title": "รหัสผ่านเดิม",
-    "new_password_title": "รหัสผ่านใหม่",
-    "confirm_password_title": "ยืนยันรหัสผ่านใหม่"
-  },
-  "main_page": {
-    "more_information": "สอบถามเพิ่มเติม"
+    "recommend" : "โปรดแนะนำตัวเอง และสิ่งที่คุณต้องการหนุนเสริมเพื่อการพัฒนาการเรียนรู้ให้แก่ผู้ที่มาใช้บริการ"
   },
   "manage_accommodation" : {
     "accommodation_anagement" : "จัดการที่พัก",
@@ -130,22 +113,21 @@
   "payment": "ช่องทางการชำระเงิน",
   "confirm": "ยืนยัน",
   "search_accommodation" : "ค้นหาที่พักของคุณที่นี่",
-  "search" : "ค้นหา",
-  "location" : "ตำแหน่งสถานที่",
-  "province_state" : "จังหวัด/รัฐ",
-  "adult" : "ผู้ใหญ่ (13 ปีขึ้นไป)",
-  "children" : "เด็ก (2-13 ปี)",
-  "infant" : "ทารก (น้อยกว่า 2 ปี)",
-  "pets" : "สัตว์เลี้ยง",
-  "house" : "บ้านเดี่ยว",
-  "hotel" : "โรงแรม",
-  "apartment" : "อพาร์ตเมนต์",
-  "townhome" : "บ้านทาวน์โฮม",
-  "condominium" : "คอนโดมิเนียม",
-  "what you will receive from in9.co" : "สิ่งที่คุณจะได้รับจาก In9.co",
-  "experience" : "ประสบการณ์",
-  "fast convenient" : "รวดเร็วสะดวกสบาย",
-  "business partner" : "เครือข่ายพันธมิตรทางธุรกิจ",
-  "click_upload_file" :"คลิกเพื่ออัพโหลดไฟล์",
-  "failed_server_down_message":"ระบบขัดข้อง โปรดติดต่อผู้ดูแลระบบ"
+    "search" : "ค้นหา",
+    "location" : "ตำแหน่งสถานที่",
+    "province_State" : "จังหวัด/รัฐ",
+    "adult" : "ผู้ใหญ่ (13 ปีขึ้นไป)",
+    "children" : "เด็ก (2-13 ปี)",
+    "infant" : "ทารก (น้อยกว่า 2 ปี)",
+    "pets" : "สัตว์เลี้ยง",
+    "house" : "บ้านเดี่ยว",
+    "hotel" : "โรงแรม",
+    "apartment" : "อพาร์ตเมนต์",
+    "townhome" : "บ้านทาวน์โฮม",
+    "condominium" : "คอนโดมิเนียม",
+    "what you will receive from in9.co" : "สิ่งที่คุณจะได้รับจาก In9.co",
+    "experience" : "ประสบการณ์",
+    "fast convenient" : "รวดเร็วสะดวกสบาย",
+    "business partner" : "เครือข่ายพันธมิตรทางธุรกิจ",
+    "click_upload_file" :"คลิกเพื่ออัพโหลดไฟล์"
 }
