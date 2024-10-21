@@ -27,7 +27,7 @@ export function createAccommodation() {
         <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96 ">
           <div className="mb-1 flex flex-col gap-3 ">
             <div className="w-full">
-              <Select label={t("create.accommodationType")} className="bg-white" size="lg">
+              <Select label={t("manageAccommodation_create.accommodationType")} className="bg-white" size="lg">
                 <Option>Material Tailwind HTML</Option>
                 <Option>Material Tailwind React</Option>
               </Select>
@@ -36,67 +36,67 @@ export function createAccommodation() {
               type="text"
               size="lg"
               color="black"
-              placeholder={t("create.please_fill_name_of_accommodation")}
-              label={t("create.name_of_accommodation")}
+              placeholder={t("manageAccommodation_create.please_fill_name_of_accommodation")}
+              label={t("manageAccommodation_create.name_of_accommodation")}
             />
             <div className="w-full">
-              <Select label={t("create.country")} className="bg-white" size="lg">
+              <Select label={t("manageAccommodation_create.country")} className="bg-white" size="lg">
                 <Option>Material Tailwind HTML</Option>
                 <Option>Material Tailwind React</Option>
               </Select>
             </div>
             <div className="w-full">
-              <Select label={t("create.province_state")} className="bg-white" size="lg">
+              <Select label={t("manageAccommodation_create.province_state")} className="bg-white" size="lg">
                 <Option>Material Tailwind HTML</Option>
                 <Option>Material Tailwind React</Option>
               </Select>
             </div>
             <Textarea
               rows={4}
-              label={t("create.accommodation_address")}
+              label={t("manageAccommodation_create.accommodation_address")}
               containerProps={{ className: "min-w-[72px]" }}
             />
             <Textarea
               rows={4}
-              label={t("create.accommodation_address_eng")}
+              label={t("manageAccommodation_create.accommodation_address_eng")}
               containerProps={{ className: "min-w-[72px]" }}
             />
             <Input
-              label={t("create.location")}
+              label={t("manageAccommodation_create.location")}
               size="lg"
-              placeholder={t("create.please_fill_location")}
+              placeholder={t("manageAccommodation_create.please_fill_location")}
               color="black"
               type="text"
             />
             <Textarea
               rows={4}
-              label={t("create.accommodation_details")}
+              label={t("manageAccommodation_create.accommodation_details")}
               containerProps={{ className: "min-w-[72px]" }}
             />
             <Textarea
               rows={4}
-              label={t("create.accommodation_details_eng")}
+              label={t("manageAccommodation_create.accommodation_details_eng")}
               containerProps={{ className: "min-w-[72px]" }}
             />
             <Input
-              label={t("create.phone_number")}
+              label={t("manageAccommodation_create.phone_number")}
               size="lg"
-              placeholder={t("create.please_phone_number")}
+              placeholder={t("manageAccommodation_create.please_phone_number")}
               color="black"
               type="text"
             />
             <Textarea
               rows={4}
-              label={t("create.facilities")}
+              label={t("manageAccommodation_create.facilities")}
               containerProps={{ className: "min-w-[72px]" }}
             />
             <Textarea
               rows={4}
-              label={t("create.facilities_eng")}
+              label={t("manageAccommodation_create.facilities_eng")}
               containerProps={{ className: "min-w-[72px]" }}
             />
             <div className="flex flex-col gap-2">
-              <Radio name="type" label={t("create.pets")} />
+              <Radio name="type" label={t("manageAccommodation_create.pets")} />
             </div>
             <div className="">
               <div className="rounded-md border border-indigo-500 bg-gray-50 p-4 shadow-md w-36">

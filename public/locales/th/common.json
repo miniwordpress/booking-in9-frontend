@@ -3,6 +3,10 @@
     "error": "อีเมลหรือรหัสไม่ถูกต้อง",
     "signIn": "เข้าสู่ระบบ"
   },
+  "button" : {
+    "confirm" : "ยืนยัน",
+    "cancel" : "ยกเลิก"
+  },
   "register" : {
     "register" : "ลงทะเบียน",
     "id" : "เลขบัตรประจำตัวประชาชน",
@@ -16,7 +20,14 @@
     "tel" : "เบอร์โทร",
     "recommend" : "โปรดแนะนำตัวเอง และสิ่งที่คุณต้องการหนุนเสริมเพื่อการพัฒนาการเรียนรู้ให้แก่ผู้ที่มาใช้บริการ"
   },
-  "create" : {
+  "manage_accommodation" : {
+    "accommodation_anagement" : "จัดการที่พัก",
+    "add_accommodation" : "เพิ่มที่พัก",
+    "delete_accommodation" : "ลบที่พัก",
+    "you_sure_delete_accommodation" : "คุณต้องการลบที่พักนี้ ใช่ หรือ ไม่ ?",
+    "edit_accommodation" : "แก้ไขที่พัก"
+  },
+  "manageAccommodation_create" : {
     "accommodationType" : "ประเภทที่พัก",
     "name_of_accommodation" : "ชื่อที่พัก",
     "please_fill_name_of_accommodation" : "โปรดกรอกชื่อที่พัก",
@@ -33,6 +44,20 @@
     "facilities" : "สิ่งอำนวยความสะดวก",
     "facilities_eng" : "สิ่งอำนวยความสะดวก (Eng)",
     "pets" : "สัตว์เลี้ยง"
+  },
+  "forbidden" : {
+    "permission_dont_have" : "คุณไม่มีสิทธิในการเข้าถึงหน้านี้",
+    "back_to_home" : "กลับสู่หน้าหลัก"
+  },
+  "not_found" : {
+    "page_not_found" : "ไม่พบหน้านี้",
+    "page_not_found_detail" : "ไม่พบหน้านี้",
+    "back_to_home" : "กลับสู่หน้าหลัก"
+  },
+  "unauthorized" : {
+    "unauthorized_access" : "การเข้าถึงโดยไม่ได้รับอนุญาต",
+    "unauthorized_access_detail" : "คุณไม่มีสิทธิในการเข้าถึงหน้านี้",
+    "back_to_home" : "กลับสู่หน้าหลัก"
   },
   "hello": "สวัสดี",
   "home": "หน้าหลัก",
