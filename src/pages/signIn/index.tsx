@@ -15,10 +15,8 @@ export default function SignInPage() {
   const router = useRouter();
   const { t } = useTranslation();
   const [signIn] = useSignInMutation();
-  const [disableButton, setDisableButton] = useState(false);
   const [isDialogFailedOpen, setIsDialogFailedOpen] = useState(false);
   const [statusCode, setStatusCode] = useState("");
-
 
   const validationSchema = yup.object({
     email: yup
@@ -37,19 +35,17 @@ export default function SignInPage() {
       password: "",
     },
     validationSchema,
-    onSubmit: async (values) => {
-      try {
-        setDisableButton(true);
-        setServerError("");
-        await signIn({
-          email: values.email,
-          password: values.password,
-        }).unwrap();
+    onSubmit:(values) => {
+      signIn(values)
+      .unwrap()
+      .then((value) => {
         router.push("/manageAccommodation");
-      } catch (error) {
-        setServerError(t("login.email_or_password_is_incorrect"));
-        setDisableButton(false);
-      }
+        console.error("login success", value);
+      }).catch((error) => {
+        setIsDialogFailedOpen(true);
+        setStatusCode(error.status.toString());
+        console.error(error);
+      })
     },
     validateOnBlur: true,
     validateOnChange: true,
@@ -120,20 +116,17 @@ export default function SignInPage() {
             )}
 
             <Button
-              type="submit"
-              disabled={disableButton}
+              type="submit" 
               className="mt-2 bg-gradient-to-r from-cyan-500 via-purple-300 to-pink-300 text-[100%] font-semibold"
               fullWidth
             >
               {t("login.signIn")}
               <DialogOneButton
-              title={t("register.modal_title_success_message")}
-              body={t("register.modal_body_success_message")}
-              buttonText={t("register.modal_button_success_title")}
+              title={"Failed"}
+              body={"Cannot login becase ..."}
+              buttonText={"Close"}
               buttonColor="bg-gradient-to-r from-cyan-500 via-purple-300 to-pink-300"
-              buttonHandler={() => {
-                router.push("/login")
-              }}
+              buttonHandler={() => {}}
               open={isDialogFailedOpen}
               setOpen={setIsDialogFailedOpen}
               />
