@@ -39,6 +39,24 @@
   "main_page": {
     "more_information": "More information"
   },
+  "create" : {
+    "accommodationType" : "Accommodation Type",
+    "name_of_accommodation" : "Name of Accommodation",
+    "please_fill_name_of_accommodation" : "Please Fill in Name of Accommodation.",
+    "country" : "Country",
+    "province_state" : "Province/State",
+    "accommodation_address" : "Accommodation Address",
+    "accommodation_address_eng" : "Accommodation Address (Eng)",
+    "location" : "Location (Link google maps)",
+    "please_fill_location" : "Please Fill in Location.",
+    "accommodation_details" : "Accommodation Details",
+    "accommodation_details_eng" : "Accommodation Details (Eng)",
+    "phone_number" : "Phone Number",
+    "please_phone_number" : "Please Fill phone number.",
+    "facilities" : "Facilities",
+    "facilities_eng" : "Facilities (Eng)",
+    "pets" : "Pets"
+  },
     "hello": "Hello",
     "home": "Home",
     "email": "Email",

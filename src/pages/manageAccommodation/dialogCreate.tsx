@@ -1,14 +1,9 @@
-import { useState } from "react";
-import { useRouter } from "next/navigation";
 import { useTranslation } from "react-i18next";
-import SidebarMenu from "@/components/SidebarMenu";
 import HeaderBaseAdmin from "../../components/header_admin";
 
 import {
   Textarea,
-  Typography,
   Input,
-  Button,
   Radio,
   Card,
   Select,
@@ -16,7 +11,6 @@ import {
 } from "@material-tailwind/react";
 
 export function createAccommodation() {
-  const router = useRouter();
   const { t } = useTranslation();
 
   return (
@@ -33,7 +27,7 @@ export function createAccommodation() {
         <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96 ">
           <div className="mb-1 flex flex-col gap-3 ">
             <div className="w-full">
-              <Select label={t("ประเภทที่พัก")} className="bg-white" size="lg">
+              <Select label={t("create.accommodationType")} className="bg-white" size="lg">
                 <Option>Material Tailwind HTML</Option>
                 <Option>Material Tailwind React</Option>
               </Select>
@@ -42,67 +36,67 @@ export function createAccommodation() {
               type="text"
               size="lg"
               color="black"
-              placeholder="กรอกชื่อที่พัก"
-              label="ชื่อที่พัก"
+              placeholder={t("create.please_fill_name_of_accommodation")}
+              label={t("create.name_of_accommodation")}
             />
             <div className="w-full">
-              <Select label={t("ประเทศ")} className="bg-white" size="lg">
+              <Select label={t("create.country")} className="bg-white" size="lg">
                 <Option>Material Tailwind HTML</Option>
                 <Option>Material Tailwind React</Option>
               </Select>
             </div>
             <div className="w-full">
-              <Select label={t("รัฐ/จังหวัด")} className="bg-white" size="lg">
+              <Select label={t("create.province_state")} className="bg-white" size="lg">
                 <Option>Material Tailwind HTML</Option>
                 <Option>Material Tailwind React</Option>
               </Select>
             </div>
             <Textarea
               rows={4}
-              label="ที่อยู่ของที่พัก"
+              label={t("create.accommodation_address")}
               containerProps={{ className: "min-w-[72px]" }}
             />
             <Textarea
               rows={4}
-              label="ที่อยู่ของที่พัก (Eng)"
+              label={t("create.accommodation_address_eng")}
               containerProps={{ className: "min-w-[72px]" }}
             />
             <Input
-              label="ตำแหน่งที่ตั้ง (เเนบลิ้งค์ google map)"
+              label={t("create.location")}
               size="lg"
-              placeholder="กรอกตำแหน่งที่ตั้ง"
+              placeholder={t("create.please_fill_location")}
               color="black"
               type="text"
             />
             <Textarea
               rows={4}
-              label="รายละเอียดเพิ่มเติมของที่พัก"
+              label={t("create.accommodation_details")}
               containerProps={{ className: "min-w-[72px]" }}
             />
             <Textarea
               rows={4}
-              label="รายละเอียดเพิ่มเติมของที่พัก (Eng)"
+              label={t("create.accommodation_details_eng")}
               containerProps={{ className: "min-w-[72px]" }}
             />
             <Input
-              label="เบอร์โทร"
+              label={t("create.phone_number")}
               size="lg"
-              placeholder="กรอกเบอร์โทร"
+              placeholder={t("create.please_phone_number")}
               color="black"
               type="text"
             />
             <Textarea
               rows={4}
-              label="สิ่งอำนวยความสะดวก"
+              label={t("create.facilities")}
               containerProps={{ className: "min-w-[72px]" }}
             />
             <Textarea
               rows={4}
-              label="สิ่งอำนวยความสะดวก (Eng)"
+              label={t("create.facilities_eng")}
               containerProps={{ className: "min-w-[72px]" }}
             />
             <div className="flex flex-col gap-2">
-              <Radio name="type" label="Pet" />
+              <Radio name="type" label={t("create.pets")} />
             </div>
             <div className="">
               <div className="rounded-md border border-indigo-500 bg-gray-50 p-4 shadow-md w-36">

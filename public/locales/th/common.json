@@ -39,6 +39,24 @@
   "main_page": {
     "more_information": "สอบถามเพิ่มเติม"
   },
+  "create" : {
+    "accommodationType" : "ประเภทที่พัก",
+    "name_of_accommodation" : "ชื่อที่พัก",
+    "please_fill_name_of_accommodation" : "โปรดกรอกชื่อที่พัก",
+    "country" : "ประเทศ",
+    "province_state" : "รัฐ/จังหวัด",
+    "accommodation_address" : "ที่อยู่ของที่พัก",
+    "accommodation_address_eng" : "ที่อยู่ของที่พัก (Eng)",
+    "location" : "ตำแหน่งที่ตั้ง (แนบลิ้งค์ google maps)",
+    "please_fill_location" : "โปรดกรอกตำแหน่งที่ตั้ง",
+    "accommodation_details" : "รายละเอียดเพิ่มเติมของที่พัก",
+    "accommodation_details_eng" : "รายละเอียดเพิ่มเติมของที่พัก  (Eng)",
+    "phone_number" : "เบอร์โทร",
+    "please_phone_number" : "โปรดกรอกเบอร์โทร",
+    "facilities" : "สิ่งอำนวยความสะดวก",
+    "facilities_eng" : "สิ่งอำนวยความสะดวก (Eng)",
+    "pets" : "สัตว์เลี้ยง"
+  },
   "hello": "สวัสดี",
   "home": "หน้าหลัก",
   "email": "อีเมล",
