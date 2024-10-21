@@ -24,7 +24,7 @@ export function manageAccommodation() {
   const [open, setOpen] = useState(false);
 
   const handleOpen = () => setOpen(!open);
-  const TABLE_HEAD = ["#", "Name Accommodation", "Status", "Setting"];
+  const TABLE_HEAD = ["ลำดับ", "ชื่อที่พัก", "Status", "จัดการ"];
 
   const TABLE_ROWS = [
     {
