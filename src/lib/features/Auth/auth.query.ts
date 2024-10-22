@@ -27,6 +27,14 @@ export const authAPI = createApi({
         }),
         invalidatesTags: ['Auth'],
       }),
+      verifyAccount: builder.mutation({
+        query: (body) => ({
+          url: '/users/verify',
+          method: 'POST',
+          body: { ...body }
+        }),
+        invalidatesTags: ['Auth'],
+      }),
     }
   },
 })
@@ -34,4 +42,4 @@ export const authAPI = createApi({
 export const authQueryReducer = { [reducerPath]: authAPI.reducer }
 export const { useSignInMutation } = authAPI
 
-export const { signIn } = authAPI.endpoints
+export const { signIn, verifyAccount } = authAPI.endpoints

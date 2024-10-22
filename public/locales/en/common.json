@@ -5,7 +5,16 @@
     "please_enter_your_email": "Please enter email",
     "please_enter_correct_email_address": "Please enter correct email address",
     "please_enter_your_password": "please enter your password",
-    "email_or_password_is_incorrect": "Email or password is incorrect"
+    "email_or_password_is_incorrect": "Email or password is incorrect",
+    "close":"Close"
+    
+  },
+  "verify_account" : {
+    "title_modal_success":"Success",
+    "message_modal_success":"Verify account success",
+    "title_modal_error":"Failed",
+    "message_modal_error":"Verify account error",
+    "title_button_go_to_login":"Go to login"
   },
   "button" : {
     "confirm" : "Confirm",

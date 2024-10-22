@@ -5,13 +5,19 @@
     "please_enter_your_email": "โปรดกรอกอีเมลของคุณ",
     "please_enter_correct_email_address": "โปรดกรอกอีเมลให้ถูกต้อง",
     "please_enter_your_password": "โปรดกรอกรหัสผ่านของคุณ",
-    "email_or_password_is_incorrect": "อีเมลหรือรหัสผ่านไม่ถูกต้อง"
-    
-    
+    "email_or_password_is_incorrect": "อีเมลหรือรหัสผ่านไม่ถูกต้อง",
+    "close":"ปิด"
   },
   "button" : {
     "confirm" : "ยืนยัน",
     "cancel" : "ยกเลิก"
+  },
+  "verify_account" : {
+    "title_modal_success":"สำเร็จ",
+    "message_modal_success":"ยืนยันบัญชีสำเร็จ",
+    "title_modal_error":"ไม่สำเร็จ",
+    "message_modal_error":"ยืนยันบัญชีไม่สำเร็จ",
+    "title_button_go_to_login":"ไปหน้าเข้าสู่ระบบ"
   },
   "register" : {
     "register" : "ลงทะเบียน",

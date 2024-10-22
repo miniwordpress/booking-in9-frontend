@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit"
-import { signIn } from "./auth.query"
+import { signIn, verifyAccount } from "./auth.query"
 import { setAccessToken } from '@/utils/cookies'
 import { IReduxAuth } from "./auth"
 
@@ -20,6 +20,12 @@ export const authSlice = createSlice({
   extraReducers: (builder) => {
     builder.addMatcher(
       signIn.matchFulfilled,
+      (state, { payload }: {payload: IReduxAuth.BaseResponse}) => {
+        state.baseResponse = {...payload}
+      }
+    )
+    builder.addMatcher(
+      verifyAccount.matchFulfilled,
       (state, { payload }: {payload: IReduxAuth.BaseResponse}) => {
         state.baseResponse = {...payload}
       }
