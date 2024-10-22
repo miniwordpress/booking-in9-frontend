@@ -40,7 +40,7 @@ export default function SignInPage() {
       .unwrap()
       .then((value) => {
         router.push("/manageAccommodation");
-        console.error("login success", value);
+        console.log("login success", value);
       }).catch((error) => {
         setIsDialogFailedOpen(true);
         setStatusCode(error.status.toString());
@@ -123,8 +123,8 @@ export default function SignInPage() {
               {t("login.signIn")}
               <DialogOneButton
               title={"Failed"}
-              body={"Cannot login becase ..."}
-              buttonText={"Close"}
+              body={t("login.email_or_password_is_incorrect")}
+              buttonText={t("login.close")}
               buttonColor="bg-gradient-to-r from-cyan-500 via-purple-300 to-pink-300"
               buttonHandler={() => {}}
               open={isDialogFailedOpen}

@@ -29,6 +29,8 @@ export default function SignUpPage() {
   const SSN_TYPE = "SSN";
   const TIN_TYPE = "TIN";
 
+  
+ 
   const router = useRouter();
   const { t } = useTranslation();
   const { locale } = router;
