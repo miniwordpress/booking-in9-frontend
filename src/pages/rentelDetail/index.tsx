@@ -3,10 +3,7 @@ import { useState } from "react"
 import Header from "@components/header";
 import Footer from "@components/footer";
 import {
-  Carousel,
   Card,
-  Select,
-  Option,
   CardBody,
   CardHeader,
   Typography,
@@ -19,9 +16,8 @@ import {
 } from "@material-tailwind/react";
 import { format } from "date-fns";
 import { DayPicker } from "react-day-picker";
-// import { ChevronRightIcon, ChevronLeftIcon } from "@heroicons/react/24/outline";
 
-export default function MainPage() {
+export default function rentelDetailPage() {
   const { t } = useTranslation();
   const [checkin, setCheckin] = useState<Date>();
   const [checkout, setCheckout] = useState<Date>();

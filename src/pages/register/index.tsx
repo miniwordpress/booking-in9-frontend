@@ -23,7 +23,7 @@ import { useFormik } from "formik";
 import * as yup from "yup";
 import { set } from 'cypress/types/lodash';
 
-export default function SignUpPage() {
+export default function registerPage() {
   const ID_TYPE = "ID";
   const PASSPORT_TYPE = "PASSPORT";
   const SSN_TYPE = "SSN";
