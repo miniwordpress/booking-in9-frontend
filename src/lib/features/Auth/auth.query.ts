@@ -40,6 +40,6 @@ export const authAPI = createApi({
 })
 
 export const authQueryReducer = { [reducerPath]: authAPI.reducer }
-export const { useSignInMutation } = authAPI
+export const { useSignInMutation, useVerifyAccountMutation } = authAPI
 
 export const { signIn, verifyAccount } = authAPI.endpoints

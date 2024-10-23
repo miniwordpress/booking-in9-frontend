@@ -33,8 +33,6 @@ export const nationalityAPI = createApi({
 
 export const nationalityQueryReducer = { [reducerPath]: nationalityAPI.reducer }
 
-export const {
-  usePublicNationalityQuery,
-} = nationalityAPI
+export const { usePublicNationalityQuery } = nationalityAPI
 
 export const { publicNationality } = nationalityAPI.endpoints

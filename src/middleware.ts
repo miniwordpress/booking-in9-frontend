@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-const signInRoutes = ['/signIn']
+const signInRoutes = ['/signIn', "/manageAccommodation"]
 const publicRoutes = ['/', '/forgotPassword', '/register', '/renew-password', '/rentelDetail', '/verify-account']
 
 export default async function middleware(req: NextRequest) {
