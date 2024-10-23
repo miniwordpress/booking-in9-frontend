@@ -6,9 +6,10 @@ import {
   Card,
   CardBody,
   Typography,
-  Button,
+  Option,
   Input,
   Breadcrumbs,
+  Select,
 } from "@material-tailwind/react";
 
 export default function ConfirmBookingPage() {
@@ -138,6 +139,7 @@ export default function ConfirmBookingPage() {
               </Card>
             </div>
           </div>
+
           <div className="">
             <Card className="mt-6 w-full h-auto border">
               <CardBody>
@@ -214,32 +216,56 @@ export default function ConfirmBookingPage() {
           </div>
         </div>
       </div>
-      <div className="flex justify-center xl:w-full gap-8 p-16">
-        <Card className="mt-6 w-full h-auto border p-16">
-          <CardBody>
-            <div>
-              <Typography variant="h5" color="blue-gray">
-                ชำระเงินด้วย
-              </Typography>
+      <div className="font-prompt grid h-auto grid-rows-[auto_1fr] p-16">
+        <Card className="flex items-center justify-center p-4 border">
+        <Typography variant="h4" color="blue-gray" className="mt-2">
+        ชำระเงินด้วย
+                    </Typography>
+          <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
+            <div className="mb-1 flex flex-col gap-6 ">
+              <div className="w-full">
+                <Select label={t("comfirm_booking.payment")} size="lg">
+                  <Option>{t("comfirm_booking.credit_card")}</Option>
+                  <Option>{t("comfirm_booking.dabit_card")}</Option>
+                  <Option>{t("comfirm_booking.promptPay")}</Option>
+                </Select>
+              </div>
+
+              <Input
+                maxLength={19}
+                size="lg"
+                color="black"
+                label="Card Details"
+                placeholder="0000 0000 0000 0000"
+              />
+              <Input
+                maxLength={5}
+                size="lg"
+                color="black"
+                label="Expires"
+                placeholder="00/00"
+              />
+              <Input
+                maxLength={4}
+                size="lg"
+                color="black"
+                label="CVC"
+                placeholder="0000"
+              />
+              <Input
+                maxLength={8}
+                size="lg"
+                color="black"
+                label="รหัสไปรษณีย์"
+                placeholder="รหัสไปรษณีย์"
+              />
+              <div className="w-full">
+                <Select label="ประเทศ" size="lg">
+                  <Option>ไทย</Option>
+                </Select>
+              </div>
             </div>
-            <div className="p-16">
-              <div className="pb-4">
-                <Input
-                  maxLength={19}
-                  label="Card Details"
-                  placeholder="0000 0000 0000 0000"
-                />
-              </div>
-              {/* <div className="my-4 flex items-center justify-center gap-4 "> */}
-              <div className="pb-4">
-                <Input maxLength={5} label="Expires" placeholder="00/00" />
-              </div>
-              <div>
-                <Input maxLength={4} label="CVC" placeholder="0000" />
-              </div>
-            </div>
-            {/* </div> */}
-          </CardBody>
+          </form>
         </Card>
       </div>
       <Footer />

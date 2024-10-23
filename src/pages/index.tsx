@@ -237,7 +237,7 @@ export default function MainPage() {
             <Card className="w-92 shadow-xl hover:shadow-orange-900/50">
               <CardHeader floated={false} className="h-60">
                 <img
-                  src="https://images.pexels.com/photos/322154/pexels-photo-322154.jpeg?auto=compress&cs=tinysrgb&w=600"
+                  src="https://picsum.photos/600/600"
                   alt="profile-picture"
                 />
               </CardHeader>
