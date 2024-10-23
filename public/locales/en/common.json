@@ -82,45 +82,6 @@
     "unauthorized_access_detail" : "Oops! You're not authorization access this pages.",
     "back_to_home" : "Back To Home"
   },
-  "manage_accommodation" : {
-    "accommodation_anagement" : "Accommodation Management",
-    "add_accommodation" : "Add Accommodation",
-    "delete_accommodation" : "Delete Accommodation",
-    "you_sure_delete_accommodation" : "Are you sure you want to delete this accommodation?",
-    "edit_accommodation" : "Edit Accommodation"
-  },
-  "manageAccommodation_create" : {
-    "accommodationType" : "Accommodation Type",
-    "name_of_accommodation" : "Name of Accommodation",
-    "please_fill_name_of_accommodation" : "Please Fill in Name of Accommodation.",
-    "country" : "Country",
-    "province_state" : "Province/State",
-    "accommodation_address" : "Accommodation Address",
-    "accommodation_address_eng" : "Accommodation Address (Eng)",
-    "location" : "Location (Link google maps)",
-    "please_fill_location" : "Please Fill in Location.",
-    "accommodation_details" : "Accommodation Details",
-    "accommodation_details_eng" : "Accommodation Details (Eng)",
-    "phone_number" : "Phone Number",
-    "please_phone_number" : "Please Fill phone number.",
-    "facilities" : "Facilities",
-    "facilities_eng" : "Facilities (Eng)",
-    "pets" : "Pets"
-  },
-  "forbidden" : {
-    "permission_dont_have" : "Oops, You don't have permission to access this page.",
-    "back_to_home" : "Back To Home"
-  },
-  "not_found" : {
-    "page_not_found" : "Page Not Found",
-    "page_not_found_detail" : "Oops! That page doesn’t exist.",
-    "back_to_home" : "Back To Home"
-  },
-  "unauthorized" : {
-    "unauthorized_access" : "Unauthorized Access.",
-    "unauthorized_access_detail" : "Oops! You're not authorization access this pages.",
-    "back_to_home" : "Back To Home"
-  },
     "hello": "Hello",
     "home": "Home",
     "email": "Email",

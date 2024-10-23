@@ -1,6 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit"
 import { listAccommodation } from "./accommodation.query"
-import { setAccessToken } from '@/utils/cookies'
 import { IReduxAccommodation } from "./accommodation"
 
 const reducerName = "accommodation"
