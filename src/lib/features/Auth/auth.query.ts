@@ -6,12 +6,6 @@ import customFetchBase from '../customFetchBase'
 function isHydrateAction(action: Action): action is PayloadAction<any> {
   return action.type === HYDRATE
 }
-const baseBody = {
-  client_id: process.env.NEXT_PUBLIC_CLIENT_ID,
-  client_secret: process.env.NEXT_PUBLIC_CLIENT_SECRET
-}
-
-const signInBody = { grant_type: 'password', ...baseBody }
 
 const reducerPath = "authAPI"
 export const authAPI = createApi({
@@ -27,7 +21,15 @@ export const authAPI = createApi({
     return {
       signIn: builder.mutation({
         query: (body) => ({
-          url: '/mock/login',
+          url: '/authentication/sign-in',
+          method: 'POST',
+          body: { ...body }
+        }),
+        invalidatesTags: ['Auth'],
+      }),
+      verifyAccount: builder.mutation({
+        query: (body) => ({
+          url: '/users/verify',
           method: 'POST',
           body: { ...body }
         }),
@@ -38,6 +40,6 @@ export const authAPI = createApi({
 })
 
 export const authQueryReducer = { [reducerPath]: authAPI.reducer }
-export const { useSignInMutation } = authAPI
+export const { useSignInMutation, useVerifyAccountMutation } = authAPI
 
-export const { signIn } = authAPI.endpoints
+export const { signIn, verifyAccount } = authAPI.endpoints

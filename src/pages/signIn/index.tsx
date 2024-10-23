@@ -1,63 +1,68 @@
-import { useRouter } from 'next/navigation'
-import { useTranslation } from "react-i18next"
-import { useState } from "react"
-import { useSignInMutation } from '@/lib/features/Auth'
-import Header from "../../components/header"
-import Footer from "../../components/footer"
-import Breadcrumbs from "../../components/breadcrumbs"
-import { Alert } from "@material-tailwind/react"
-import {
-  Card,
-  Typography,
-  Input,
-  Button,
-} from "@material-tailwind/react"
+import { useRouter } from "next/navigation";
+import { useTranslation } from "react-i18next";
+import { useState } from "react";
+import { useSignInMutation } from "@/lib/features/Auth";
+import Header from "../../components/header";
+import Footer from "../../components/footer";
+import Breadcrumbs from "../../components/breadcrumbs";
+import { Alert } from "@material-tailwind/react";
+import { Card, Typography, Input, Button } from "@material-tailwind/react";
+import { useFormik } from "formik";
+import * as yup from "yup";
+import { DialogOneButton } from "@/components/modal_one_button";
 
 export default function SignInPage() {
-  const router = useRouter()
-  const { t } = useTranslation()
-  const [signIn] = useSignInMutation()
-  const [username, setUsername] = useState("")
-  const [password, setPassword] = useState("")
-  const [showErrorUsername, setShowErrorUsername] = useState(false)
-  const [showErrorPassword, setShowErrorPassword] = useState(false)
-  const [disableButton, setDisableButton] = useState(false)
-  const [open, setOpen] = useState(false)
+  const router = useRouter();
+  const { t } = useTranslation();
+  const [signIn] = useSignInMutation();
+  const [isDialogFailedOpen, setIsDialogFailedOpen] = useState(false);
+  const [statusCode, setStatusCode] = useState("");
 
-  const loginSubmit = async () => {
-    if (username.length > 0 && password.length > 0) {
-      setOpen(false)
-      try {
-        await signIn(
-          {
-            email: username,
-            password: password
-          }
-        ).unwrap()
-        setDisableButton(true)
-        router.push("/manageAccommodation")
-      } catch (error: any) {
-        setOpen(true)
-        setDisableButton(false)
-      }
-    } else {
-      setShowErrorUsername(true)
-      setShowErrorPassword(true)
-    }
-  };
+  const validationSchema = yup.object({
+    email: yup
+      .string()
+      .email(t("login.please_enter_correct_email_address"))
+      .required(t("login.please_enter_your_email")),
+    password: yup
+      .string()
+      .min(1, "")
+      .required(t("login.please_enter_your_password")),
+  });
+
+  const formik = useFormik({
+    initialValues: {
+      email: "",
+      password: "",
+    },
+    validationSchema,
+    onSubmit:(values) => {
+      signIn(values)
+      .unwrap()
+      .then((value) => {
+        router.push("/manageAccommodation");
+        console.log("login success", value);
+      }).catch((error) => {
+        setIsDialogFailedOpen(true);
+        setStatusCode(error.status.toString());
+        console.error(error);
+      })
+    },
+    validateOnBlur: true,
+    validateOnChange: true,
+  });
 
   return (
-    <div className="font-prompt grid h-screen grid-rows-[auto_1fr] bg-white ">
+    <div className="font-prompt grid h-screen grid-rows-[auto_1fr] bg-white">
       <div>
         <Header />
         <div className="hidden sm:block my-10 mx-10">
-          <Breadcrumbs className="">
-          <a href="/" className="opacity-80 ml-2">
-            {t('home')}
-          </a>
-          <a href="/signIn" className="text-black">
-            {t('login.signIn')}
-          </a>
+          <Breadcrumbs>
+            <a href="/" className="opacity-80 ml-2">
+              {t("home")}
+            </a>
+            <a href="/signIn" className="text-black">
+              {t("login.signIn")}
+            </a>
           </Breadcrumbs>
         </div>
       </div>
@@ -66,69 +71,75 @@ export default function SignInPage() {
         color="transparent"
         shadow={false}
       >
-        <Typography className="text-[150%] text-black ">
+        <Typography className="text-[150%] text-black">
           {t("login.signIn")}
         </Typography>
-        <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96 ">
-          <div className="mb-1 flex flex-col gap-6 ">
-            <Alert open={open} color="red" onClose={() => setOpen(false)}>
-              {t("login.error")}
-            </Alert>
-            <Typography className="text-[110%] font-bold">
-              {t("email")}
-            </Typography>
+        <form
+          className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96"
+          onSubmit={formik.handleSubmit}
+          noValidate
+        >
+          <div className={`mb-1 flex flex-col ${formik.submitCount > 0 && (Boolean(formik.errors.email) || Boolean(formik.errors.password)) ? 'gap-3' : 'gap-6'}`}>
             <Input
-              error={showErrorUsername}
+              error={formik.submitCount > 0 && Boolean(formik.errors.email)}
               type="email"
+              label={t("email")}
               size="lg"
               color="black"
-              placeholder="email@mail.com"
-              onChange={(e) => {
-                setUsername(e.target.value);
-              }}
-              label="Email"
-              onFocus={(e) => { setShowErrorUsername(false) }}
-              value={username}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.email}
+              name="email"
+              className=""
             />
-            <Typography className="text-[110%] font-bold">
-              {t("password")}
-            </Typography>
+            {Boolean(formik.errors.email) && formik.submitCount > 0 && (
+              <Typography variant="small" color="red" className="">
+                {formik.errors.email}
+              </Typography>
+            )}
             <Input
-              label="Password"
+              error={formik.submitCount > 0 && Boolean(formik.errors.password)}
               type="password"
-              value={password}
-              onChange={(e) => {
-                setPassword(e.target.value);
-              }}
-            />
-            {/* { <Input
-              type="password"
+              label={t("password")}
               size="lg"
-              label="Password"
-              color="white"
-              value={password}
-              onChange={(e) => {
-                setPassword(e.target.value);
-              }}
-              onFocus={(e) => { setShowErrorPassword(false) }}
-              // icon={<i className="fas fa-heart" />}
-              // className=" !border-t-blue-gray-500 focus:!border-t-gray-900 bg-white"
-            /> */}
-            
+              color="black"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.password}
+              name="password"
+              className=""
+            />
+             {Boolean(formik.errors.password) && formik.submitCount > 0 && (
+              <Typography variant="small" color="red" className="">
+                {formik.errors.password}
+              </Typography>
+            )}
+
             <Button
-              disabled={disableButton}
-              onClick={loginSubmit}
+              type="submit" 
               className="mt-2 bg-gradient-to-r from-cyan-500 via-purple-300 to-pink-300 text-[100%] font-semibold"
               fullWidth
             >
               {t("login.signIn")}
+              <DialogOneButton
+              title={"Failed"}
+              body={t("login.email_or_password_is_incorrect")}
+              buttonText={t("login.close")}
+              buttonColor="bg-gradient-to-r from-cyan-500 via-purple-300 to-pink-300"
+              buttonHandler={() => {}}
+              open={isDialogFailedOpen}
+              setOpen={setIsDialogFailedOpen}
+              />
             </Button>
             <Typography
               variant="small"
               color="black"
-              className="flex justify-center font-normal mt-3"
+              className="flex justify-center font-normal my-3"
             >
-              <a href="/forgotPassword" className="font-prompt hover:text-gray-700">
+              <a
+                href="/forgotPassword"
+                className="font-prompt hover:text-gray-700"
+              >
                 {t("forgot_password")}
               </a>
             </Typography>
@@ -139,3 +150,4 @@ export default function SignInPage() {
     </div>
   );
 }
+// testaaa
