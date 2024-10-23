@@ -32,31 +32,6 @@
     "tel" : "เบอร์โทร",
     "recommend" : "โปรดแนะนำตัวเอง และสิ่งที่คุณต้องการหนุนเสริมเพื่อการพัฒนาการเรียนรู้ให้แก่ผู้ที่มาใช้บริการ"
   },
-  "manage_accommodation" : {
-    "accommodation_anagement" : "จัดการที่พัก",
-    "add_accommodation" : "เพิ่มที่พัก",
-    "delete_accommodation" : "ลบที่พัก",
-    "you_sure_delete_accommodation" : "คุณต้องการลบที่พักนี้ ใช่ หรือ ไม่ ?",
-    "edit_accommodation" : "แก้ไขที่พัก"
-  },
-  "manageAccommodation_create" : {
-    "accommodationType" : "ประเภทที่พัก",
-    "name_of_accommodation" : "ชื่อที่พัก",
-    "please_fill_name_of_accommodation" : "โปรดกรอกชื่อที่พัก",
-    "country" : "ประเทศ",
-    "province_state" : "รัฐ/จังหวัด",
-    "accommodation_address" : "ที่อยู่ของที่พัก",
-    "accommodation_address_eng" : "ที่อยู่ของที่พัก (Eng)",
-    "location" : "ตำแหน่งที่ตั้ง (แนบลิ้งค์ google maps)",
-    "please_fill_location" : "โปรดกรอกตำแหน่งที่ตั้ง",
-    "accommodation_details" : "รายละเอียดเพิ่มเติมของที่พัก",
-    "accommodation_details_eng" : "รายละเอียดเพิ่มเติมของที่พัก  (Eng)",
-    "phone_number" : "เบอร์โทร",
-    "please_phone_number" : "โปรดกรอกเบอร์โทร",
-    "facilities" : "สิ่งอำนวยความสะดวก",
-    "facilities_eng" : "สิ่งอำนวยความสะดวก (Eng)",
-    "pets" : "สัตว์เลี้ยง"
-  },
   "forbidden" : {
     "permission_dont_have" : "คุณไม่มีสิทธิในการเข้าถึงหน้านี้",
     "back_to_home" : "กลับสู่หน้าหลัก"
@@ -95,20 +70,6 @@
     "facilities" : "สิ่งอำนวยความสะดวก",
     "facilities_eng" : "สิ่งอำนวยความสะดวก (Eng)",
     "pets" : "สัตว์เลี้ยง"
-  },
-  "forbidden" : {
-    "permission_dont_have" : "คุณไม่มีสิทธิในการเข้าถึงหน้านี้",
-    "back_to_home" : "กลับสู่หน้าหลัก"
-  },
-  "not_found" : {
-    "page_not_found" : "ไม่พบหน้านี้",
-    "page_not_found_detail" : "ไม่พบหน้านี้",
-    "back_to_home" : "กลับสู่หน้าหลัก"
-  },
-  "unauthorized" : {
-    "unauthorized_access" : "การเข้าถึงโดยไม่ได้รับอนุญาต",
-    "unauthorized_access_detail" : "คุณไม่มีสิทธิในการเข้าถึงหน้านี้",
-    "back_to_home" : "กลับสู่หน้าหลัก"
   },
   "hello": "สวัสดี",
   "home": "หน้าหลัก",
@@ -119,21 +80,21 @@
   "payment": "ช่องทางการชำระเงิน",
   "confirm": "ยืนยัน",
   "search_accommodation" : "ค้นหาที่พักของคุณที่นี่",
-    "search" : "ค้นหา",
-    "location" : "ตำแหน่งสถานที่",
-    "province_State" : "จังหวัด/รัฐ",
-    "adult" : "ผู้ใหญ่ (13 ปีขึ้นไป)",
-    "children" : "เด็ก (2-13 ปี)",
-    "infant" : "ทารก (น้อยกว่า 2 ปี)",
-    "pets" : "สัตว์เลี้ยง",
-    "house" : "บ้านเดี่ยว",
-    "hotel" : "โรงแรม",
-    "apartment" : "อพาร์ตเมนต์",
-    "townhome" : "บ้านทาวน์โฮม",
-    "condominium" : "คอนโดมิเนียม",
-    "what you will receive from in9.co" : "สิ่งที่คุณจะได้รับจาก In9.co",
-    "experience" : "ประสบการณ์",
-    "fast convenient" : "รวดเร็วสะดวกสบาย",
-    "business partner" : "เครือข่ายพันธมิตรทางธุรกิจ",
-    "click_upload_file" :"คลิกเพื่ออัพโหลดไฟล์"
+  "search" : "ค้นหา",
+  "location" : "ตำแหน่งสถานที่",
+  "province_State" : "จังหวัด/รัฐ",
+  "adult" : "ผู้ใหญ่ (13 ปีขึ้นไป)",
+  "children" : "เด็ก (2-13 ปี)",
+  "infant" : "ทารก (น้อยกว่า 2 ปี)",
+  "pets" : "สัตว์เลี้ยง",
+  "house" : "บ้านเดี่ยว",
+  "hotel" : "โรงแรม",
+  "apartment" : "อพาร์ตเมนต์",
+  "townhome" : "บ้านทาวน์โฮม",
+  "condominium" : "คอนโดมิเนียม",
+  "what you will receive from in9.co" : "สิ่งที่คุณจะได้รับจาก In9.co",
+  "experience" : "ประสบการณ์",
+  "fast convenient" : "รวดเร็วสะดวกสบาย",
+  "business partner" : "เครือข่ายพันธมิตรทางธุรกิจ",
+  "click_upload_file" :"คลิกเพื่ออัพโหลดไฟล์"
 }
