@@ -1,6 +1,9 @@
 import { useTranslation } from "react-i18next";
+import { useRouter } from "next/router";
 import Header from "../components/header";
 import Footer from "../components/footer";
+import { useListAccommodationMutation } from "@/lib/features/Accommodation";
+import { useEffect, useState } from "react";
 import {
   Carousel,
   Card,
@@ -16,6 +19,17 @@ import {
 
 export default function MainPage() {
   const { t } = useTranslation();
+  const router = useRouter();
+  const { locale } = router;
+  const [loading, setLoading] = useState(true);
+  const [ListAccommodation] = useListAccommodationMutation();
+
+
+  useEffect(() => {
+    setLoading(false);
+  }, [locale]);
+
+
   return (
     <>
       <div className="bg-fixed">
@@ -234,7 +248,7 @@ export default function MainPage() {
               </Card>
             </a>
 
-            <Card className="w-92 shadow-xl hover:shadow-orange-900/50">
+            {/* <Card className="w-92 shadow-xl hover:shadow-orange-900/50">
               <CardHeader floated={false} className="h-60">
                 <img
                   src="https://picsum.photos/600/600"
@@ -592,7 +606,7 @@ export default function MainPage() {
                   1,200-2,200 THB
                 </Typography>
               </CardBody>
-            </Card>
+            </Card> */}
           </div>
         </div>
         <div className="flex items-center justify-center bg-footer-background w-full mt-5">
